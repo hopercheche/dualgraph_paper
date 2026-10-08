@@ -1,0 +1,1057 @@
+{
+  "scope": "18 existing machine transcripts; source MP4 container and extracted WAV durations; no new ASR/LLM invocation",
+  "token_counts_status": "Not computed by this script; character counts are not token counts",
+  "limitations": [
+    "Machine chunk intervals cover extracted WAV; this does not establish every utterance was recognized.",
+    "ASR no-words errors were converted to nonempty placeholders; complete:true therefore means no empty chunk strings, not verified verbatim completeness.",
+    "No human-verified transcript or speaker-turn annotation found in these artifacts.",
+    "Video duration includes silent search time, preparation, and any outside-station speech; it is not verified station interaction time."
+  ],
+  "source_manifest": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\transcripts.json",
+  "corpus_summary": {
+    "videos": 18,
+    "chunks": 307,
+    "placeholder_chunks": 67,
+    "placeholder_seconds": 1903.408,
+    "duration_seconds": 8980.245439,
+    "duration_median_seconds": 497.877344,
+    "all_selected_sources_byte_match_original": true
+  },
+  "per_station": [
+    {
+      "case": "case1_fungal_toe",
+      "videos": 5,
+      "duration_min_seconds": 384.682687,
+      "duration_median_seconds": 498.602688,
+      "duration_max_seconds": 505.365313,
+      "spoken_chars_min": 1183,
+      "spoken_chars_median": 1599,
+      "spoken_chars_max": 2380,
+      "placeholder_chunks_total": 25,
+      "placeholder_seconds_total": 750.0,
+      "all_time_intervals_contiguous": true
+    },
+    {
+      "case": "case2_migraine",
+      "videos": 5,
+      "duration_min_seconds": 491.754687,
+      "duration_median_seconds": 507.925313,
+      "duration_max_seconds": 587.136,
+      "spoken_chars_min": 790,
+      "spoken_chars_median": 1226,
+      "spoken_chars_max": 1827,
+      "placeholder_chunks_total": 39,
+      "placeholder_seconds_total": 1128.208,
+      "all_time_intervals_contiguous": true
+    },
+    {
+      "case": "case3_diuretics",
+      "videos": 4,
+      "duration_min_seconds": 470.784,
+      "duration_median_seconds": 490.56,
+      "duration_max_seconds": 505.962688,
+      "spoken_chars_min": 2188,
+      "spoken_chars_median": 2416.0,
+      "spoken_chars_max": 2662,
+      "placeholder_chunks_total": 1,
+      "placeholder_seconds_total": 13.781312500000013,
+      "all_time_intervals_contiguous": true
+    },
+    {
+      "case": "case4_mtx",
+      "videos": 4,
+      "duration_min_seconds": 487.04,
+      "duration_median_seconds": 500.50134349999996,
+      "duration_max_seconds": 574.378687,
+      "spoken_chars_min": 1731,
+      "spoken_chars_median": 2145.0,
+      "spoken_chars_max": 2429,
+      "placeholder_chunks_total": 2,
+      "placeholder_seconds_total": 11.418687499999976,
+      "all_time_intervals_contiguous": true
+    }
+  ],
+  "videos": [
+    {
+      "case": "case1_fungal_toe",
+      "video": "v01",
+      "file": "1. Best Case.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\1. Best Case.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v01\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v01.wav",
+      "wav_duration_seconds": 384.682687,
+      "movie_duration_seconds": 384.6826458333333,
+      "chunk_count": 13,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 384.6826875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 4,
+      "placeholder_seconds": 120.0,
+      "spoken_chars_with_newlines": 1273,
+      "spoken_chars_without_whitespace": 1163,
+      "spoken_text_sha256": "c27b617acf2031c86f3bbaf48c5a483265102d1e096f967da535fed467c8c7af",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case1_fungal_toe_v01_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 61,
+      "text_unit_roles": {
+        "student": 27,
+        "doctor": 30,
+        "unintelligible": 4
+      },
+      "inferred_contiguous_runs_all_roles": 28,
+      "inferred_contiguous_runs_student_or_doctor": 26,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\1. Best Case.mp4",
+      "source_sha256": "4bcb54ff67fb10403d30d206f4999b197466ec7a105eb9b967313b89b74783ae",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case1_fungal_toe",
+      "video": "v02",
+      "file": "2. Above Average.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\2. Above Average.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v02\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v02.wav",
+      "wav_duration_seconds": 498.602688,
+      "movie_duration_seconds": 498.6026458333333,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 498.6026875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 5,
+      "placeholder_seconds": 150.0,
+      "spoken_chars_with_newlines": 2380,
+      "spoken_chars_without_whitespace": 2186,
+      "spoken_text_sha256": "02eb68e8882e352e3dcfa88e6f7ee2c6f8c3bd0e926c0dd00e100038fb7c7a24",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case1_fungal_toe_v02_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 72,
+      "text_unit_roles": {
+        "outside_station": 3,
+        "student": 48,
+        "doctor": 16,
+        "unintelligible": 5
+      },
+      "inferred_contiguous_runs_all_roles": 23,
+      "inferred_contiguous_runs_student_or_doctor": 21,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\2. Above Average.mp4",
+      "source_sha256": "c7552906262a92368a9bc23ffc1b1ea4987a02d16b9d3ea5980b1e1e92305279",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case1_fungal_toe",
+      "video": "v03",
+      "file": "3. Average.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\3. Average.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v03\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v03.wav",
+      "wav_duration_seconds": 443.178688,
+      "movie_duration_seconds": 443.17864583333335,
+      "chunk_count": 15,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 443.1786875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 3,
+      "placeholder_seconds": 90.0,
+      "spoken_chars_with_newlines": 1931,
+      "spoken_chars_without_whitespace": 1772,
+      "spoken_text_sha256": "82a09b970b8c42747382f17cf62b7d625d1a1dc65e06868646a08936dae3f5e0",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case1_fungal_toe_v03_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 53,
+      "text_unit_roles": {
+        "mixed": 3,
+        "student": 28,
+        "doctor": 19,
+        "unintelligible": 3
+      },
+      "inferred_contiguous_runs_all_roles": 26,
+      "inferred_contiguous_runs_student_or_doctor": 23,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\3. Average.mp4",
+      "source_sha256": "292954a58a1e6b7ce984f5cb87a6cb1516cdcb807fb2616ad7715bc516171dca",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case1_fungal_toe",
+      "video": "v04",
+      "file": "4. Fail (1).mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\4. Fail (1).mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v04\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v04.wav",
+      "wav_duration_seconds": 503.104,
+      "movie_duration_seconds": 503.10397916666665,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 503.104,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 6,
+      "placeholder_seconds": 180.0,
+      "spoken_chars_with_newlines": 1599,
+      "spoken_chars_without_whitespace": 1478,
+      "spoken_text_sha256": "fd77471763ce9f59b8915bcbe63bffbcf4f3602fa711978e9461696c8f05049a",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case1_fungal_toe_v04_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 61,
+      "text_unit_roles": {
+        "outside_station": 5,
+        "student": 33,
+        "doctor": 15,
+        "uncertain": 2,
+        "unintelligible": 6
+      },
+      "inferred_contiguous_runs_all_roles": 26,
+      "inferred_contiguous_runs_student_or_doctor": 20,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\4. Fail (1).mp4",
+      "source_sha256": "d19d614ca0ddf580eb9b59d178ae918a6fac400c4be5c98e5cc9c504c6dcf296",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case1_fungal_toe",
+      "video": "v05",
+      "file": "5. Fail (2).mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\5. Fail (2).mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v05\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case1_fungal_toe\\v05.wav",
+      "wav_duration_seconds": 505.365313,
+      "movie_duration_seconds": 505.3653125,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 505.3653125,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 7,
+      "placeholder_seconds": 210.0,
+      "spoken_chars_with_newlines": 1183,
+      "spoken_chars_without_whitespace": 1093,
+      "spoken_text_sha256": "fc495865a715003f3b86a4d3f6412f8d751e69f42040c5fc415f1aa809f18ac0",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case1_fungal_toe_v05_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 38,
+      "text_unit_roles": {
+        "outside_station": 1,
+        "student": 17,
+        "doctor": 11,
+        "uncertain": 1,
+        "mixed": 1,
+        "unintelligible": 7
+      },
+      "inferred_contiguous_runs_all_roles": 22,
+      "inferred_contiguous_runs_student_or_doctor": 18,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\5. Fail (2).mp4",
+      "source_sha256": "6697ee4e0fb46481104cac2c3a75f6e6d17e822d07c5a5437ec6e9e75903c893",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case2_migraine",
+      "video": "v01",
+      "file": "1. Best.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\1. Best.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v01\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v01.wav",
+      "wav_duration_seconds": 491.754687,
+      "movie_duration_seconds": 491.7546458333333,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 491.7546875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 8,
+      "placeholder_seconds": 240.0,
+      "spoken_chars_with_newlines": 1226,
+      "spoken_chars_without_whitespace": 1121,
+      "spoken_text_sha256": "5b939e146ed2e866fa2deab7085fe0b0539ff4c0e30d631d56fdfbd9e4be5e8e",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case2_migraine_v01_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 45,
+      "text_unit_roles": {
+        "outside_station": 4,
+        "doctor": 13,
+        "student": 20,
+        "unintelligible": 8
+      },
+      "inferred_contiguous_runs_all_roles": 19,
+      "inferred_contiguous_runs_student_or_doctor": 16,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\1. Best.mp4",
+      "source_sha256": "74094a95d1029d6f1d2881ce96ce5f058a8a0efda861aaf05fe1a103b5fa9593",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case2_migraine",
+      "video": "v02",
+      "file": "2. Above Average.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\2. Above Average.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v02\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v02.wav",
+      "wav_duration_seconds": 587.136,
+      "movie_duration_seconds": 587.1359791666666,
+      "chunk_count": 20,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 587.136,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 5,
+      "placeholder_seconds": 150.0,
+      "spoken_chars_with_newlines": 1603,
+      "spoken_chars_without_whitespace": 1459,
+      "spoken_text_sha256": "75977506e2a96fa5970999eaaf81ba612c4593089366d43f0fd8257cfd2b1081",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case2_migraine_v02_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 49,
+      "text_unit_roles": {
+        "uncertain": 3,
+        "student": 22,
+        "mixed": 1,
+        "doctor": 16,
+        "unintelligible": 5,
+        "outside_station": 2
+      },
+      "inferred_contiguous_runs_all_roles": 31,
+      "inferred_contiguous_runs_student_or_doctor": 24,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\2. Above Average.mp4",
+      "source_sha256": "bfa990b1ac868a1085f76a1bf4e9f043e3666c00d810f15556cd840eb517256e",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case2_migraine",
+      "video": "v03",
+      "file": "3. Average.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\3. Average.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v03\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v03.wav",
+      "wav_duration_seconds": 507.925313,
+      "movie_duration_seconds": 507.9253125,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 507.9253125,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 5,
+      "placeholder_seconds": 150.0,
+      "spoken_chars_with_newlines": 1827,
+      "spoken_chars_without_whitespace": 1661,
+      "spoken_text_sha256": "38e0cde4df543f3fd6bbdbdca36f40c8f589bbca2b755cf67f285ad288768720",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case2_migraine_v03_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 67,
+      "text_unit_roles": {
+        "outside_station": 2,
+        "student": 36,
+        "doctor": 23,
+        "unintelligible": 5,
+        "mixed": 1
+      },
+      "inferred_contiguous_runs_all_roles": 31,
+      "inferred_contiguous_runs_student_or_doctor": 27,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\3. Average.mp4",
+      "source_sha256": "c86446241332900d4693ccffeeaad74bcd31710608990e1a8b6d462bc39065c7",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case2_migraine",
+      "video": "v04",
+      "file": "4. Fail.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\4. Fail.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v04\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v04.wav",
+      "wav_duration_seconds": 545.493313,
+      "movie_duration_seconds": 545.4933125,
+      "chunk_count": 19,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 545.4933125,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 13,
+      "placeholder_seconds": 365.4933125,
+      "spoken_chars_with_newlines": 790,
+      "spoken_chars_without_whitespace": 738,
+      "spoken_text_sha256": "7929c3a77eefb975c11261bcaf430e6914b19e5b644143e0d9d1240731088052",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case2_migraine_v04_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 40,
+      "text_unit_roles": {
+        "student": 11,
+        "mixed": 4,
+        "doctor": 12,
+        "unintelligible": 13
+      },
+      "inferred_contiguous_runs_all_roles": 16,
+      "inferred_contiguous_runs_student_or_doctor": 12,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\4. Fail.mp4",
+      "source_sha256": "402b8ccb6e36f78e6504bc6236739bdd9326fca331d8e0305cf2a5b57cfb31a4",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case2_migraine",
+      "video": "v05",
+      "file": "5. Extremely bad fail.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\5. Extremely bad fail.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v05\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case2_migraine\\v05.wav",
+      "wav_duration_seconds": 492.714688,
+      "movie_duration_seconds": 492.71464583333335,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 492.7146875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 8,
+      "placeholder_seconds": 222.71468750000003,
+      "spoken_chars_with_newlines": 803,
+      "spoken_chars_without_whitespace": 714,
+      "spoken_text_sha256": "c85eaa1e3467fa3f3991e54efa41cf1da6210f608538f005dd576ae0e5cb2a53",
+      "human_verified": false,
+      "speaker_turns_status": "unverified LLM role runs; not ground-truth turns",
+      "role_labels_file": "E:\\che\\apricot\\hoper\\CUHK项目\\outputs\\CUHK_原表与示范视频评分复核_20260922\\case2_migraine_v05_原文.json",
+      "role_label_method": "LLM inference from ASR text; no audio sent",
+      "text_unit_count": 42,
+      "text_unit_roles": {
+        "student": 19,
+        "doctor": 14,
+        "unintelligible": 8,
+        "outside_station": 1
+      },
+      "inferred_contiguous_runs_all_roles": 31,
+      "inferred_contiguous_runs_student_or_doctor": 27,
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\5. Extremely bad fail.mp4",
+      "source_sha256": "8723f982394af952592eb1829d745d141533eda36084d72cce594a630e26b472",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case3_diuretics",
+      "video": "v01",
+      "file": "Case 2_Diuretics_Below average _auto fail case.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Below average _auto fail case.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v01\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v01.wav",
+      "wav_duration_seconds": 470.784,
+      "movie_duration_seconds": 470.8,
+      "chunk_count": 16,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 470.784,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 0,
+      "placeholder_seconds": 0,
+      "spoken_chars_with_newlines": 2188,
+      "spoken_chars_without_whitespace": 2144,
+      "spoken_text_sha256": "ae329e98d38af53da3d0e88fbe02941d7587466b23def09b355097f940c2c5da",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Below average _auto fail case.mp4",
+      "source_sha256": "7f5751897a1a6cfc56124ca4b10083ce8acbc52ed7dfa80609bad85467da60f4",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case3_diuretics",
+      "video": "v02",
+      "file": "Case 2_Diuretics_Below average.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Below average.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v02\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v02.wav",
+      "wav_duration_seconds": 487.338687,
+      "movie_duration_seconds": 487.56663333333336,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 487.3386875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 0,
+      "placeholder_seconds": 0,
+      "spoken_chars_with_newlines": 2477,
+      "spoken_chars_without_whitespace": 2443,
+      "spoken_text_sha256": "7265661efbb54c583914e878e467f28a6bf9921f35cc5d9447bf7220944fd5cb",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Below average.mp4",
+      "source_sha256": "0027834c895b147c53453c5f96f07afd31a598abd1af5fec1b2b9c4610c35058",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case3_diuretics",
+      "video": "v03",
+      "file": "Case 2_Diuretics_Fail .mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Fail .mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v03\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v03.wav",
+      "wav_duration_seconds": 493.781313,
+      "movie_duration_seconds": 493.8,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 493.7813125,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 1,
+      "placeholder_seconds": 13.781312500000013,
+      "spoken_chars_with_newlines": 2355,
+      "spoken_chars_without_whitespace": 2307,
+      "spoken_text_sha256": "fe7a3a3dfd942f216271732a326c11c5c668ec970c708bcb5d79b9e97eef1e0b",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Fail.mp4",
+      "source_sha256": "c22498afb7e2f808d52be886800b9834a30c3da4466b6ae13913aeab16764572",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case3_diuretics",
+      "video": "v04",
+      "file": "Case 2_Diuretics_Good.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Good.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v04\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case3_diuretics\\v04.wav",
+      "wav_duration_seconds": 505.962688,
+      "movie_duration_seconds": 505.996,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 505.9626875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 0,
+      "placeholder_seconds": 0,
+      "spoken_chars_with_newlines": 2662,
+      "spoken_chars_without_whitespace": 2619,
+      "spoken_text_sha256": "385a9b27c02853f510be08314ad15639d9ed04233556b21dde966162490d5216",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Good.mp4",
+      "source_sha256": "452dc88ba4e40ebb5de9f3c20fc0ce5eeef39b997842fad6153974c91466d7f2",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case4_mtx",
+      "video": "v01",
+      "file": "Case1_MTX_Average.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Average.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v01\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v01.wav",
+      "wav_duration_seconds": 497.152,
+      "movie_duration_seconds": 497.193,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 497.152,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 0,
+      "placeholder_seconds": 0,
+      "spoken_chars_with_newlines": 2075,
+      "spoken_chars_without_whitespace": 2006,
+      "spoken_text_sha256": "ac045ea610db0b1570455283eb80ecad6ecceb85764b5997b222a6119a8a26ed",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Average.mp4",
+      "source_sha256": "3df500d48d931aa8f9590d9d8394ea6e13ae9f75acfd29babd2e52ad6c4bfc08",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case4_mtx",
+      "video": "v02",
+      "file": "Case1_MTX_Below average.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Below average.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v02\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v02.wav",
+      "wav_duration_seconds": 487.04,
+      "movie_duration_seconds": 487.0399791666667,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 487.04,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 1,
+      "placeholder_seconds": 7.0400000000000205,
+      "spoken_chars_with_newlines": 2215,
+      "spoken_chars_without_whitespace": 2154,
+      "spoken_text_sha256": "ec8588b667dd33f9336cc8c9e5b04334a8cae82fe69d9b3474bc1a92c06567ff",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Below average.mp4",
+      "source_sha256": "230e885e17860746490ebe6acf276e0413747bb2bbcf2ba662f88239ca1d62a2",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case4_mtx",
+      "video": "v03",
+      "file": "Case1_MTX_Good.mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Good.mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v03\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v03.wav",
+      "wav_duration_seconds": 503.850687,
+      "movie_duration_seconds": 503.8666333333333,
+      "chunk_count": 17,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 503.8506875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 0,
+      "placeholder_seconds": 0,
+      "spoken_chars_with_newlines": 2429,
+      "spoken_chars_without_whitespace": 2401,
+      "spoken_text_sha256": "79d15869aa0a152e320a8865d74343f4348d9d9aaebefaae595679de3b9e0326",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Good.mp4",
+      "source_sha256": "543f4534e560b0642e17b41e1644b82e90ebb935f447903688ad76151881ce5c",
+      "byte_identical_original_and_onedrive": true
+    },
+    {
+      "case": "case4_mtx",
+      "video": "v04",
+      "file": "Case1_MTX_Poor (fail) .mp4",
+      "old_source": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Poor (fail) .mp4",
+      "transcript_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v04\\transcript.txt",
+      "audio_file": "E:\\che\\apricot\\hoper\\CUHK项目\\.codex_tmp\\case_audit\\videos\\case4_mtx\\v04.wav",
+      "wav_duration_seconds": 574.378687,
+      "movie_duration_seconds": 574.417,
+      "chunk_count": 20,
+      "machine_complete_flag": true,
+      "time_coverage_start_seconds": 0.0,
+      "time_coverage_end_seconds": 574.3786875,
+      "gaps": [],
+      "empty_chunk_count": 0,
+      "placeholder_chunk_count": 1,
+      "placeholder_seconds": 4.378687499999955,
+      "spoken_chars_with_newlines": 1731,
+      "spoken_chars_without_whitespace": 1696,
+      "spoken_text_sha256": "59e0f0c8a65059135dfdea51c9a406f9ce60bf9234f2bef297cb347394102e45",
+      "human_verified": false,
+      "speaker_turns_status": "not_diarized",
+      "selected_source": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Poor (fail) .mp4",
+      "source_sha256": "b523654b784fb5b7ff96f483d52ce0f672f2cc1a777bec1a447b02ffaf245425",
+      "byte_identical_original_and_onedrive": true
+    }
+  ],
+  "file_inventory": [
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\1. Best Case.mp4",
+      "size_bytes": 246634467,
+      "movie_duration_seconds": 384.6826458333333,
+      "sha256": "4bcb54ff67fb10403d30d206f4999b197466ec7a105eb9b967313b89b74783ae",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\2. Above Average.mp4",
+      "size_bytes": 319527700,
+      "movie_duration_seconds": 498.6026458333333,
+      "sha256": "c7552906262a92368a9bc23ffc1b1ea4987a02d16b9d3ea5980b1e1e92305279",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\3. Average.mp4",
+      "size_bytes": 283536486,
+      "movie_duration_seconds": 443.17864583333335,
+      "sha256": "292954a58a1e6b7ce984f5cb87a6cb1516cdcb807fb2616ad7715bc516171dca",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\4. Fail (1).mp4",
+      "size_bytes": 324216212,
+      "movie_duration_seconds": 503.10397916666665,
+      "sha256": "d19d614ca0ddf580eb9b59d178ae918a6fac400c4be5c98e5cc9c504c6dcf296",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\5. Fail (2).mp4",
+      "size_bytes": 329532658,
+      "movie_duration_seconds": 505.3653125,
+      "sha256": "6697ee4e0fb46481104cac2c3a75f6e6d17e822d07c5a5437ec6e9e75903c893",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\1. Best.mp4",
+      "size_bytes": 325294174,
+      "movie_duration_seconds": 491.7546458333333,
+      "sha256": "74094a95d1029d6f1d2881ce96ce5f058a8a0efda861aaf05fe1a103b5fa9593",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\2. Above Average.mp4",
+      "size_bytes": 375476495,
+      "movie_duration_seconds": 587.1359791666666,
+      "sha256": "bfa990b1ac868a1085f76a1bf4e9f043e3666c00d810f15556cd840eb517256e",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\3. Average.mp4",
+      "size_bytes": 331836777,
+      "movie_duration_seconds": 507.9253125,
+      "sha256": "c86446241332900d4693ccffeeaad74bcd31710608990e1a8b6d462bc39065c7",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\4. Fail.mp4",
+      "size_bytes": 353037650,
+      "movie_duration_seconds": 545.4933125,
+      "sha256": "402b8ccb6e36f78e6504bc6236739bdd9326fca331d8e0305cf2a5b57cfb31a4",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\5. Extremely bad fail.mp4",
+      "size_bytes": 317427077,
+      "movie_duration_seconds": 492.71464583333335,
+      "sha256": "8723f982394af952592eb1829d745d141533eda36084d72cce594a630e26b472",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Below average _auto fail case.mp4",
+      "size_bytes": 13935504,
+      "movie_duration_seconds": 470.8,
+      "sha256": "7f5751897a1a6cfc56124ca4b10083ce8acbc52ed7dfa80609bad85467da60f4",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Below average.mp4",
+      "size_bytes": 15246169,
+      "movie_duration_seconds": 487.56663333333336,
+      "sha256": "0027834c895b147c53453c5f96f07afd31a598abd1af5fec1b2b9c4610c35058",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Fail.mp4",
+      "size_bytes": 13541272,
+      "movie_duration_seconds": 493.8,
+      "sha256": "c22498afb7e2f808d52be886800b9834a30c3da4466b6ae13913aeab16764572",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Good.mp4",
+      "size_bytes": 522312590,
+      "movie_duration_seconds": 505.996,
+      "sha256": "452dc88ba4e40ebb5de9f3c20fc0ce5eeef39b997842fad6153974c91466d7f2",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Poor (fail) .mp4",
+      "size_bytes": 568073364,
+      "movie_duration_seconds": 574.417,
+      "sha256": "b523654b784fb5b7ff96f483d52ce0f672f2cc1a777bec1a447b02ffaf245425",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Average.mp4",
+      "size_bytes": 500028995,
+      "movie_duration_seconds": 497.193,
+      "sha256": "3df500d48d931aa8f9590d9d8394ea6e13ae9f75acfd29babd2e52ad6c4bfc08",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Below average.mp4",
+      "size_bytes": 16433794,
+      "movie_duration_seconds": 487.0399791666667,
+      "sha256": "230e885e17860746490ebe6acf276e0413747bb2bbcf2ba662f88239ca1d62a2",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Good.mp4",
+      "size_bytes": 23195827,
+      "movie_duration_seconds": 503.8666333333333,
+      "sha256": "543f4534e560b0642e17b41e1644b82e90ebb935f447903688ad76151881ce5c",
+      "group": "onedrive_selected"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\1. Best Case.mp4",
+      "size_bytes": 246634467,
+      "movie_duration_seconds": 384.6826458333333,
+      "sha256": "4bcb54ff67fb10403d30d206f4999b197466ec7a105eb9b967313b89b74783ae",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\2. Above Average.mp4",
+      "size_bytes": 319527700,
+      "movie_duration_seconds": 498.6026458333333,
+      "sha256": "c7552906262a92368a9bc23ffc1b1ea4987a02d16b9d3ea5980b1e1e92305279",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\3. Average.mp4",
+      "size_bytes": 283536486,
+      "movie_duration_seconds": 443.17864583333335,
+      "sha256": "292954a58a1e6b7ce984f5cb87a6cb1516cdcb807fb2616ad7715bc516171dca",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\4. Fail (1).mp4",
+      "size_bytes": 324216212,
+      "movie_duration_seconds": 503.10397916666665,
+      "sha256": "d19d614ca0ddf580eb9b59d178ae918a6fac400c4be5c98e5cc9c504c6dcf296",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\5. Fail (2).mp4",
+      "size_bytes": 329532658,
+      "movie_duration_seconds": 505.3653125,
+      "sha256": "6697ee4e0fb46481104cac2c3a75f6e6d17e822d07c5a5437ec6e9e75903c893",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\1. Best.mp4",
+      "size_bytes": 325294174,
+      "movie_duration_seconds": 491.7546458333333,
+      "sha256": "74094a95d1029d6f1d2881ce96ce5f058a8a0efda861aaf05fe1a103b5fa9593",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\2. Above Average.mp4",
+      "size_bytes": 375476495,
+      "movie_duration_seconds": 587.1359791666666,
+      "sha256": "bfa990b1ac868a1085f76a1bf4e9f043e3666c00d810f15556cd840eb517256e",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\3. Average.mp4",
+      "size_bytes": 331836777,
+      "movie_duration_seconds": 507.9253125,
+      "sha256": "c86446241332900d4693ccffeeaad74bcd31710608990e1a8b6d462bc39065c7",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\4. Fail.mp4",
+      "size_bytes": 353037650,
+      "movie_duration_seconds": 545.4933125,
+      "sha256": "402b8ccb6e36f78e6504bc6236739bdd9326fca331d8e0305cf2a5b57cfb31a4",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\5. Extremely bad fail.mp4",
+      "size_bytes": 317427077,
+      "movie_duration_seconds": 492.71464583333335,
+      "sha256": "8723f982394af952592eb1829d745d141533eda36084d72cce594a630e26b472",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Below average _auto fail case.mp4",
+      "size_bytes": 13935504,
+      "movie_duration_seconds": 470.8,
+      "sha256": "7f5751897a1a6cfc56124ca4b10083ce8acbc52ed7dfa80609bad85467da60f4",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Below average.mp4",
+      "size_bytes": 15246169,
+      "movie_duration_seconds": 487.56663333333336,
+      "sha256": "0027834c895b147c53453c5f96f07afd31a598abd1af5fec1b2b9c4610c35058",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Fail .mp4",
+      "size_bytes": 13541272,
+      "movie_duration_seconds": 493.8,
+      "sha256": "c22498afb7e2f808d52be886800b9834a30c3da4466b6ae13913aeab16764572",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Good.mp4",
+      "size_bytes": 522312590,
+      "movie_duration_seconds": 505.996,
+      "sha256": "452dc88ba4e40ebb5de9f3c20fc0ce5eeef39b997842fad6153974c91466d7f2",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Average.mp4",
+      "size_bytes": 500028995,
+      "movie_duration_seconds": 497.193,
+      "sha256": "3df500d48d931aa8f9590d9d8394ea6e13ae9f75acfd29babd2e52ad6c4bfc08",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Below average.mp4",
+      "size_bytes": 16433794,
+      "movie_duration_seconds": 487.0399791666667,
+      "sha256": "230e885e17860746490ebe6acf276e0413747bb2bbcf2ba662f88239ca1d62a2",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Good.mp4",
+      "size_bytes": 23195827,
+      "movie_duration_seconds": 503.8666333333333,
+      "sha256": "543f4534e560b0642e17b41e1644b82e90ebb935f447903688ad76151881ce5c",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Poor (fail) .mp4",
+      "size_bytes": 568073364,
+      "movie_duration_seconds": 574.417,
+      "sha256": "b523654b784fb5b7ff96f483d52ce0f672f2cc1a777bec1a447b02ffaf245425",
+      "group": "original"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\drugs_info_case1\\1. Best Case.mp4",
+      "size_bytes": 246634467,
+      "movie_duration_seconds": 384.6826458333333,
+      "sha256": "4bcb54ff67fb10403d30d206f4999b197466ec7a105eb9b967313b89b74783ae",
+      "group": "extra"
+    },
+    {
+      "path": "E:\\che\\apricot\\hoper\\CUHK项目\\drugs_info_case1\\2. Above Average.mp4",
+      "size_bytes": 319527700,
+      "movie_duration_seconds": 498.6026458333333,
+      "sha256": "c7552906262a92368a9bc23ffc1b1ea4987a02d16b9d3ea5980b1e1e92305279",
+      "group": "extra"
+    }
+  ],
+  "byte_identical_duplicate_groups": [
+    {
+      "sha256": "4bcb54ff67fb10403d30d206f4999b197466ec7a105eb9b967313b89b74783ae",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\1. Best Case.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\1. Best Case.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\drugs_info_case1\\1. Best Case.mp4"
+      ]
+    },
+    {
+      "sha256": "c7552906262a92368a9bc23ffc1b1ea4987a02d16b9d3ea5980b1e1e92305279",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\2. Above Average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\2. Above Average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\drugs_info_case1\\2. Above Average.mp4"
+      ]
+    },
+    {
+      "sha256": "292954a58a1e6b7ce984f5cb87a6cb1516cdcb807fb2616ad7715bc516171dca",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\3. Average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\3. Average.mp4"
+      ]
+    },
+    {
+      "sha256": "d19d614ca0ddf580eb9b59d178ae918a6fac400c4be5c98e5cc9c504c6dcf296",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\4. Fail (1).mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\4. Fail (1).mp4"
+      ]
+    },
+    {
+      "sha256": "6697ee4e0fb46481104cac2c3a75f6e6d17e822d07c5a5437ec6e9e75903c893",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 1 Fungal Toe\\5. Fail (2).mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 1 Fungal Toe-20260901T121859Z-1-001\\Drug Info Case 1 Fungal Toe\\5. Fail (2).mp4"
+      ]
+    },
+    {
+      "sha256": "74094a95d1029d6f1d2881ce96ce5f058a8a0efda861aaf05fe1a103b5fa9593",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\1. Best.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\1. Best.mp4"
+      ]
+    },
+    {
+      "sha256": "bfa990b1ac868a1085f76a1bf4e9f043e3666c00d810f15556cd840eb517256e",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\2. Above Average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\2. Above Average.mp4"
+      ]
+    },
+    {
+      "sha256": "c86446241332900d4693ccffeeaad74bcd31710608990e1a8b6d462bc39065c7",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\3. Average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\3. Average.mp4"
+      ]
+    },
+    {
+      "sha256": "402b8ccb6e36f78e6504bc6236739bdd9326fca331d8e0305cf2a5b57cfb31a4",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\4. Fail.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\4. Fail.mp4"
+      ]
+    },
+    {
+      "sha256": "8723f982394af952592eb1829d745d141533eda36084d72cce594a630e26b472",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Drug Info Case 2 Migrane\\5. Extremely bad fail.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Drug Info Case 2 Migrane-20260901T122239Z-1-001\\Drug Info Case 2 Migrane\\5. Extremely bad fail.mp4"
+      ]
+    },
+    {
+      "sha256": "7f5751897a1a6cfc56124ca4b10083ce8acbc52ed7dfa80609bad85467da60f4",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Below average _auto fail case.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Below average _auto fail case.mp4"
+      ]
+    },
+    {
+      "sha256": "0027834c895b147c53453c5f96f07afd31a598abd1af5fec1b2b9c4610c35058",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Below average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Below average.mp4"
+      ]
+    },
+    {
+      "sha256": "c22498afb7e2f808d52be886800b9834a30c3da4466b6ae13913aeab16764572",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Fail.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Fail .mp4"
+      ]
+    },
+    {
+      "sha256": "452dc88ba4e40ebb5de9f3c20fc0ce5eeef39b997842fad6153974c91466d7f2",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 1 Diruetics\\Case 1_Diuretics_Good.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 1 Diruetics-20260901T122422Z-1-001\\Patient Drug Counselling Case 1 Diruetics\\Case 2_Diuretics_Good.mp4"
+      ]
+    },
+    {
+      "sha256": "b523654b784fb5b7ff96f483d52ce0f672f2cc1a777bec1a447b02ffaf245425",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Poor (fail) .mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Poor (fail) .mp4"
+      ]
+    },
+    {
+      "sha256": "3df500d48d931aa8f9590d9d8394ea6e13ae9f75acfd29babd2e52ad6c4bfc08",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Average.mp4"
+      ]
+    },
+    {
+      "sha256": "230e885e17860746490ebe6acf276e0413747bb2bbcf2ba662f88239ca1d62a2",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Below average.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Below average.mp4"
+      ]
+    },
+    {
+      "sha256": "543f4534e560b0642e17b41e1644b82e90ebb935f447903688ad76151881ce5c",
+      "paths": [
+        "E:\\che\\apricot\\hoper\\CUHK项目\\OneDrive_2026-09-09\\Sample cases Apricot\\Patient Drug Counselling Case 2 MTX\\Case2_MTX_Good.mp4",
+        "E:\\che\\apricot\\hoper\\CUHK项目\\Patient Drug Counselling Case 2 MTX-20260901T122454Z-1-001\\Patient Drug Counselling Case 2 MTX\\Case1_MTX_Good.mp4"
+      ]
+    }
+  ]
+}

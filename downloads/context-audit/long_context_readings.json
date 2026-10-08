@@ -1,0 +1,515 @@
+{
+  "schema_version": "1.0",
+  "prepared_date": "2026-10-03",
+  "language": "zh-CN",
+  "scope": "四篇原始研究的中文研读数据；只含原创概述、具体结果、解释边界与短定位字符串，不包含整篇原文或完整摘要。",
+  "overall_assessment": "这些研究支持检验长上下文中的证据检索、关联推理与信息保真问题。它们没有在CUHK药学OSCE上证明窗口超限、评分退化或EGJ优越性。文献结果只能作为机制动机，目标场景结论须由本项目实测与受控比较支持。",
+  "page_number_convention": "pdf_page_1based为下载PDF的物理页序；journal_page为期刊印刷页码。不同版本的附录不能混用。",
+  "records": [
+    {
+      "id": "R36",
+      "title": "Lost in the Middle: How Language Models Use Long Contexts",
+      "authors": [
+        "Nelson F. Liu",
+        "Kevin Lin",
+        "John Hewitt",
+        "Ashwin Paranjape",
+        "Michele Bevilacqua",
+        "Fabio Petroni",
+        "Percy Liang"
+      ],
+      "publication": {
+        "venue": "Transactions of the Association for Computational Linguistics (TACL)",
+        "year": 2024,
+        "volume": "12",
+        "pages": "157–173",
+        "doi": "10.1162/tacl_a_00638",
+        "verified_official_url": "https://aclanthology.org/2024.tacl-1.9/"
+      },
+      "sources": {
+        "official_landing_url": "https://aclanthology.org/2024.tacl-1.9/",
+        "pdf_url": "https://aclanthology.org/2024.tacl-1.9.pdf",
+        "pdf_version_label": "正式TACL期刊版本",
+        "pdf_status": "HTTP 200；已下载并以PyMuPDF验证17页",
+        "pdf_sha256": "f37f6fabe0fe0d8c73b67579cd115dbf14e282cfb7b7af655ae8109638402c9b",
+        "source_local_path": "E:/che/apricot/hoper/tmp/egj_context_20261003/long_context_source_check/R36_source.pdf",
+        "supplemental_author_version_url": "https://arxiv.org/html/2307.03172v3",
+        "version_note": "正式PDF仅有附录A–E；arXiv v3另有token统计附录。本研读不援引其具体数值，以正式PDF为原文与高亮主本。"
+      },
+      "summary_zh": "作者控制证据位置和输入长度，发现部分模型在上下文中间取用证据较弱；扩展可接收窗口并不自动改善证据利用。",
+      "research_question_zh": "在答案和任务保持相同的情况下，增加干扰内容或移动答案位置是否改变模型表现？",
+      "method_steps_zh": [
+        "文档QA：2,655个NaturalQuestions查询；一个答案段落加Contriever取得的无答案相关段落，控制10、20、30篇文档及答案位置。",
+        "对照：不提供文档的closed-book、只提供答案文档的oracle；附录另换随机干扰文档、随机排序及无歧义子集。",
+        "最简检索：JSON内随机UUID键值；75、140、300对，每设置500例，移动目标键位置。",
+        "主体模型为MPT-30B-Instruct、LongChat-13B、GPT-3.5-0613及Claude-1.3系列；按答案是否出现计准确率，采用贪心生成。",
+        "机制分析另比较编码器—解码器、训练长度、基础/指令模型，以及把问题同时放在内容之前与之后的提示。"
+      ],
+      "results_zh": [
+        "§2.3/Figure5：GPT-3.5受位置影响可下降超过20个百分点；某些20/30篇设置低于closed-book的56.1%。",
+        "§4.2：前后重复问题可明显改善UUID检索，但不普遍改善文档QA；因此提示技巧效果依任务而异。"
+      ],
+      "egj_relation": {
+        "supports_zh": "为研究OSCE中分散证据的可访问性与位置稳健性提供机制动机。",
+        "not_supported_zh": [
+          "现代模型在同样长度必然退化。",
+          "CUHK单站会超过当前窗口。",
+          "图表示或缩短文本必然改善评分。"
+        ],
+        "design_implications_zh": "应在保留对话顺序的条件下测试证据可访问性，记录遗漏和误引用；不能仅展示输入可被模型接收。"
+      },
+      "citation_drafts_zh": {
+        "introduction": "文档QA研究显示，输入可容纳于窗口内时，证据位置仍可能影响其利用[R36]。",
+        "methods": "参考位置控制设计，我们比较完整输入与条目对应证据包的取证表现[R36]。此比较为拟议设计，尚未实施。",
+        "limitations": "该文使用旧模型及文档QA，其误差幅度不能直接推算药学评分表现[R36]。"
+      },
+      "source_locations": [
+        {
+          "location": "§2.1–2.3；Figure5；Table1",
+          "pdf_pages_1based": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "journal_pages": "159–162",
+          "purpose_zh": "主实验、位置效应与oracle对照"
+        },
+        {
+          "location": "§3.1–3.2；Figure7",
+          "pdf_pages_1based": [
+            6,
+            7
+          ],
+          "journal_pages": "162–163",
+          "purpose_zh": "UUID键值检索"
+        },
+        {
+          "location": "§4.2；Figure9",
+          "pdf_pages_1based": [
+            8,
+            9
+          ],
+          "journal_pages": "164–165",
+          "purpose_zh": "前后重复问题的任务依赖效果"
+        }
+      ],
+      "pdf_highlight_anchors": [
+        {
+          "search_string": "more than 20%",
+          "pdf_page_1based": 6,
+          "location": "§2.3",
+          "purpose_zh": "位置效应的具体量级",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "Extended-context models",
+          "pdf_page_1based": 6,
+          "location": "§2.3",
+          "purpose_zh": "窗口扩展与利用能力的区别",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 2
+        },
+        {
+          "search_string": "45.6%",
+          "pdf_page_1based": 8,
+          "location": "§4.2",
+          "purpose_zh": "提示变化与检索基线",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        }
+      ],
+      "reader_takeaway_zh": "把信息放进窗口与模型可靠地利用信息是不同问题。对EGJ的启发是明确证据如何被定位和使用；该启发仍需目标任务验证。"
+    },
+    {
+      "id": "R37",
+      "title": "RULER: What's the Real Context Size of Your Long-Context Language Models?",
+      "authors": [
+        "Cheng-Ping Hsieh",
+        "Simeng Sun",
+        "Samuel Kriman",
+        "Shantanu Acharya",
+        "Dima Rekesh",
+        "Fei Jia",
+        "Yang Zhang",
+        "Boris Ginsburg"
+      ],
+      "publication": {
+        "venue": "Conference on Language Modeling (COLM)",
+        "year": 2024,
+        "verified_official_url": "https://openreview.net/forum?id=kIoBbc76Sy",
+        "verification_note": "OpenReview论文结果与accepted作者PDF首页均标明COLM2024；直接浏览OpenReview时出现验证页。"
+      },
+      "sources": {
+        "official_landing_url": "https://openreview.net/forum?id=kIoBbc76Sy",
+        "official_pdf_url": "https://openreview.net/pdf?id=kIoBbc76Sy",
+        "official_pdf_access_status": "web直接请求返回浏览器验证页；未取得该端点PDF，不规避验证。",
+        "pdf_url": "https://arxiv.org/pdf/2404.06654v3",
+        "pdf_version_label": "accepted author version（作者arXiv v3；首页标明Published as a conference paper at COLM 2024）",
+        "pdf_status": "HTTP 200；已下载并以PyMuPDF验证27页",
+        "pdf_sha256": "8a4bc6ca28d84570eec7f42652400c2121f4c8bc361701634e596772e396fc22",
+        "source_local_path": "E:/che/apricot/hoper/tmp/egj_context_20261003/long_context_source_check/R37_source.pdf",
+        "html_url": "https://arxiv.org/html/2404.06654v3",
+        "version_note": "使用v3的17模型结果；v2仅10模型，不能混用。"
+      },
+      "summary_zh": "RULER把单条信息检索扩展为多证据、追踪、聚合与QA，揭示模型接收长度、任务难度与实际能力之间的差异。",
+      "research_question_zh": "在简单needle测试成功的模型，面对多项证据及关联操作时能否维持表现？",
+      "method_steps_zh": [
+        "四类自动生成任务：单/多键、多值、多问题检索；四跳变量追踪；词频聚合；扩展SQuAD/HotpotQA。",
+        "控制内容长度与干扰量，从相关性研究选出13任务；17模型，每任务每长度500例，测试4K至128K。",
+        "使用模型对话模板与贪心生成，按目标输出的召回准确率计分，各任务均值作为总体分数。",
+        "有效长度定义为超过Llama2-7B在4K的85.6%参考分的最大测试长度；它是人为评估阈值。",
+        "另增加Yi的链数、跳数和干扰，分析遗漏、误检索、复制及聚合失败。"
+      ],
+      "results_zh": [
+        "Table3：Llama3.1-70B在4K/32K/128K为96.5%/94.8%/66.6%；GPT-4为96.6%/93.2%/81.2%。",
+        "同表Gemini-1.5-Pro为96.7%/95.9%/94.4%，表现相对稳定，不能概括为所有模型明显下降。",
+        "§8明确指出没有验证代理任务与真实场景的关联，亦未全面验证提示稳健性。"
+      ],
+      "egj_relation": {
+        "supports_zh": "支持将检索、多证据完整性和关系追踪分开评估。",
+        "not_supported_zh": [
+          "85.6%阈值适用于药学OSCE。",
+          "RULER分数代表临床知识或评分效度。",
+          "大窗口模型在本项目中必然不够用。"
+        ],
+        "design_implications_zh": "在OSCE应记录评分条目所需证据是否齐全，以及药物—患者—规则关系是否正确；与图同预算的平面证据对照有助于检验关系贡献。"
+      },
+      "citation_drafts_zh": {
+        "introduction": "模型标称窗口与多证据任务中的有效利用能力可能存在差异，且差异依模型和任务而变[R37]。",
+        "methods": "拟议评价覆盖证据召回、关系追踪和最终条目评分，以区分错误环节[R37]。",
+        "limitations": "RULER是行为代理测试，尚不能给出药学OSCE的有效长度或评分效度阈值[R37]。"
+      },
+      "source_locations": [
+        {
+          "location": "§3.1–3.4；Table2",
+          "pdf_pages_1based": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "purpose_zh": "四类任务与输入构造"
+        },
+        {
+          "location": "§4；Table3",
+          "pdf_pages_1based": [
+            6,
+            7
+          ],
+          "purpose_zh": "样本量、评估阈值及模型结果"
+        },
+        {
+          "location": "§5；Figure2–3",
+          "pdf_pages_1based": [
+            7,
+            8
+          ],
+          "purpose_zh": "任务难度与错误分析"
+        },
+        {
+          "location": "§8 Limitations",
+          "pdf_pages_1based": [
+            10
+          ],
+          "purpose_zh": "代理任务及提示边界"
+        }
+      ],
+      "pdf_highlight_anchors": [
+        {
+          "search_string": "Effective Context Size",
+          "pdf_page_1based": 6,
+          "location": "§4",
+          "purpose_zh": "有效长度定义是评估阈值",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "96.7",
+          "pdf_page_1based": 7,
+          "location": "Table3",
+          "purpose_zh": "Gemini稳定结果；应标整行模型结果",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "Lack of correlation",
+          "pdf_page_1based": 10,
+          "location": "§8",
+          "purpose_zh": "不能直接外推真实OSCE",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "RULER comprises tasks",
+          "pdf_page_1based": 3,
+          "location": "§3 The RULER Benchmark",
+          "purpose_zh": "检索、多跳追踪、聚合与问答的任务设计",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 3
+        }
+      ],
+      "reader_takeaway_zh": "RULER适合帮助设计可诊断的检查项目。它不证明图结构有用，也不替代目标任务验证。"
+    },
+    {
+      "id": "R38",
+      "title": "NoLiMa: Long-Context Evaluation Beyond Literal Matching",
+      "authors": [
+        "Ali Modarressi",
+        "Hanieh Deilamsalehy",
+        "Franck Dernoncourt",
+        "Trung Bui",
+        "Ryan A. Rossi",
+        "Seunghyun Yoon",
+        "Hinrich Schuetze"
+      ],
+      "publication": {
+        "venue": "Proceedings of the 42nd International Conference on Machine Learning (ICML)",
+        "year": 2025,
+        "series": "Proceedings of Machine Learning Research",
+        "volume": "267",
+        "pages": "44554–44570",
+        "verified_official_url": "https://proceedings.mlr.press/v267/modarressi25a.html"
+      },
+      "sources": {
+        "official_landing_url": "https://proceedings.mlr.press/v267/modarressi25a.html",
+        "pdf_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/modarressi25a/modarressi25a.pdf",
+        "pdf_version_label": "正式ICML/PMLR proceedings PDF；链接由PMLR官方页面提供",
+        "pdf_status": "HTTP 200；已下载并以PyMuPDF验证17页",
+        "pdf_sha256": "133e9ea0f8735efaf36243dd95800774f241ead176f4d1c2ec4bb9fef24c3e42",
+        "source_local_path": "E:/che/apricot/hoper/tmp/egj_context_20261003/long_context_source_check/R38_source.pdf",
+        "html_url": "https://arxiv.org/html/2502.05167v3",
+        "author_pdf_url": "https://arxiv.org/pdf/2502.05167v3",
+        "version_note": "正式版主体13模型、32K时11模型低于自身基线的一半；旧v2为12/10。附录E另提供新模型。"
+      },
+      "summary_zh": "NoLiMa削弱问题与证据的字面重合，测试通过知识关联定位证据的能力；这种任务在窗口内也可随内容增加而变难。",
+      "research_question_zh": "简单needle测试中直接词面匹配是否掩盖了长上下文关联检索困难？",
+      "method_steps_zh": [
+        "58个问题—证据对，含一/二跳关联及两种词序；背景取自10本开放许可书籍，过滤相关词和可能的答案冲突。",
+        "每长度5个背景、26个证据位置，共7,540例；主体测试250、500、1K、2K、4K、8K、16K、32K。",
+        "13模型，答案含正确人物名即通过；对每对证据，取250/500/1K的最高平均表现，再求总体基线。",
+        "有效长度为维持自身基线85%的最大测试长度；另比较跳数、词序、深度对齐、CoT与直接词面匹配。",
+        "附录E新模型及64K/128K实验因成本将位置数减至11；不能将其采样量视为主体实验相同。"
+      ],
+      "results_zh": [
+        "Table3：GPT-4o基线99.3%，8K89.2%、16K81.6%、32K69.7%；11/13模型在32K低于各自基线一半。",
+        "Table6：Llama3.3-70B在32K直接匹配98.5%，二跳25.9%；加入选择项后87.2%，说明任务线索影响很大。",
+        "AppendixE/Table10：GPT-4.1基线97.0%，16K84.9%、32K79.8%、128K64.7%。"
+      ],
+      "egj_relation": {
+        "supports_zh": "与OSCE中患者表达、药名、知识与评分条目需语义关联这一机制较相关，但关系属于本项目的推论。",
+        "not_supported_zh": [
+          "关联检索基准等同药学专业推理。",
+          "文中有效16K是GPT-4.1的硬窗口。",
+          "该文直接证明EGJ评分准确性。"
+        ],
+        "design_implications_zh": "应包含同义表达、间接证据及多项关系的错误分析；用相同证据预算的平面对照检验图是否帮助消除歧义。"
+      },
+      "citation_drafts_zh": {
+        "introduction": "当问题与证据缺少字面重合时，长上下文关联检索可能更困难[R38]；这为药学条目取证提供待验证的机制动机。",
+        "methods": "拟议取证分析区分直接表达、语义改写与需关联多项事实的条目[R38]。",
+        "limitations": "NoLiMa使用书籍背景和人物检索，其结果不能直接推算药学评分误差[R38]。"
+      },
+      "source_locations": [
+        {
+          "location": "§3–3.1；Figure1",
+          "pdf_pages_1based": [
+            3,
+            4
+          ],
+          "purpose_zh": "关联证据与背景过滤"
+        },
+        {
+          "location": "§4.1–4.3；Table3",
+          "pdf_pages_1based": [
+            4,
+            5
+          ],
+          "purpose_zh": "样本构造、基线定义和主体数字"
+        },
+        {
+          "location": "§4.4.4；Table6",
+          "pdf_pages_1based": [
+            7
+          ],
+          "purpose_zh": "字面匹配对照"
+        },
+        {
+          "location": "AppendixE；Table10",
+          "pdf_pages_1based": [
+            15,
+            16
+          ],
+          "purpose_zh": "新模型及位置数变更"
+        }
+      ],
+      "pdf_highlight_anchors": [
+        {
+          "search_string": "7,540",
+          "pdf_page_1based": 5,
+          "location": "§4.1",
+          "purpose_zh": "每长度主体采样数",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "69.7",
+          "pdf_page_1based": 5,
+          "location": "Table3",
+          "purpose_zh": "GPT-4o在32K结果；应标整行",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "GPT-4.1",
+          "pdf_page_1based": 15,
+          "location": "Table10",
+          "purpose_zh": "新模型结果；只选表格模型行，避免同页说明文字",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 3
+        },
+        {
+          "search_string": "The main elements",
+          "pdf_page_1based": 3,
+          "location": "§3 NOLIMA",
+          "purpose_zh": "问题与证据保持最少字面匹配的构造条件",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        }
+      ],
+      "reader_takeaway_zh": "专业知识复杂度与上下文长度应共同考虑。图关系可能提供关联线索，但这只是可检验假设。"
+    },
+    {
+      "id": "R39",
+      "title": "LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory",
+      "authors": [
+        "Di Wu",
+        "Hongwei Wang",
+        "Wenhao Yu",
+        "Yuwei Zhang",
+        "Kai-Wei Chang",
+        "Dong Yu"
+      ],
+      "publication": {
+        "venue": "International Conference on Learning Representations (ICLR)",
+        "year": 2025,
+        "verified_official_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/d813d324dbf0598bbdc9c8e79740ed01-Abstract-Conference.html"
+      },
+      "sources": {
+        "official_landing_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/d813d324dbf0598bbdc9c8e79740ed01-Abstract-Conference.html",
+        "pdf_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/d813d324dbf0598bbdc9c8e79740ed01-Paper-Conference.pdf",
+        "pdf_version_label": "正式ICLR proceedings PDF",
+        "pdf_status": "HTTP 200；已下载并以PyMuPDF验证28页",
+        "pdf_sha256": "c6c6d75072d316d7b040dbbbb9caf7607821e6dd34d986e6f6c7e3e1721179f7",
+        "source_local_path": "E:/che/apricot/hoper/tmp/egj_context_20261003/long_context_source_check/R39_source.pdf",
+        "html_url": "https://arxiv.org/html/2410.10813v2"
+      },
+      "summary_zh": "LongMemEval测试长期互动的记忆与利用，并比较检索、内容粒度和阅读方式。结果既支持结构化取证，也提醒过度压缩会丢失信息。",
+      "research_question_zh": "助手能否跨会话提取、汇总、更新、处理时间信息并在证据不足时弃答？",
+      "method_steps_zh": [
+        "500个人工修订问题；LLM模拟的证据会话经人工编辑、时间与证据位置标注，再加入非冲突的无关会话。",
+        "S约115K tokens；M为500会话约1.5M。完整历史与只含真实证据的oracle分别评估。",
+        "QA由GPT-4o-2024-08-06判定，作者元评价报告与人类一致率超过97%；另测Recall@k、NDCG@k。",
+        "检索实验使用Stella V5、Llama3.1-8B抽取索引信息；比较会话、轮次、摘要/事实，原文与事实组合索引及时间过滤。",
+        "阅读设计比较自然语言/JSON及直接作答/Chain-of-Note；在oracle下隔离阅读错误。"
+      ],
+      "results_zh": [
+        "Figure3(b)：GPT-4o从oracle87.0%到完整S历史60.6%，为26.4个百分点或相对30.3%下降。",
+        "§5.2/Figure5：以摘要或事实替代会话/轮次通常降低QA；多会话汇总有例外。",
+        "同节：Llama3.1-8B超过约3K检索tokens后下降，GPT-4o超过20K仍改善；§5.5中JSON单独并非总占优。"
+      ],
+      "egj_relation": {
+        "supports_zh": "支持将证据召回、信息保真及阅读/评分三个环节分别检查。",
+        "not_supported_zh": [
+          "115K会话结果适用于几千token单站OSCE。",
+          "内容越短就越准确。",
+          "摘要、事实、JSON或图中的任一种表示普遍更好。"
+        ],
+        "design_implications_zh": "EGJ宜保留可回查原话、条件、否定、时序和缺失状态，并按条目检查压缩后的证据覆盖；这是本项目设计建议，尚非已验证效果。"
+      },
+      "citation_drafts_zh": {
+        "introduction": "长互动研究揭示证据检索与利用之间仍有性能差距，但其长度远高于本项目单站材料[R39]。",
+        "methods": "为检查证据保真，拟议评价分别测原文证据覆盖、误引用与最终评分[R39]。",
+        "limitations": "信息抽取可能遗漏必要细节，不能将EGJ输入减少本身作为准确性证据[R39]。"
+      },
+      "source_locations": [
+        {
+          "location": "§3.1–3.3；Figure2",
+          "pdf_pages_1based": [
+            4,
+            5
+          ],
+          "purpose_zh": "数据、长度与评价方法"
+        },
+        {
+          "location": "§3.4；Figure3(b)",
+          "pdf_pages_1based": [
+            6
+          ],
+          "purpose_zh": "完整历史与oracle的绝对/相对差距"
+        },
+        {
+          "location": "§5.1–5.2；Figure5",
+          "pdf_pages_1based": [
+            8,
+            9
+          ],
+          "purpose_zh": "粒度、信息损失及不同token预算"
+        },
+        {
+          "location": "§5.5；Figure6",
+          "pdf_pages_1based": [
+            10
+          ],
+          "purpose_zh": "结构化格式与阅读策略组合"
+        }
+      ],
+      "pdf_highlight_anchors": [
+        {
+          "search_string": "0.870",
+          "pdf_page_1based": 6,
+          "location": "Figure3(b)",
+          "purpose_zh": "GPT-4o oracle/全历史结果；应标整行",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "replacing sessions",
+          "pdf_page_1based": 8,
+          "location": "§5.2",
+          "purpose_zh": "进一步压缩可能降低性能",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        },
+        {
+          "search_string": "over 20k",
+          "pdf_page_1based": 9,
+          "location": "§5.2",
+          "purpose_zh": "GPT-4o更多检索tokens仍改善",
+          "actual_pdf_match_verified": true,
+          "matched_rectangle_count": 1
+        }
+      ],
+      "reader_takeaway_zh": "EGJ应以可追溯证据链接和条件覆盖争取优势。单纯压缩长度既可能减少干扰，也可能丢失评分依据。"
+    }
+  ],
+  "minimal_controlled_comparison": {
+    "status": "建议方案，尚未实施；不得写入结果作为完成实验",
+    "conditions_zh": [
+      "完整原对话＋相同rubric＋相同范围专业资料。",
+      "与EGJ相同证据、来源、知识事实及token预算的平面包，移除显式关系。",
+      "相同证据包加EGJ的criterion—患者状态—证据显式关系。"
+    ],
+    "interpretation_zh": "完整输入对平面包检验选择/减少干扰；平面包对EGJ较接近检验关系表示贡献。提取本身的成本、错误和信息损失均须记录。",
+    "controls_zh": "固定模型版本、知识范围、rubric、输出预算及解码设置；所有条件基于同一真实站点，保持对话原顺序。",
+    "outcomes_zh": [
+      "条目评分一致性与误给/漏给分",
+      "证据覆盖及误引用",
+      "否定、条件、时序及缺失状态处理",
+      "输入tokens、峰值上下文、全流程tokens与重复运行稳定性"
+    ],
+    "unit_of_analysis_zh": "四个站点只能支持描述性可行性分析。重复生成、资料重排与人工扩长不产生新增独立病例。",
+    "stress_test_zh": "先测真实输入；扩至8K/16K/32K时只增加明确无关资料并标为人为压力条件。位置实验移动完整资料块，不打乱对话语义。"
+  }
+}

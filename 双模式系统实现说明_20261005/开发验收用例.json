@@ -1,0 +1,110 @@
+[
+  {
+    "id": "M01",
+    "input": "会话开始时确定mode，下一轮不得改为另一模式",
+    "expected": "拒绝修改或读取原模式；不得悄悄切换",
+    "status": "not_executed"
+  },
+  {
+    "id": "M02",
+    "input": "同一病例启动甲乙，使用相同模型与检索版本",
+    "expected": "运行清单记录一致，共同检索候选可核对",
+    "status": "not_executed"
+  },
+  {
+    "id": "M03",
+    "input": "同一request_id重试、断线重连、服务重启",
+    "expected": "模式、证据与提示消耗状态不丢失，不重复执行",
+    "status": "not_executed"
+  },
+  {
+    "id": "M04",
+    "input": "两种模式遇到完全相同的history_revision",
+    "expected": "评分和预生成缓存仍隔离；不得跨模式命中",
+    "status": "not_executed"
+  },
+  {
+    "id": "G01",
+    "input": "甲癣指定提示仅写成草稿，未发出",
+    "expected": "不得消耗提示或触发C+上限",
+    "status": "not_executed"
+  },
+  {
+    "id": "G02",
+    "input": "甲癣授权提示实际发出后学生补充正确答案",
+    "expected": "正确项可完成；保留C+最高等级条件；不直接指定最终C+",
+    "status": "not_executed"
+  },
+  {
+    "id": "G03",
+    "input": "越权答案已实际交付给学生；另测被拦截的越权草稿",
+    "expected": "已交付：记录干预并复核；仅草稿：记录审核失败/重写，不污染考核或消耗提示",
+    "status": "not_executed"
+  },
+  {
+    "id": "G04",
+    "input": "MTX每日建议→患者复述→学生更正每周",
+    "expected": "保留历史错误与纠正关系；患者复述不算学生作答",
+    "status": "not_executed"
+  },
+  {
+    "id": "G05",
+    "input": "偏头痛在实际替代建议后才询问过敏",
+    "expected": "执行M04顺序要求；咨询站不得照搬此顺序",
+    "status": "not_executed"
+  },
+  {
+    "id": "G06",
+    "input": "利尿药经允许提示后正确回答",
+    "expected": "不得复制甲癣C+提示扣分；按利尿药原条目处理",
+    "status": "not_executed"
+  },
+  {
+    "id": "G07",
+    "input": "咨询仍进行中，尚未问过敏",
+    "expected": "PENDING；不可仅因尚未问就定最终遗漏失败",
+    "status": "not_executed"
+  },
+  {
+    "id": "G08",
+    "input": "转写缺失或说话人不清楚",
+    "expected": "UNCERTAIN与复核，不能冒充正确或学生错误",
+    "status": "not_executed"
+  },
+  {
+    "id": "G09",
+    "input": "瑞舒伐他汀的剂量被误绑定到呋塞米",
+    "expected": "药物与方案绑定失败，不得据此判对应条目完成",
+    "status": "not_executed"
+  },
+  {
+    "id": "D01",
+    "input": "TTS已经发出部分音频后中断",
+    "expected": "保留实际发送/播放范围；不可删掉已发事件、重试当作从未发生",
+    "status": "not_executed"
+  },
+  {
+    "id": "I01",
+    "input": "LLM返回不存在的转写引文或不存在的知识source_id",
+    "expected": "共用真实性校验拒绝；记录失败，不生成虚假正常成绩",
+    "status": "not_executed"
+  },
+  {
+    "id": "I02",
+    "input": "知识检索为空或无批准来源",
+    "expected": "明确知识覆盖缺口；不得说图谱确认无风险",
+    "status": "not_executed"
+  },
+  {
+    "id": "R01",
+    "input": "同一冻结证据图与规则版本重放",
+    "expected": "B规则执行结果一致；此一致性不等于语言抽取必然正确",
+    "status": "not_executed"
+  },
+  {
+    "id": "R02",
+    "input": "会话与评分期间更新全局默认mode",
+    "expected": "已有会话不受影响；评分仍使用原模式和资源快照",
+    "status": "not_executed"
+  }
+]

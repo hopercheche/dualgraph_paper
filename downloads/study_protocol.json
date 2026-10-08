@@ -1,0 +1,51 @@
+{
+  "study_id": "DualGraph-OSCE-20261008",
+  "status": "DESIGN_ONLY_NOT_EXECUTED",
+  "manuscript_title": "DualGraph-OSCE: Synchronizing Clinical Role Simulation and Deterministic Assessment via Paired Rule-Evidence Graphs",
+  "core_engine": "Evidence-Graph Judge",
+  "stations": [
+    "C1",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "primary_checkpoints_target": 120,
+  "checkpoints_per_station_target": 30,
+  "live_consultations_target": 16,
+  "participant_count": "record actual count; not assumed to equal consultation count",
+  "methods": [
+    "conventional_rag",
+    "egj"
+  ],
+  "ablation": [
+    "FULL",
+    "UNLINKED"
+  ],
+  "same_cutoff_for_role_and_current_decision": true,
+  "primary_outcomes": [
+    "first_run_role_compliance",
+    "exact_assessment_decision_agreement"
+  ],
+  "role_check_categories": [
+    "required_response",
+    "case_fidelity",
+    "disclosure_permission",
+    "provenance_and_time",
+    "prompt_control"
+  ],
+  "assessment_fields": [
+    "status",
+    "applicable_effects",
+    "correction_state",
+    "review_reasons"
+  ],
+  "clustering": [
+    "participant",
+    "source_consultation",
+    "constructed_script_family"
+  ],
+  "independence_assumption": "Multiple prefixes or paraphrases from one source are not independent observations.",
+  "faculty_reference": "One reviewer per checkpoint; independently reviewed subset if a second reviewer is available.",
+  "analysis": "paired effect sizes and failures; source-cluster intervals; exact McNemar only under independent-pair assumption",
+  "scope": "Technical decision reliability and live feasibility in four fixed stations; no learning-gain or human-exam equivalence claim."
+}

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "R34",
+    "source": "https://doi.org/10.1145/3785022.3785092",
+    "author_full": "https://arxiv.org/html/2503.05793v2",
+    "original_pages": 11,
+    "sha256": "cf49445359cea4f41a18075910530da4f11feb96e89175a1475b4f3024590931",
+    "highlight_pdf": "pdf/R34_高亮全文.pdf",
+    "evidence": [
+      {
+        "id": "R34-E1",
+        "index": 1,
+        "page": 5,
+        "purpose": "§4.1：结构化病例与角色生成",
+        "phrase": "MedSimAI’s AI-SP engine uses instructor-provided case parame-",
+        "image": "R34-E1.png",
+        "full_image": "R34-p5.png"
+      },
+      {
+        "id": "R34-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "§4.2：逐项评分、原句依据与结构化输出",
+        "phrase": "For rubrics, items are scored independently using item-specific",
+        "image": "R34-E2.png",
+        "full_image": "R34-p5.png"
+      },
+      {
+        "id": "R34-E3",
+        "index": 3,
+        "page": 6,
+        "purpose": "§5.1.2：独立评分验证样本",
+        "phrase": "To benchmark automated scoring, we rescored 104 first-year OSCE",
+        "image": "R34-E3.png",
+        "full_image": "R34-p6.png"
+      },
+      {
+        "id": "R34-E4",
+        "index": 4,
+        "page": 7,
+        "purpose": "§5.2.3：三种准确率的不同结果",
+        "phrase": "scoring engine achieved 32.5% exact accuracy",
+        "image": "R34-E4.png",
+        "full_image": "R34-p7.png"
+      }
+    ]
+  },
+  {
+    "id": "R35",
+    "source": "https://havelund.com/Publications/rv-2026-first-order-guardrails.pdf",
+    "author_full": "https://havelund.com/Publications/rv-2026-first-order-guardrails.pdf",
+    "original_pages": 20,
+    "sha256": "9cae45a9d4449a098ce76cfada0c04e58f0cec331a79a006b6a1724a4f00da5a",
+    "highlight_pdf": "pdf/R35_高亮全文.pdf",
+    "evidence": [
+      {
+        "id": "R35-E1",
+        "index": 1,
+        "page": 1,
+        "purpose": "摘要：对象感知、在线检查与语义落地",
+        "phrase": "Our approach",
+        "image": "R35-E1.png",
+        "full_image": "R35-p1.png"
+      },
+      {
+        "id": "R35-E2",
+        "index": 2,
+        "page": 3,
+        "purpose": "图 1：消息落地、监控及转发／阻断",
+        "phrase": "The module grounds each inter-",
+        "image": "R35-E2.png",
+        "full_image": "R35-p3.png"
+      },
+      {
+        "id": "R35-E3",
+        "index": 3,
+        "page": 3,
+        "purpose": "§1：对象、时序及量化政策",
+        "phrase": "This analysis produces an object-centered trace of events",
+        "image": "R35-E3.png",
+        "full_image": "R35-p3.png"
+      }
+    ]
+  },
+  {
+    "id": "R14",
+    "source": "https://aclanthology.org/2026.lrec-1.831/",
+    "highlight_pdf": "pdf/R14_准则分解高亮全文.pdf",
+    "evidence": [
+      {
+        "id": "R14-E4",
+        "page": 6,
+        "purpose": "§4.3 准则分解与程序聚合",
+        "image": "R14-E4.png"
+      }
+    ]
+  }
+]

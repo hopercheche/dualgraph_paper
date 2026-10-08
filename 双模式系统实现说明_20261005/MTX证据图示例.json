@@ -1,0 +1,58 @@
+{
+  "kind": "synthetic_algorithm_example_not_collected_data",
+  "case_id": "cuhk_di_04_mtx_counseling",
+  "source_rule": "case_4_mtx_counseling.json assessment_rules T05; original faculty station requirement",
+  "events": [
+    {
+      "id": "E1",
+      "speaker": "student",
+      "act": "adopted_recommendation",
+      "drug": "methotrexate",
+      "frequency": "daily",
+      "quote": "Methotrexate 每日一次。",
+      "span": {
+        "turn_id": "t1",
+        "start": 0,
+        "end": 18
+      },
+      "delivery": "text_observed"
+    },
+    {
+      "id": "E2",
+      "speaker": "patient",
+      "act": "confirmation_repeat",
+      "drug": "methotrexate",
+      "frequency": "daily",
+      "quote": "即係每日食一次？",
+      "span": {
+        "turn_id": "t2",
+        "start": 0,
+        "end": 8
+      },
+      "repeats_from": "E1",
+      "delivery": "example_assumes_played"
+    },
+    {
+      "id": "E3",
+      "speaker": "student",
+      "act": "explicit_correction",
+      "drug": "methotrexate",
+      "frequency": "weekly",
+      "quote": "我更正一下，係每星期一次，唔係每日。",
+      "span": {
+        "turn_id": "t3",
+        "start": 0,
+        "end": 18
+      },
+      "corrects": "E1",
+      "delivery": "text_observed"
+    }
+  ],
+  "expected_mechanism": {
+    "current_regimen": "weekly",
+    "E1_error_history": "retained_with_correction_relation",
+    "E2_student_credit": false,
+    "frequency_evidence": "E3",
+    "final_penalty": "apply_station_rule_or_faculty_review; do_not_invent_automatic_failure_for_corrected_error"
+  }
+}

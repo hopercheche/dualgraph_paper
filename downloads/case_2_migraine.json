@@ -1,0 +1,293 @@
+{
+  "case_id": "cuhk_di_02_migraine",
+  "version": "2026-09-28-faculty-clarifications-v1",
+  "faculty_status": "faculty_confirmation_required",
+  "title": "Drug Information Case 2 - Migraine",
+  "station": "Drug Information",
+  "student_role": "Junior pharmacist",
+  "interaction": {
+    "mode": "simulated phone call",
+    "languages": [
+      "Hong Kong Cantonese",
+      "English"
+    ],
+    "urgency": "ASAP because the patient is waiting in clinic"
+  },
+  "doctor": {
+    "name": "Dr Anson Lo",
+    "role": "Resident doctor",
+    "telephone": "3943 1000",
+    "opening": "藥劑師你好，有位病人而家等緊，佢嘅 private GP 開咗 Cafergot，需要時食兩粒。可唔可以幫我睇下呢個 dose 同用法適唔適合？"
+  },
+  "patient": {
+    "patient_code": "PKC",
+    "age": 72,
+    "sex": "male",
+    "ethnicity": "Chinese",
+    "hkrid": "A1234",
+    "weight_lb": 158,
+    "height_cm": 170,
+    "bmi": 24.8,
+    "allergies": "NKDA",
+    "clinic_status": "Euvolaemic with no oedema",
+    "vital_signs": {
+      "blood_pressure_mmHg": "138/80",
+      "heart_rate_per_min": 69,
+      "fever": false
+    },
+    "medical_history": [
+      "Heart failure with reduced ejection fraction, LVEF 30%",
+      "ST-elevation myocardial infarction in December 2024",
+      "Hypertension",
+      "Type 2 diabetes mellitus, recent HbA1c 8.2%; patient refuses injectable treatment",
+      "Chronic kidney disease with baseline serum creatinine 150 to 160 micromol/L",
+      "Depression and anxiety",
+      "Migraine"
+    ],
+    "laboratory_results": [
+      {
+        "test": "Sodium",
+        "value": "127 mmol/L",
+        "flag": "low"
+      },
+      {
+        "test": "Potassium",
+        "value": "4.5 mmol/L"
+      },
+      {
+        "test": "Urea",
+        "value": "10.1 mmol/L",
+        "flag": "high"
+      },
+      {
+        "test": "Creatinine",
+        "value": "154 micromol/L",
+        "flag": "high"
+      },
+      {
+        "test": "Estimated creatinine clearance",
+        "value": "approximately 39 mL/min",
+        "method": "Cockcroft-Gault"
+      },
+      {
+        "test": "Total bilirubin",
+        "value": "20 micromol/L"
+      },
+      {
+        "test": "ALP",
+        "value": "100 IU/L"
+      },
+      {
+        "test": "ALT",
+        "value": "36 IU/L",
+        "note": "upper end of supplied reference range"
+      }
+    ],
+    "medicines": [
+      "Silodosin 8 mg orally daily",
+      "Metoprolol succinate ER 50 mg orally daily",
+      "Lisinopril 10 mg orally daily - planned switch to sacubitril/valsartan",
+      "Dapagliflozin 10 mg orally daily",
+      "Spironolactone 25 mg orally daily",
+      "Aspirin 80 mg orally daily",
+      "Clopidogrel 75 mg orally daily",
+      "Pantoprazole 40 mg orally daily",
+      "Citalopram 20 mg orally daily - changed from sertraline three weeks earlier",
+      "Frusemide 20 mg orally daily as required for leg oedema - new prescription",
+      "Sacubitril/valsartan 100 mg orally twice daily - starting today"
+    ],
+    "migraine_problem": {
+      "frequency": "Approximately weekly",
+      "recent_treatment": "Paracetamol and naproxen have recently been ineffective",
+      "cafergot": "Prescribed by a private GP one week earlier; patient has not used it before",
+      "current_episode": "Intermittent headache last night",
+      "patient_goal": "Wants a medicine to keep at home",
+      "associated_symptoms": "No nausea or vomiting"
+    }
+  },
+  "dialogue_policy": {
+    "reveal_only_when_asked": [
+      "Migraine frequency and current symptoms",
+      "First use and timing of the private-GP prescription",
+      "Previous migraine treatments and response",
+      "Allergy status and relevant chart details"
+    ],
+    "do_not_reveal": [
+      "The expected recommendation",
+      "Rubric wording, grade caps or auto-fail rules",
+      "Unasked-for contraindications, interactions or alternative medicines"
+    ],
+    "challenge_rules": [
+      "If the student discusses only citalopram or metoprolol interactions, ask whether the patient's cardiovascular history independently changes the recommendation.",
+      "If the student recommends an NSAID, remind them that paracetamol and naproxen have been ineffective and ask them to consider cardiac and renal risk.",
+      "If the student recommends a triptan, ask whether the recent STEMI and coronary disease affect its suitability.",
+      "After the main recommendation is complete, ask for the usual IV magnesium sulfate regimen."
+    ]
+  },
+  "expected_clinical_answer": [
+    "Cafergot contains ergotamine and caffeine.",
+    "Reject Cafergot because its ergotamine component is contraindicated with coronary artery disease/recent STEMI and hypertension; unresolved HFrEF is relevant. Caffeine alone is not the defining contraindication. Renal impairment or citalopram interaction alone is not a sufficient primary reason (YT 2.7).",
+    "Citalopram serotonergic interaction and possible metoprolol-associated vasoconstriction are secondary and do not replace the patient-level contraindication.",
+    "Under the supplied case teaching key, recommend rimegepant 75 mg as a single oral dose when required, with a maximum of 75 mg in 24 hours and no dose adjustment at creatinine clearance at least 15 mL/min.",
+    "Do not use NSAIDs as the final answer because they have been ineffective and present cardiorenal risk; triptans are unsuitable after recent MI or with ischaemic heart disease.",
+    "The supplied written follow-up answer is magnesium sulfate 1 g IV over 15 to 20 minutes.",
+    "Rimegepant is preferred, not the only answer (YT 2.1-2.2). Lasmiditan is not locally marketed under the station premise, but is acceptable as a named-patient import. Suitable acute CGRP alternatives may also use that pathway; IV preventive medicines are not a suitable home PRN answer.",
+    "Lasmiditan/other imported alternatives: faculty did not supply an alternative dose key in this clarification; review that specific regimen against a faculty-approved product reference before assigning regimen credit. Do not invent a dose or automatically reject the choice.",
+    "M15 is resolved by YT 2.4: use the written magnesium sulfate 1 g IV over 15-20 minutes, not the conflicting video dose."
+  ],
+  "asr": {
+    "context": "Hong Kong Cantonese-English pharmacy phone call. Transcribe only what is spoken. Preserve drug names, numbers and negation. Do not infer diagnoses or replace heart failure with HFrEF. Context is vocabulary, not patient facts or answers.",
+    "critical_hotwords": [
+      "Cafergot",
+      "ergotamine",
+      "caffeine",
+      "rimegepant",
+      "citalopram",
+      "metoprolol",
+      "triptan",
+      "sumatriptan",
+      "lasmiditan",
+      "atogepant",
+      "eptinezumab",
+      "erenumab",
+      "fremanezumab",
+      "galcanezumab",
+      "magnesium sulfate",
+      "STEMI",
+      "coronary artery disease",
+      "CAD",
+      "HFrEF",
+      "heart failure",
+      "CKD",
+      "75 mg",
+      "once daily",
+      "24 hours",
+      "15 to 20 minutes",
+      "contraindication"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "M01",
+      "label": "Identify Dr Anson Lo and resident-doctor role",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "M02",
+      "label": "Confirm urgency and construct the complete information need",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "M03",
+      "label": "Clarify migraine history, first use, previous treatment and frequency",
+      "level": "core",
+      "dimension": "skills"
+    },
+    {
+      "id": "M04",
+      "label": "Ask about drug allergy before recommending an alternative",
+      "level": "safety_critical",
+      "dimension": "skills"
+    },
+    {
+      "id": "M05",
+      "label": "Use and communicate at least two drug-information sources",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "M06",
+      "label": "Explain that Cafergot contains ergotamine and caffeine",
+      "level": "core",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M07",
+      "label": "Recognise the patient-specific ergotamine contraindication",
+      "level": "safety_critical",
+      "prompt_code": "MIGRAINE_CONTRAINDICATION_PROMPT",
+      "prompted_cap": "C+",
+      "missing_after_prompt": "auto_fail_candidate",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M08",
+      "label": "Do not substitute a secondary interaction for the cardiovascular contraindication",
+      "level": "core",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M09",
+      "label": "Recommend an appropriate acute option; rimegepant preferred, faculty-accepted named-patient alternatives allowed",
+      "level": "core",
+      "prompt_code": "MIGRAINE_CGRP_PROMPT",
+      "prompted_cap": "B-",
+      "missing_after_prompt": "auto_fail_candidate",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M10",
+      "label": "Give the selected accepted acute medicine regimen (rimegepant: 75 mg single dose)",
+      "level": "core",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M11",
+      "label": "State the selected medicine maximum dose (rimegepant: 75 mg in 24 hours)",
+      "level": "safety_critical",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M12",
+      "label": "Explain applicable renal guidance for the selected medicine; calculate independently",
+      "level": "core",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M13",
+      "label": "Exclude NSAIDs and triptans for case-specific reasons",
+      "level": "core",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "M14",
+      "label": "Provide an organised, professional answer within the station time",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "M15",
+      "label": "Answer the magnesium sulfate follow-up",
+      "level": "grade_cap",
+      "missing_cap": "B",
+      "dimension": "knowledge"
+    }
+  ],
+  "faculty_confirmation_required": [
+    "Official numeric grade conversion, station time limit and faculty calibration samples.",
+    "Additional concrete auto-fail examples requested at the 23 September meeting."
+  ],
+  "counterpart_role": "doctor",
+  "faculty_clarifications": {
+    "document": "CUHK_Pharmacy_Four_Case_Interpretation_and_Faculty_Confirmations_20260902_YT.pdf",
+    "pages": [
+      13,
+      14,
+      15
+    ],
+    "authority": "Faculty PDF annotations take precedence over the earlier questions in its body; station-specific teaching conventions, not universal prescribing advice."
+  },
+  "assessment_rules": [
+    "English feedback, Cantonese dialogue and English drug names. Do not return student-assessed calculation results.",
+    "The numeric conversion is an Apricot AI proposal pending faculty calibration.",
+    "Clinical prompting is restricted to original rubric permissions, each at most once.",
+    "M13 omission alone is not auto-fail; distinguish not mentioning triptans from actively recommending a contraindicated triptan. Borderline safe core performance may be C/C+ as judged holistically, without an artificial grade floor."
+  ],
+  "local_availability": {
+    "lasmiditan": "Station premise: not locally marketed; YT explicitly accepts named-patient import if student proposes it.",
+    "rimegepant": "HK-67735 registration confirmed in Drug Office database. Registration does not establish local stock or affordability. Confirm pharmacy procurement and cost; do not invent current price/stock. Faculty reported access can be difficult and costly in this teaching context; explain possible procurement and affordability barriers when asked, not a verified live stock or price claim.",
+    "other_CGRP": "Verify each product separately; suitable acute named-patient alternatives are accepted, not preventive IV therapy at home."
+  }
+}

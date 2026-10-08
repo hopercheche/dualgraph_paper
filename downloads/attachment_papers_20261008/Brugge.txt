@@ -1,0 +1,842 @@
+
+=== PAGE 1 ===
+RESEARCH Open Access
+© The Author(s) 2024. Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, 
+sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and 
+the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this 
+article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included 
+in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will 
+need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http:   //creativecommo ns.  org/lice ns e s/by/4.0/.
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+https://doi.org/10.1186/s12909-024-06399-7
+BMC Medical Education
+†Emilia Brügge and Sarah Ricchizzi contributed equally to this work.
+*Correspondence:
+Dogus Darici
+darici@uni-muenster.de
+Full list of author information is available at the end of the article
+Abstract
+Background Clinical decision-making (CDM) refers to physicians’ ability to gather, evaluate, and interpret relevant 
+diagnostic information. An integral component of CDM is the medical history conversation, traditionally practiced on 
+real or simulated patients. In this study, we explored the potential of using Large Language Models (LLM) to simulate 
+patient-doctor interactions and provide structured feedback.
+Methods We developed AI prompts to simulate patients with different symptoms, engaging in realistic medical 
+history conversations. In our double-blind randomized design, the control group participated in simulated medical 
+history conversations with AI patients (control group), while the intervention group, in addition to simulated 
+conversations, also received AI-generated feedback on their performances (feedback group). We examined the 
+influence of feedback based on their CDM performance, which was evaluated by two raters (ICC = 0.924) using the 
+Clinical Reasoning Indicator – History Taking Inventory (CRI-HTI). The data was analyzed using an ANOVA for repeated 
+measures.
+Results Our final sample included 21 medical students (agemean = 22.10 years, semestermean = 4, 14 females). At 
+baseline, the feedback group (mean = 3.28 ± 0.09 [standard deviation]) and the control group (3.21 ± 0.08) achieved 
+similar CRI-HTI scores, indicating successful randomization. After only four training sessions, the feedback group 
+(3.60 ± 0.13) outperformed the control group (3.02 ± 0.12), F (1,18) = 4.44, p = .049 with a strong effect size, partial 
+η 2 = 0.198. Specifically, the feedback group showed improvements in the subdomains of CDM of creating context 
+(p = .046) and securing information (p = .018), while their ability to focus questions did not improve significantly 
+(p = .265).
+Large language models improve clinical 
+decision making of medical students through 
+patient simulation and structured feedback: 
+a randomized controlled trial
+Emilia Brügge1,2†, Sarah Ricchizzi1,2†, Malin Arenbeck1,2, Marius Niklas Keller1,2, Lina Schur1,2, Walter Stummer2, 
+Markus Holling2, Max Hao Lu3 and Dogus Darici4*
+
+=== PAGE 2 ===
+Page 2 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+Introduction
+Clinical decision-making (CDM) refers to the ability of 
+healthcare professionals to gather, evaluate, and inter -
+pret relevant information [ 1]. An integral component of 
+CDM is the medical history conversation, traditionally 
+practiced on real or standardized patients combined with 
+feedback on the performance [2]. Thereby, CDM is highly 
+intertwined with the concept of clinical reasoning, which 
+refers to the cognitive process that healthcare profes -
+sionals use to understand and process patient informa -
+tion, recognize clinical patterns, and evaluate evidence 
+to reach a diagnosis and determine an appropriate treat -
+ment plan [3].
+Conversations with real patients, or simulated patients 
+are the traditional approaches for training clinical-deci -
+sion-making. These training interactions are designed 
+to teach and assess skills such as history taking, physi -
+cal examination, and communication, often involving 
+trained actors who simulate patient scenarios. However, 
+training with real patients or human actors is often costly 
+and limited, reducing the availability of these simulation 
+opportunities for students [4, 5].
+Various technologies have been adopted to expand the 
+availability of simulations, with the goal to make it more 
+accessible to more students. For example, Virtual Real -
+ity (VR) and Augmented Reality (AR), along with various 
+forms of computer-based simulations, have been used to 
+simulate different CDM situations [6].
+LLM-simulated CDM-training
+One emerging technology with the potential to make 
+CDM even more accessible is the use of LLMs, such 
+as ChatGPT. Kung et al. showed that ChatGPT (2022 
+December version) can successfully pass the United 
+States Medical Licensing Exam (USMLE), showing its 
+“knowledge” in medical area [ 7]. In addition, it has been 
+shown that LLM can successfully mimic patients with 
+various types of medical history or personality, and can 
+be a valuable tool for educating patients in a clinical set -
+ting [ 8– 11]. Therefore, and with the ability to specify 
+context for each conversation, LLMs may be able to sim -
+ulate natural discussions with students, and be used as a 
+cost-effective way to train CDM skills.
+However, the use of LLMs have also been associated 
+with poorer outcomes in some cases [ 12]. Inaccurate 
+information produced by LLMs can lead to misconcep -
+tions and faulty knowledge construction, and when the 
+answer lacks proper instruction, it could mislead the 
+user rather than providing clarifications. Therefore, there 
+is currently a need for empirical studies that carefully 
+design and evaluate the use of LLMs in CDM-training.
+Incorporating LLM-generated feedback
+A critical pedagogical consideration in designing LLMs 
+for CDM training is the role of feedback. Well-founded 
+feedback after completing a task is essential for an effec -
+tive learning process [ 13]. For many years, research into 
+educational sciences has focused on the topic of feedback 
+culture and its impact on learning outcomes [13, 14]. It is 
+widely acknowledged that getting feedback after a perfor-
+mance helps identify areas of strength and improvement 
+while reinforcing good practices [ 15, 16]. Studies have 
+shown that feedback in online learning environments 
+can improve student performance in about 65% of cases 
+[17]. The most significant impact occurs when students 
+receive immediate, and task-specific feedback along with 
+strategies for more effective task completion, rather than 
+general praise or criticism [18– 20].
+Among the few studies that exist on LLM-generated 
+patient simulations [ 21– 24], none have implemented 
+feedback or debriefing at the time of reporting. Therefore, 
+we were particularly interested to investigate to what 
+extent automatically generated feedback from LLMs after 
+a patient simulation can improve students’ performance.
+The current study
+To address these gaps in the literature, we designed a 
+set of LLM prompts that simulate patients with differ -
+ent symptoms and medical histories. Afterward, medi -
+cal students were randomly assigned into two groups to 
+conduct CDM activities with the simulated patient, while 
+only one group received feedback after their simulated 
+conversation.
+We hypothesized that the group that receives addi -
+tional feedback would achieve better CDM scores than 
+the control group that received no additional feedback. 
+Furthermore, we hypothesized that the participants 
+perceive the LLM-based CDM training as helpful and 
+realistic.
+Methods
+We conducted a two-group randomized-controlled 
+study during winter term 2023/2024 at the University of 
+Münster, Germany and used the large language model 
+Conclusion The results suggest that AI-simulated medical history conversations can support CDM training, especially 
+when combined with structured feedback. Such training format may serve as a cost-effective supplement to existing 
+training methods, better preparing students for real medical history conversations.
+Keywords Large language models, Clinical decision making, Medical students education, Structured feedback, 
+Patient simulation training
+
+=== PAGE 3 ===
+Page 3 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+OpenAI’s ChatGPT 3.5 (“generative pretrained trans -
+former”), free version. Ethics approval was obtained from 
+the ethics board (“Ethik-Kommission Westfalen-Lippe”) 
+under the reference 2023-438-f-N. Informed consent was 
+obtained from all participants. A clinical trial number 
+was not applicable.
+Study population
+For the study, we recruited medical students from the 
+University of Münster using an e-Mail distribution list 
+between November 2023 and February 2024. The study 
+was promoted in lectures. Participants had to be enrolled 
+as medical students to be included. In the following sec -
+tions, the medical students who were included in the 
+study population will be referred as participants. Data 
+was collected anonymously, and all participants took part 
+in the study voluntarily. No allowance was paid.
+The following inclusion criteria were applied: (1) Par -
+ticipants needed to be enrolled medical students of the 
+University of Münster. (2) Participants needed to attend 
+the study on site in person. (3) Participants needed to 
+give full consent.
+Study procedure
+For the study execution (Fig.  1), participants were ran -
+domly assigned (per simple random allocation ) to one 
+of two groups: a control group (AI-simulated patient 
+conversation only) and a feedback group (AI-simula -
+tion patient conversation and feedback). Participants 
+were blinded to the intervention (closed-label RCT). 
+Both groups received the same prompt. In addition to 
+the conversation, the feedback group received feedback 
+from ChatGPT after each simulated conversation (see 
+below). Both groups had the same number of training 
+Fig. 1 Study design. The diagram illustrates the timeline of the study. The control group completed four patient cases, with a 2-minute break between 
+each case. In contrast, the feedback group received feedback from ChatGPT during these breaks instead of pausing. After fulfilling the tasks, the partici -
+pants received a survey with no time limit
+ 
+
+=== PAGE 4 ===
+Page 4 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+opportunities, with no difference in the order and fre -
+quency of patient case scenarios. The AI-generated feed -
+back focused solely on CDM processes rather than on 
+transmitting medical content.
+The study was conducted on the premises of the medi -
+cal faculty of the University of Münster. After random -
+ization, the research team placed the participants at 
+prepared workplaces.
+The simulated conversations were conducted within 
+the ChatGPT Playground Interface. We created con -
+textual prompts (see below for a detailed explanation) 
+simulating a neurological or neurosurgical emergency 
+situation in a chat window. These simulated patient cases 
+reflected the CDM tasks. The tasks involved conducting 
+a thorough medical history conversation to develop a dif-
+ferential diagnosis for the patient’s condition, a common 
+CDM practice. The AI takes on the role of a patient pre -
+senting symptoms and engaging in a realistic medical his-
+tory conversation with a study participant.
+The corresponding contextual prompt (see below) was 
+entered into AI before the study participants arrived. 
+To ensure that participants could only view the conver -
+sation interface, parts of the computer screen were cov -
+ered. There was no opportunity for the study participants 
+to communicate with each other while performing the 
+tasks, as adequate distance was ensured between the 
+workstations. Three researchers monitored the partici -
+pants during the execution of the tasks. Predetermined 
+times were announced out loud for all participants.
+The control group conducted the conversation with 
+the simulated patient independently, while the feedback 
+group received mentoring feedback from ChatGPT after 
+completing each task. For each patient case, the partici -
+pants had six minutes to take a medical history of the 
+simulated patient with pre-specified conditions in order 
+to suspect a diagnosis.
+CDM task
+Participants were asked to practice CDM in four scenar -
+ios in which ChatGPT simulates patients with the follow-
+ing diagnosis: (1) herniated lumbar disc, (2) stroke, (3) 
+meningitis and (4) concussion. The selection of scenarios 
+was made in consultation with the department of neuro -
+surgery of the university hospital of Münster, ensuring 
+both medical accuracy of the clinical context and practi -
+cality of the training tasks.
+Prompt for control group
+The prompt consisted of four different patient cases 
+(Table 1). Both groups were given the same CDM tasks to 
+complete which was to suspect a diagnose for the patient 
+by having a medical history conversation. Across both 
+groups, ChatGPT received basic contextual prompts 
+regarding the patient cases (see Table 1).
+The prompt was designed by refining different contex -
+tual prompts and evaluating the corresponding interac -
+tions with ChatGPT. Through multiple pilot phases, we 
+optimized the prompts to provide responses that simu -
+late a realistic knowledge level and react appropriately to 
+unusual queries or requests. Through the final selected 
+prompts, we were able to obtain meaningful answers to 
+relevant medical history questions from ChatGPT.
+Prompt for feedback group
+Recognizing the importance of feedback in medical his -
+tory training, we enhanced the prompt for the feed -
+back group with AI-generated feedback for clinical 
+decision-making (see Table  1, blue text). The CDM was 
+qualitatively assessed by ChatGPT using the Clinical Rea-
+soning Indicator-History Taking Inventory score (CRI-
+HTI) [25]. This is done by adding additional information 
+into the contextual prompt we provided to ChatGPT at 
+the beginning. In addition to the assessment, the prompt 
+also asked ChatGPT to generate three personalized sug -
+gestions for improvements in bullet points aimed at 
+strengthening clinical reasoning skills after every patient 
+case.
+Measures
+The CRI-HTI, developed and validated by Fürstenberg 
+et al. (2016) [ 25], measures the clinical reasoning skills 
+of medical students using a five-point Likert-Scale. The 
+score consists of eight criteria assigning to three fields 
+of competence: “Focusing questions” , “Creating con -
+text” and “Securing information” . The following items 
+were included: “1) Taking the lead in the conversation 2) 
+Recognizing and responding to relevant information 3) 
+Specifying symptoms 4) Asking specific questions that 
+point to pathophysiological thinking 5) Putting ques -
+tions in a logical order 6) Checking with the patient 7) 
+Summarizing 8) Collected data and effectiveness of the 
+conversation” .
+The criteria were translated to German and entered as 
+part of the contextual prompt to ChatGPT. In addition, 
+ChatGPT was asked to rate the conversation according 
+to the following pattern: “ Assess whether the user has 
+taken control of the conversation to obtain the necessary 
+information” . Each item is evaluated according to a five 
+point Likert-Scale that ranges from 1 (does not meet the 
+criterion) to 5 (fully meets the criterion). An increase of 
+1 point in the scale equals an improvement of 20%. The 
+CRI-HTI was validated in German language with Ger -
+man medical students with a high internal consistency of 
+0.78. The usage of a scale validated in German language 
+minimizes the potential bias from reduced validity due 
+to translation. After the training, the perceived realism, 
+authenticity and accuracy of the simulation was assessed 
+using a survey.
+
+=== PAGE 5 ===
+Page 5 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+Data analysis
+After the completed data collection, two independent 
+raters read the participants’ chat conversations and 
+assessed their clinical reasoning ability according to the 
+CRI-HTI. The raters were blinded, i.e. had no knowledge 
+of which group each participant belongs to, and showed 
+an excellent agreement, ICC = 0.924. An example of the 
+simulated conversation is shown in Fig.  2. Standardized 
+feedback is shown in Fig. 3.
+Statistical method
+The data was analyzed using SPSS (Version 28, IBM 
+Corp., Armonk, NY). To compare the progression of the 
+CRI-HTI over time (3 levels), we performed an ANOVA 
+for repeated measures with the CRI-HTI as a within-
+group and the group allocation (feedback group vs. 
+control group) as between-group factors. Gender, age, 
+and semester were included as covariates. All statistics 
+were performed two-sided under a significance level of 
+α = 0.05. The statistical testing results were specified by 
+an effect size with partial η2 = 0.01 considered a small, 
+η2 = 0.06 a moderate, and η2 = 0.14 a strong effect.
+The intraclass correlation coefficient (ICC) was used 
+to assess the reliability of CRI-HTI ratings across the 
+two human raters. A two-way mixed-effects model with 
+95% confidence intervals was applied focusing on the 
+consistency of ratings rather than absolute agreement, 
+as we were primarily interested in whether raters rank 
+individuals similarly rather than achieving exact numeric 
+matches.
+Results
+Study population
+In total, N = 29 students initially agreed to participate 
+in the study. Before randomization, 5 students dropped 
+out by not attending the study session, leaving 24 stu -
+dents who began the study and underwent randomiza -
+tion. The final analysis included 21 participants, as we 
+had to exclude 3 participants due to technical difficul -
+ties where their data was not properly saved during the 
+upload process. These drop-outs were unrelated to 
+either the intervention or any participant characteristics 
+(“missing completely at random”). The final study group 
+included 21 participants between the ages of 19 and 35. 
+Table 1 AI-prompts used to simulate clinical decision-making scenarios as exemplified by one scenario
+Prompt for control group (AI simulation 
+only)
+Prompt for feedback group (AI simulation + AI feedback)
+Scenario (4): Traumatic Brain Injury
+I would like you to behave as if you were 
+simulating a patient who comes into the 
+emergency room with a traumatic brain 
+injury.
+• You should simulate the patient as if you 
+were talking to a doctor.
+• Answer sparingly and only to the questions 
+asked.
+• You do not know that you have a traumatic 
+brain injury.
+• Respond from the patient’s perspective.
+• Have the patient answer very vaguely and 
+imprecisely.
+The user will simulate the doctor and 
+respond to your comments and ask further 
+questions. You always answer only after the 
+doctor has asked you a question. The user 
+will end the conversation with the command 
+“END” .
+Before we begin, please confirm that you 
+have understood the request with the word 
+“BEGIN” . Afterward, please simulate the first 
+message of the patient. You introduce your-
+self and explain why you have come to the 
+emergency room. You are the patient. The 
+user is the doctor.
+Scenario (4): Traumatic Brain Injury
+I would like you to behave as if you were simulating a patient who comes into the emergency room 
+with a traumatic brain injury.
+• You should simulate the patient as if you were talking to a doctor.
+• Answer sparingly and only to the questions asked.
+• You do not know that you have a traumatic brain injury.
+• Respond from the patient’s perspective.
+• Have the patient answer very vaguely and imprecisely.
+The user will simulate the doctor and respond to your comments and ask further questions. You 
+always answer only after the doctor has asked you a question. The user will end the conversation with 
+the command “END” .
+At this point, you will provide feedback on how the user, in their role as a doctor, could improve the 
+anamnesis.
+• Your feedback should include the following eight criteria:
+1. Assess whether the user has taken control of the conversation to obtain the necessary information.
+2. Assess whether the user recognizes all relevant information.
+3. Assess whether the user formulates targeted questions so that he can capture and specify the symptoms 
+in detail.
+4. Assess whether the questions of the user suggest that specific causes or circumstances lead to certain 
+symptoms.
+5. Assess whether the user asks questions in a logical sequence.
+6. Assess whether the user reassures the patient that he has received the correct information from the patient.
+7. Assess whether the user has summarized his collected information before ending the conversation.
+8. Assess whether the user has collected sufficient information of high quality at an appropriate speed.
+Assign each of the eight criteria a score according to the following scheme:
+1 - Does not meet the criterion 2 - Rather does not meet the criterion 3 - Partially meets the criterion 4 - Rather 
+meets the criterion 5 - Fully meets the criterion Explain the evaluation with two sentences.
+Create three suggestions for improvement in bullet points aimed at strengthening clinical reasoning skills.
+End the feedback with the word: “END” .
+Before we begin, please confirm that you have understood the request with the word “BEGIN” . After-
+ward, please simulate the first message of the patient. You introduce yourself and explain why you 
+have come to the emergency room. You are the patient. The user is the doctor.
+Note. The feedback ground (right column) received additional feedback from ChatGPT. The prompt that generates the feedback is highlighted in italic
+
+=== PAGE 6 ===
+Page 6 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+The control group consisted of 11 participants and 10 
+participants for the feedback group. None of the partici -
+pants had clinical rotations so far, and half of the popula -
+tion answered to have no prior knowledge. The majority 
+was in 3rd semester and 21 years old.
+When comparing their sociodemographic information, 
+no group differences were observed, indicating tenta -
+tive successful randomization (Table  2). Specifically, nei-
+ther age, gender, prior knowledge nor semester of study 
+showed a significant difference between the two study 
+groups. No participants had extended medical knowledge 
+Fig. 2 Example of a conversation between the participant and ChatGPT. The prompt of the fourth scenario instructed ChatGPT to simulate a patient with 
+a concussion. Italicized text represents the responses given by ChatGPT
+ 
+
+=== PAGE 7 ===
+Page 7 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+on the topic of neurology or neuroscience such as intern-
+ships, lectures or modules.
+To further ensure group equivalence at baseline, we 
+compared the pre-intervention word, using the chat 
+transcript the students had with the AI, during scenario 
+1 between the feedback group ( Mean = 86.89, SD = 20.02) 
+and control group (Mean = 85.09, SD = 16.67). A t-test for 
+independent samples showed no significant difference 
+between the groups, t(18) = 0.219, p = .829, indicating that 
+both groups were comparable at baseline.
+Effects of feedback on performance
+A repeated measures ANOVA was performed to evalu -
+ate the effects of the feedback provided by ChatGPT on 
+the performance of the participant. The results demon -
+strated significantly better outcomes in the feedback 
+Fig. 3 Example of the feedback using the CRI-HTI-Score and the individual feedback given by ChatGPT. The participant received the feedback after com-
+pleting scenario 2. This is the same participant as in Fig. 3. Italicized text represents the responses given by ChatGPT
+ 
+
+=== PAGE 8 ===
+Page 8 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+group, with participants showing a steady improvement 
+from scenario 1 to scenario 4 compared to the control 
+group (Fig.  4). After four scenarios, participants in the 
+feedback group ( M = 3.604 ± 0.130; 95% CI: 3.331, 3.878) 
+outperformed the control group ( M = 3.017 ± 0.118; 95% 
+CI: 2.770, 3.264), in CDM, F(1,20) = 4.436, p = .049, with a 
+strong effect size, partial η2 = 0.198.
+Specifically, the feedback group showed improvements 
+in the CDM-subdomains creating context ( p = .046) and 
+securing information ( p = .018), while their ability to 
+focus questions did not improve significantly ( p = .265). 
+Together, the results indicate that AI-based medical 
+history conversations with feedback can simulate con -
+ducive teaching and learning scenarios, and improve 
+students’ CDM performances. We also screened the 
+feedback provided for its quality, with most instances 
+being deemed specific, realistic, and helpful (Supple -
+mental Fig.  1). Furthermore, the participants in both 
+groups rated the simulations as being highly accurate 
+(M = 8.67/10 ± 2.01), feasible ( M = 8.38/10 ± 1.88), and 
+realistic (M = 7.81/10 ± 1.40).
+Discussion
+This study is the first empirical study to show that auto -
+matically generated feedback by Large Language Models 
+(LLM) can enhance the clinical decision-making (CDM) 
+training effects for medical students in LLM-simulated 
+conversations. Using an experimental design, we found 
+that the group receiving LLM-generated feedback dem -
+onstrated a significant improvement across four clini -
+cal scenarios compared to the control group. The strong 
+effect size indicates that this effect is practically relevant. 
+This finding holds potential to transform the way we 
+teach CDM, particularly for conducting medical history 
+conversations.
+The impact of LLM-generated feedback on CDM training
+Our results align with the vast amount of research that 
+underscores the importance of feedback in medical train-
+ing. The students in the feedback group showed signifi -
+cant improvements in the subdomains of CDM, such as 
+“creating context” , and “securing information” . LLM-gen-
+erated feedback may have helped the students to reflect 
+on their skills and adapt more quickly. In a similar vein, 
+other comparative studies have shown that feedback 
+from LLMs is perceived as equally beneficial as human-
+generated feedback [ 26]. This indicates that LLMs can 
+generate immediate, specific feedback that helps students 
+refine their questioning techniques and better gather rel -
+evant patient information (Figs. 2 and 3).
+The integration of LLM-based feedback offers students 
+an additional, readily available tool for medical training 
+and skill development. Our findings demonstrate that the 
+feedback provided by ChatGPT was perceived as helpful 
+by participants and had a positive effect on their perfor -
+mance. In the future, it would be interesting to examine 
+the effect over a longer period, with regular use of Chat -
+GPT integrated into the daily studies of medical students.
+Effects on the subdomains of CDM
+We further observed that the feedback group demon -
+strated varying levels of improvement across the three 
+subdomains of CDM, with the most notable progress in 
+“securing information” . We think that the pronounced 
+improvement in this particular subdomain likely stems 
+from several factors inherent to both the nature of infor -
+mation gathering and the feedback process itself. Infor -
+mation securing represents a concrete, observable skill 
+that can be readily identified and refined through specific 
+feedback. When conducting patient interviews, students 
+must learn to systematically collect relevant information, 
+and feedback can directly highlight missed opportuni -
+ties, suggest alternative questions, or reinforce effective 
+strategies. Unlike more nuanced aspects of clinical com -
+munication, information gathering often follows clear 
+Table 2 Participant characteristics after simple random 
+allocation
+Variable Feed-
+back 
+group
+n = 10
+Con-
+trol 
+group
+n = 11
+Significantly
+different?
+Age (years) χ2(6) = 7.58, p = .271
+ 19 0 1
+ 20 1 2
+ 21 8 3
+ 22 0 2
+ 23 0 1
+ 26 1 1
+ 35 0 1
+Gender χ2(1) = 0.095, p = .757
+ Male 3 4
+ Female 7 7
+ Diverse 0 0
+Prior knowledge χ2(3) = 0.649, p = .885
+ Without prior knowledge 5 5
+ Non-clinical internship 3 3
+ Clinical internship 1 0
+ Clinical rotation 0 0
+ Other 2 4
+Semester of study χ2(3) = 3.560, p = .313
+ 3 6 9
+ 6 3 1
+ 7 0 1
+ 8 0 1
+Note. No significant group differences were observed, indicating successful 
+randomization
+
+=== PAGE 9 ===
+Page 9 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+patterns and protocols, making it especially receptive to 
+structured feedback.
+The “creating context” subdomain also showed sig -
+nificant improvement, likely influenced by ChatGPT’s 
+specific feedback patterns. The LLM consistently encour-
+aged participants to think deeper into symptom causa -
+tion, a key component of this subdomain. Specifically, 
+the feedback addressed common oversights in gathering 
+contextual information, such as pre-existing conditions 
+and relevant history like recent travel, helping students 
+develop more comprehensive interviewing strategies.
+The absence of significant improvement in the “focus -
+ing questions” subdomain can be attributed to a ceiling 
+effect: many participants entered the study with already 
+well-developed skills in this area, as evidenced by five 
+participants achieving maximum scores on the five-point 
+Likert scale for at least one of the first three items. This 
+high baseline performance left limited room for measur -
+able improvement in question-focusing techniques.
+LLM-simulations are a powerful “Add-On” but do not yet 
+replace real human interactions
+The self-report data provided by the students underscores 
+a high degree of perceived authenticity and accuracy 
+with their interactions with LLM. This is an important 
+observation, as it relates to the concept of suspension of 
+disbelief in the context of human-LLM interaction [ 27, 
+28]. It suggests a willingness to engage with the LLM as 
+if it were a bona fide conversational partner. Moreover, 
+studies have indicated that AI-driven text interactions 
+can closely resemble real human conversations as the 
+language generated by LLMs exhibits many human-like 
+characteristics [29]. This allows students to set aside the 
+awareness that they are communicating with an artifi -
+cial intelligence. This condition may have enhanced the 
+immersion of the simulation, potentially leading to more 
+engaged learning experiences, and satisfaction.
+However, while this suspension of disbelief can lead to 
+satisfying and engaging interactions, it is also important 
+to recognize the limitations of LLM-based conversations. 
+The immersive nature of these interactions may not fully 
+replicate the complexity of real-life conversations. For 
+example, LLM-simulation neglects non-verbal and social 
+aspects [ 30]. In patient encounters, humans rely heavily 
+on facial expressions, body language, tone of voice, and 
+other subtle cues to interpret meaning and derive clini -
+cal decisions [31]. These non-verbal elements often carry 
+as much, if not more, information than the verbal com -
+munication themselves. For instance, research has shown 
+that a physician’s ability to read and respond to a patient’s 
+non-verbal cues can significantly impact the quality of 
+care and patient outcomes [30, 31].
+Nonetheless, this new tool offers students a poten -
+tially unlimited opportunity to prepare for medical con -
+versations in terms of number, time, and variety of case 
+scenarios. Additionally, it serves as a cost-effective alter -
+native to compensate for the high costs associated with 
+simulated patients, as well as the resources needed for 
+Fig. 4 Effects of AI-generated feedback on clinical decision-making and history taking. Median CRI-HT Score (ICC = 0.924) with the individual values is 
+shown for the control group (red) and feedback group (blue) over four subsequent AI-simulated history taking scenarios
+ 
+
+=== PAGE 10 ===
+Page 10 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+real patient interactions and dedicated facilities. In the 
+context of telemedicine and the growing prevalence of 
+patient communication via chat, this tool also provides 
+relevant training opportunities. We want to emphasize 
+that this is intended as a supplementary training resource 
+for medical students and not as a replacement for real-
+life interactions.
+Limitations of the study
+This study has several limitations. First, as previously 
+noted, the study used the “Playground” interface of Chat-
+GPT for its execution. One limitation is that ChatGPT 
+3.5’s training data only extends up to January 2022. A 
+more significant limitation is the ongoing development 
+of the language model, which may affect reproducibility. 
+For instance, in March 2023, OpenAI updated its model, 
+potentially influencing the consistency of results in future 
+studies. It has not been tested whether the results can be 
+replicated using newer versions.
+Second, the conversations with ChatGPT were con -
+ducted in German. It can be assumed that the answers, 
+questions and feedback given by ChatGPT are even more 
+precise in English due to the fact that ChatGPT was orig -
+inally trained on English texts.
+Third, although the sample used for this randomized 
+control study is relatively small, a significant effect was 
+discovered. However, future studies will benefit from 
+increasing the statistical power and increase the number 
+of participants. Additionally, future studies should look 
+into how the effect varies across different audiences from 
+different geographic regions, cultures, and contexts.
+Forth, we observed that in order to overcome the 
+latency produced by ChatGPT, some participants 
+“learned” to combine several questions into one prompt 
+to get a more comprehensive answer. However, asking 
+multiple questions in a row does not reflect a realistic 
+scenario during medical history conversations. Thus, the 
+use of ChatGPT may not reflect how participants would 
+actually engage in those conversations in real life.
+Conclusion
+Our study demonstrated a significant learning effect in 
+medical students through LLM-generated feedback for 
+practicing CDM. These findings contribute to the ongo -
+ing, lively discussion about the potential of LLMs in 
+CDM education and medical training overall [ 32– 34], 
+paving the way for individualized learning and cost effi -
+ciency. Additionally, we outlined the opportunities 
+and challenges associated with using LLM for patient 
+simulations.
+Abbreviations
+AI  Artificial Intelligence
+ANOVA  Analysis of Variance
+AR  Artificial Reality
+CDM  Clinical Decision Making
+CRI-HTI  Clinical Reasoning Indicator-History Taking Inventory
+GPT  Generative Pre-trained Transformer
+LLM  Large Language Model
+VR  Virtual Reality
+Supplementary Information
+The online version contains supplementary material available at  h t t  p s : /  / d o  i .  o r 
+g / 1 0 . 1 1 8 6 / s 1 2 9 0 9 - 0 2 4 - 0 6 3 9 9 - 7     .  
+Supplementary Material 1: Further examples of AI-generated feedback are 
+shown. Feedback quality ranged from specific (as exemplarily shown in 
+Panel A) to unspecific (Panel B), with the majority being specific
+Acknowledgements
+We would like to express our gratitude to all participants for their time and 
+effort in contributing to our study.
+Author contributions
+EDEB: Conceptualization, Investigation, Data curation, Writing – Original 
+Draft, Writing – Review & Editing, Visualization, Project AdministrationSR: 
+Conceptualization, Writing – Original Draft, Writing – Review & Editing, Project 
+AdministrationMA: Conceptualization, InvestigationMNK: Conceptualization, 
+Writing – Review & Editing, VisualizationLS: Conceptualization, 
+InvestigationWS: Validation, SupervisionMH: Conceptualization, Writing – 
+Review & Editing, ValidationMHL: Writing – Review & Editing, ValidationDD: 
+Conceptualization, Methodology, Software, Formal Analysis, Writing – 
+Original Draft, Writing – Review & Editing, Visualization, Validation, Project 
+Administration, Supervision.
+Funding
+This project received no specific funding.
+Open Access funding enabled and organized by Projekt DEAL.
+Data availability
+The data that support the findings of this study are available on request from 
+the corresponding author, DD.
+Declarations
+Ethics approval and consent to participate
+Ethics approval was obtained from the ethics board (“Ethik-Kommission 
+Westfalen-Lippe”) under the reference 2023-438-f-N. Informed consent was 
+obtained from all participants.
+Consent for publication
+Not applicable.
+Competing interests
+The authors declare no competing interests.
+Author details
+1Connectome – Student Association for Neurosurgery, Neurology and 
+Neurosciences, Berlin, Germany
+2Department of Neurosurgery, University Hospital of Münster, Münster, 
+Germany
+3Harvard Graduate School of Education, Cambridge, USA
+4Institute of Anatomy and Neurobiology, University of Münster, 
+Vesaliusweg 2-4, 48149 Münster, Germany
+Received: 18 August 2024 / Accepted: 25 November 2024
+References
+1. Macauley K, Brudvig T, Kadakia M, Bonneville M. Systematic review of 
+assessments that evaluate clinical decision making, clinical reasoning, and 
+
+=== PAGE 11 ===
+Page 11 of 11
+Brügge et al. BMC Medical Education         (2024) 24:1391 
+critical thinking changes after simulation participation. J Phys Ther Educ. 
+2017;31(4):64–75. https:/ /doi.or g/10.10 97/J TE.0000000000000011.
+2. Barrows HS. An overview of the uses of standardized patients for teaching 
+and evaluating clinical skills. Acad Med. 1993;68(6):443–51.  h t t  p s : /  / d o  i .  o r g / 1 0 . 
+1 0 9 7 / 0 0 0 0 1 8 8 8 - 1 9 9 3 0 6 0 0 0 - 0 0 0 0 2     .   
+3. Edwards I, Jones M, Carr J, Braunack-Mayer A, Jensen GM. Clinical reasoning 
+strategies in physical therapy. Phys Ther. 2004;84(4):312–30.  h t t  p s : /  / d o  i .  o r g / 1 
+0 . 1 0 9 3 / p t j / 8 4 . 4 . 3 1 2     .   
+4. Kneebone R, Nestel D, Wetzel C, et al. The human face of simulation: patient-
+focused simulation training. Acad Med. 2006;81(10):919–24.  h t t  p s : /  / d o  i .  o r g / 1 
+0 . 1 0 9 7 / 0 1 . A C M . 0 0 0 0 2 3 8 3 2 3 . 7 3 6 2 3 . c 2     .   
+5. Gillette C, Stanton RB, Rockich-Winston N, Rudolph M, Anderson HG Jr. Cost-
+effectiveness of using standardized patients to assess student-pharmacist 
+communication skills. Am J Pharm Educ. 2017;81(10):6120.  h t t  p s : /  / d o  i .  o r g / 1 0 . 
+5 6 8 8 / a j p e 6 1 2 0     .   
+6. Izard SG, Juanes JA, García Peñalvo FJ, Estella JMG, Ledesma MJS, Ruisoto P . 
+Virtual reality as an educational and training tool for medicine. J Med Syst. 
+2018;42(3):50. https:/ /doi.or g/10.10 07/s 10916-018-0900-2.
+7. Kung TH, Cheatham M, Medenilla A, et al. Performance of ChatGPT on 
+USMLE: potential for AI-assisted medical education using large language 
+models. PLOS Digit Health. 2023;2(2).  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 3 7 1 / j o u r n a l . p d i g . 0 0 
+0 0 1 9 8     .   
+8. Alessandri-Bonetti M, Liu HY, Palmesano M, Nguyen VT, Egro FM. Online 
+patient education in body contouring: a comparison between Google and 
+ChatGPT. J Plast Reconstr Aesthet Surg. 2023;87:390–402.  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 
+0 1 6 / j . b j p s . 2 0 2 3 . 1 0 . 0 9 1     .   
+9. Mika AP , Martin JR, Engstrom SM, Polkowski GG, Wilson JM. Assessing Chat-
+GPT responses to common patient questions regarding total hip arthroplasty. 
+J Bone Joint Surg Am. 2023;105(19):1519–26.  h t t  p s : /  / d o  i .  o r g / 1 0 . 2 1 0 6 / J B J S . 2 3 . 
+0 0 2 0 9     .   
+10. Lechien JR, Carroll TL, Huston MN, Naunheim MR. ChatGPT-4 accuracy for 
+patient education in laryngopharyngeal reflux. Eur Arch Otorhinolaryngol. 
+2024;281(5):2547–52. https:/ /doi.or g/10.10 07/s 00405-024-08560-w.
+11. Krittanawong C, Rodriguez M, Kaplin S, Tang WHW. Assessing the potential of 
+ChatGPT for patient education in the cardiology clinic. Prog Cardiovasc Dis. 
+2023;81:109–10. https:/ /doi.or g/10.10 16/j .pcad.2023.10.002.
+12. Civettini I, Zappaterra A, Ramazzotti D, et al. Evaluating the performance of 
+large language models in hematopoietic stem cell transplantation decision 
+making. Br J Haematol. 2024;204(4):1523–8.  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 1 1 1 / b j h . 1 9 2 0 
+0     .   
+13. Rao A, Pang M, Kim J, et al. Assessing the utility of ChatGPT throughout the 
+entire clinical workflow: development and usability study. J Med Internet Res. 
+2023;25. https:/ /doi.or g/10.21 96/4 8659.
+14. Kasneci E, Sessler K, Küchemann S, et al. ChatGPT for good? On opportunities 
+and challenges of large language models for education. Learn Individ Differ. 
+2023;103:102274. https:/ /doi.or g/10.10 16/j .lindif.2023.102274.
+15. Bosse HM, Mohr J, Buss B, et al. The benefit of repetitive skills training and 
+frequency of expert feedback in the early acquisition of procedural skills. BMC 
+Med Educ. 2015;15(1). https:/ /doi.or g/10.11 86/s 12909-015-0286-5.
+16. Li Q, Ma EL, Liu J, Fang LQ, Xia T. Pre-training evaluation and feedback 
+improve medical students’ skills in basic life support. Med Teach. 2011;33(10). 
+https:/ /doi.or g/10.31 09/0 142159X.2011.600360.
+17. Burgess A, van Diggele C, Roberts C, Mellis C. Feedback in the clinical setting. 
+BMC Med Educ. 2020;20(Suppl 2):460.  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 1 8 6 / s 1 2 9 0 9 - 0 2 0 - 0 2 
+2 8 0 - 5     .   
+18. Burns CL. Using debriefing and feedback in simulation to improve participant 
+performance: an educator’s perspective. Int J Med Educ. 2015;6:118–20. 
+https:/ /doi.or g/10.51 16/i jme.55fb.3d3a.
+19. Cavalcanti AP , Barbosa A, Carvalho R, et al. Automatic feedback in online 
+learning environments: a systematic literature review. Comput Educ Artif 
+Intell. 2021;2:100027. https:/ /doi.or g/10.10 16/j .caeai.2021.100027.
+20. Hattie J, Timperley H. The power of feedback. Rev Educ Res. 2007;77(1):81–
+112. https:/ /doi.or g/10.31 02/0 03465430298487.
+21. Holderried F, Stegemann-Philipps C, Herschbach L, et al. A generative 
+pretrained transformer (GPT)-powered chatbot as a simulated patient to 
+practice history taking: prospective, mixed methods study. JMIR Med Educ. 
+2024;10(1). https:/ /doi.or g/10.21 96/5 3961.
+22. Benfatah M, Marfak A, Saad E, Hilali A, Nejjari C, Youlyouz-Marfak I. Assessing 
+the efficacy of ChatGPT as a virtual patient in nursing simulation training: a 
+study on nursing students’ experience. Teach Learn Nurs Published Online. 
+2024. https:/ /doi.or g/10.10 16/j .teln.2024.02.005.
+23. Scherr R, Halaseh FF, Spina A, Andalib S, Rivera R. ChatGPT interactive medical 
+simulations for early clinical education: case study. JMIR Med Educ. 2023;9(1). 
+https:/ /doi.or g/10.21 96/4 9877.
+24. Vaughn J, Ford SH, Scott M, Jones C, Lewinski A. Enhancing healthcare educa-
+tion: leveraging ChatGPT for innovative simulation scenarios. Clin Simul Nurs. 
+2024;87. https:/ /doi.or g/10.10 16/j .ecns.2023.101487.
+25. Fürstenberg S, Helm T, Prediger S, Kadmon M, Berberat PO, Harendza S. 
+Assessing clinical reasoning in undergraduate medical students during his-
+tory taking with an empirically derived scale for clinical reasoning indicators. 
+BMC Med Educ. 2020;20(1):368. https:/ /doi.or g/10.11 86/s 12909-020-02260-9.
+26. Ruwe T, Mayweg-Paus E, Embracing. LLM feedback: the role of feedback 
+providers and provider information for feedback effectiveness. Digit Learn 
+Innov. 2024;9. https:/ /doi.or g/10.33 89/f educ.2024.1461362.
+27. Riess H, Kraft-Todd G, E.M.P .A.T.H. Y Acad Med. 2014;89(8):1108–12.  h t t  p s : /  / d o  i .  
+o r g / 1 0 . 1 0 9 7 / A C M . 0 0 0 0 0 0 0 0 0 0 0 0 0 2 8 7     .   
+28. Piza F, Piza P , Schwartzstein RM. The power of nonverbal communication in 
+medical education. Med Teach. 2019;41(4):476–7.  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 0 8 0 / 0 1 4 
+2 1 5 9 X . 2 0 1 8 . 1 4 5 4 5 9 0     .   
+29. Dentella V, Günther F, Leivada E. Systematic testing of three Language 
+models reveals low language accuracy, absence of response stability, and a 
+yes-response bias. Proc Natl Acad Sci. 2023;19(51):e2309583120.  h t t  p s : /  / d o  i .  o r 
+g / 1 0 . 1 0 7 3 / p n a s . 2 3 0 9 5 8 3 1 2 0     .   
+30. Cousin G, Schmid Mast M, Roter DL, Hall JA. Concordance between physician 
+communication style and patient attitudes predicts patient satisfaction. 
+Patient Educ Couns. 2012;87(2):193–7.  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 0 1 6 / j . p e c . 2 0 1 1 . 0 8 . 0 
+0 4     .   
+31. Street RL, Makoul G, Arora NK, Epstein RM. How does communication heal? 
+Pathways linking clinician-patient communication to health outcomes. 
+Patient Educ Couns. 2009;74(3):295–301.  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 0 1 6 / j . p e c . 2 0 0 8 . 1 
+1 . 0 1 5     .   
+32. Yanagita Y, Yokokawa D, Uchida S, Uehara T, Masatomi I. Can AI-generated 
+clinical vignettes in Japanese be used medically and linguistically? J Gen Int 
+Med. 2024. https:/ /doi.or g/10.10 07/s 11606-024-09031-y. epub ehead of print.
+33. Holderried F, Stegemann-Phillips C, Herrmann-Werner A, Festl-Wietek T, 
+Holderried M, Eickhoff C, Mahling M. A language model-powered simulated 
+patient with automated feedback for history taking: prospective study. JMIR 
+Med Educ. 2024;10. https:/ /doi.or g/10.21 96/5 9213.
+34. Goh E, Gallo R, Hom J. Large Language Model influence on diagnostic 
+reasoning: a randomized trial. JAMA Net Open. 2024.  h t t  p s : /  / d o  i .  o r g / 1 0 . 1 0 0 1 / 
+j a m a n e t w o r k o p e n . 2 0 2 4 . 4 0 9 6 9     .   
+Publisher’s note
+Springer Nature remains neutral with regard to jurisdictional claims in 
+published maps and institutional affiliations.

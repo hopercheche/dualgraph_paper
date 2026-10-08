@@ -1,0 +1,224 @@
+{
+  "case_id": "cuhk_di_04_mtx_counseling",
+  "version": "2026-09-28-faculty-clarifications-v2",
+  "faculty_status": "faculty_confirmation_required",
+  "title": "Counseling - Methotrexate",
+  "station": "Patient Counseling",
+  "student_role": "Junior pharmacist",
+  "counterpart_role": "patient",
+  "release_status": "internal_pilot",
+  "faculty_clarifications": {
+    "document": "CUHK_Pharmacy_Four_Case_Interpretation_and_Faculty_Confirmations_20260902_YT.pdf",
+    "pages": [
+      13,
+      14,
+      15
+    ],
+    "authority": "Faculty PDF annotations take precedence over the earlier questions in its body; station-specific teaching conventions, not universal prescribing advice."
+  },
+  "interaction": {
+    "mode": "pharmacist clinic counselling",
+    "languages": [
+      "Hong Kong Cantonese"
+    ],
+    "urgency": "Scheduled counselling visit; no invented time limit"
+  },
+  "doctor": {
+    "name": "JKC",
+    "role": "Patient",
+    "opening": "啱啱睇完醫生，姑娘叫我同藥劑師傾下新藥點食。"
+  },
+  "patient": {
+    "name": "JKC",
+    "patient_code": "JKC",
+    "age": 82,
+    "sex": "male",
+    "hkrid": "A123456",
+    "date_of_birth": "1944-01-01",
+    "allergies": "NKDA",
+    "otc_tcm": "No OTC medicines or TCM supplements",
+    "current_illness": "No current acute illness",
+    "medical_history": [
+      "Rheumatoid arthritis",
+      "Hypertension",
+      "Type 2 diabetes",
+      "Chronic kidney disease",
+      "Atrial fibrillation",
+      "Dyslipidemia"
+    ],
+    "living_arrangement": "Lives with daughter; the simulated speaker is the patient himself",
+    "medicines": [
+      "New prescription: methotrexate 2.5 mg tablet, one tablet orally once weekly for four weeks",
+      "New prescription: folic acid 5 mg tablet, one tablet orally once weekly for four weeks"
+    ],
+    "other_medicines": "The supplied other medicine list is from a previous hospital stay, not a confirmed current reconciliation. Do not assert current use or that there are no other medicines.",
+    "prescription_context": "Doctor has checked this prescription; the station asks the pharmacist to explain how to take it."
+  },
+  "dialogue_policy": {
+    "reveal_only_when_asked": [
+      "Known patient identity, allergy, medicines and history; respond only to the requested topic."
+    ],
+    "do_not_reveal": [
+      "Teaching key, grading rules, calculated results, unasked complete history and unsolicited medication counselling."
+    ],
+    "challenge_rules": [
+      "At a natural transition, ask one unanswered checklist question, with its prompt code. Never repeat a consumed prompt or answer the question yourself."
+    ]
+  },
+  "station_policy": {
+    "counseling_scope": "Prescription already checked; counsel within faculty station, do not infer general prescribing safety."
+  },
+  "assessment_rules": [
+    "Use English feedback, Cantonese lay language and English drug names.",
+    "Identity: no name inquiry/confirmation auto-fail; name checked but no second identifier is feedback only, no deduction.",
+    "Allergy omission is auto-fail; asking later in the consultation is not omission. Feedback should recommend checking early.",
+    "Optional items and the second identifier cannot lower the raw score.",
+    "Evaluate logical ordering, understandable explanations and response to patient questions; do not infer tone or spoken fluency from text.",
+    "T14: explicit double-dose advice is an unsafe critical error; omission alone does not trigger auto-fail. T06 day-window mistakes or incomplete explanation use the one-subgrade rule, not automatic failure. If the learner explicitly says never double, mark T14 met.",
+    "T08 whole-grade deduction is for actual same-day advice, not mere omission. T07 purpose errors are feedback-only, not a lost base mark.",
+    "T05 omission failure applies specifically to weekly frequency emphasis. Missing tablet strength or four-week duration belongs to T15, not an invented weekly-frequency omission. Explicitly wrong dosing/frequency still requires an exact student quote and separate safety assessment."
+  ],
+  "faculty_confirmation_required": [
+    "Numeric conversion and station time limit require calibration; pilot feedback is not an official grade.",
+    "Nuanced unsafe-advice examples, including dismissing muscle breakdown, require faculty calibration."
+  ],
+  "manual_review_rubric_ids": [],
+  "rubric": [
+    {
+      "id": "T01",
+      "label": "Ask or confirm patient name",
+      "dimension": "skills",
+      "level": "safety_critical"
+    },
+    {
+      "id": "T02",
+      "label": "Ask drug allergies at any point before closing",
+      "dimension": "skills",
+      "level": "safety_critical"
+    },
+    {
+      "id": "T03",
+      "label": "Introduce self and ask current medicines and medical history",
+      "dimension": "skills",
+      "level": "required"
+    },
+    {
+      "id": "T04",
+      "label": "Explain MTX purpose for rheumatoid arthritis and delayed benefit at 3-6 weeks",
+      "dimension": "knowledge",
+      "level": "core"
+    },
+    {
+      "id": "T05",
+      "label": "Emphasize that methotrexate is taken ONCE WEEKLY, not daily",
+      "dimension": "knowledge",
+      "level": "safety_critical"
+    },
+    {
+      "id": "T06",
+      "label": "Explain missed weekly doses using the faculty-approved weekday examples; never double",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "T_MISSED_DOSE"
+    },
+    {
+      "id": "T07",
+      "label": "Explain folic acid purpose (reducing MTX adverse effects)",
+      "dimension": "knowledge",
+      "level": "bonus"
+    },
+    {
+      "id": "T08",
+      "label": "Schedule folic acid 5 mg once weekly on a different day from MTX",
+      "dimension": "knowledge",
+      "level": "core"
+    },
+    {
+      "id": "T09",
+      "label": "Explain blood count, renal and liver tests every 2-3 months",
+      "dimension": "knowledge",
+      "level": "core"
+    },
+    {
+      "id": "T10",
+      "label": "Explain infection/bruising, liver/GI/respiratory warning symptoms and when to seek professional help",
+      "dimension": "knowledge",
+      "level": "core"
+    },
+    {
+      "id": "T11",
+      "label": "Use organised, understandable counselling and professional responses",
+      "dimension": "skills",
+      "level": "required"
+    },
+    {
+      "id": "T12",
+      "label": "Optional teach-back and checking patient understanding",
+      "dimension": "skills",
+      "level": "bonus"
+    },
+    {
+      "id": "T13",
+      "label": "Optional second identifier, OTC/TCM inquiry and lifestyle advice",
+      "dimension": "skills",
+      "level": "bonus"
+    },
+    {
+      "id": "T14",
+      "label": "Do not recommend a double methotrexate dose to replace a missed dose",
+      "dimension": "knowledge",
+      "level": "safety_critical"
+    },
+    {
+      "id": "T15",
+      "label": "Explain the prescribed methotrexate strength and course: 2.5 mg one tablet for four weeks",
+      "dimension": "knowledge",
+      "level": "core"
+    }
+  ],
+  "expected_clinical_answer": [
+    "YT 4.1: the patient JKC himself is the role; his daughter only represented him in the demonstration.",
+    "This counselling prescription is assumed checked: methotrexate 2.5 mg one tablet orally once weekly for four weeks; folic acid 5 mg once weekly for four weeks on a different day. Do not test renal prescribing/dispensing appropriateness or add ibuprofen/pantoprazole review deductions (YT 4.2-4.4, 4.11). This is not general prescribing approval.",
+    "MTX is a DMARD for RA symptoms and disease progression, benefit usually 3-6 weeks. With or without food accepted; after food if stomach sensitive is optional.",
+    "Missed Monday MTX dose: if remembered Tuesday/Wednesday/Thursday, take then and resume next Monday. If Friday/Saturday/Sunday, either take then and adopt that weekday thereafter, or wait until next Monday. Never take a double dose on the same day. These explicit examples govern the ambiguous day ranges (YT 4.5).",
+    "If unable to distinguish the early/late missed-dose paths, deduct one subgrade; active double-dose advice is auto-fail. Do not call mere omission double dosing.",
+    "Folic acid limits MTX adverse effects. Wrong purpose is feedback only. Advising same-day MTX/folic acid lowers one whole letter grade (A to B, B to C), not auto-fail (YT 4.6,4.12).",
+    "FBC, RFT and LFT every 2-3 months: missing/incomplete is one-subgrade deduction. Pulmonary function testing is only if required by doctor/baseline or symptoms; omission has no deduction (YT 4.8).",
+    "Discuss infection/sore throat/bruising, liver warning symptoms/dark urine, mouth ulcers and breathlessness; refer concerning symptoms for assessment.",
+    "Hand hygiene/alcohol advice and OTC/TCM inquiry are feedback-only enrichment when absent; no penalty. Patient denies TCM use.",
+    "Name omission and allergy omission are auto-fail. Name checked without HKID/DOB is feedback only. Allergy may be asked at any point; late inquiry only merits organisational feedback, not a failure (YT 4.12).",
+    "Weekly dosing emphasis omission is auto-fail (YT 4.2). No renal-calculation result may be provided by the AI role."
+  ],
+  "guidance_permissions": {
+    "T_MISSED_DOSE": "After substantive MTX counselling or an invitation for questions, ask what to do if the weekly medicine is forgotten, only if the learner has not already explained it.",
+    "T_FOLIC_INTRO": "Original MTX assessment form row 19: after MTX counselling at a transition or closing, ask why the other prescribed medicine is needed, only if folic acid has not been explained. Do not supply its purpose, timing or dose. This optional-purpose prompt does not create a new penalty."
+  },
+  "patient_question_checklist": [
+    {
+      "prompt_code": "T_MISSED_DOSE",
+      "condition": "At a natural transition, ask what to do if the weekly medicine is forgotten, only if the learner has not already explained it."
+    },
+    {
+      "prompt_code": "T_FOLIC_INTRO",
+      "condition": "After MTX counselling, ask about the other prescribed medicine only if folic acid remains unexplained; never during identity/history gathering and never supply the answer."
+    }
+  ],
+  "asr": {
+    "context": "Cantonese patient counselling; transcribe only speech. Preserve English drug names, numbers, weekly versus daily and negation. Vocabulary supplies no clinical answers.",
+    "critical_hotwords": [
+      "methotrexate",
+      "MTX",
+      "folic acid",
+      "2.5 mg",
+      "5 mg",
+      "once weekly",
+      "once daily",
+      "rheumatoid arthritis",
+      "FBC",
+      "RFT",
+      "LFT",
+      "missed dose",
+      "double dose"
+    ]
+  }
+}

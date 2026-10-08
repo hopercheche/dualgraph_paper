@@ -1,0 +1,153 @@
+{
+  "method": "Each token in the exact user JSON is assigned by offset midpoint to one top-level value; system tokens added separately. Keys and delimiters are structure. Sum equals first-call content reference tokens.",
+  "groups": {
+    "system": "指令、政策与核验契约",
+    "case": "病例与药学答案",
+    "rubric": "评分 rubric",
+    "conversation": "带角色的对话历史",
+    "evidence": "学生原文与证据索引",
+    "structure": "字段与序列化标记"
+  },
+  "videos": [
+    {
+      "id": "case1_fungal_toe_v01",
+      "label": "甲癣咨询 v01",
+      "total": 16061,
+      "groups": {
+        "system": 9696,
+        "structure": 137,
+        "case": 961,
+        "rubric": 514,
+        "conversation": 1569,
+        "evidence": 3184
+      },
+      "private_peak": 3595
+    },
+    {
+      "id": "case1_fungal_toe_v02",
+      "label": "甲癣咨询 v02",
+      "total": 19897,
+      "groups": {
+        "system": 9959,
+        "structure": 137,
+        "case": 961,
+        "rubric": 514,
+        "conversation": 2284,
+        "evidence": 6042
+      },
+      "private_peak": 4276
+    },
+    {
+      "id": "case1_fungal_toe_v03",
+      "label": "甲癣咨询 v03",
+      "total": 18016,
+      "groups": {
+        "system": 9883,
+        "structure": 137,
+        "case": 961,
+        "rubric": 514,
+        "conversation": 1703,
+        "evidence": 4818
+      },
+      "private_peak": 3697
+    },
+    {
+      "id": "case1_fungal_toe_v04",
+      "label": "甲癣咨询 v04",
+      "total": 17927,
+      "groups": {
+        "system": 9923,
+        "structure": 137,
+        "case": 961,
+        "rubric": 514,
+        "conversation": 1642,
+        "evidence": 4750
+      },
+      "private_peak": 3674
+    },
+    {
+      "id": "case1_fungal_toe_v05",
+      "label": "甲癣咨询 v05",
+      "total": 15596,
+      "groups": {
+        "system": 9658,
+        "structure": 135,
+        "case": 961,
+        "rubric": 514,
+        "conversation": 1197,
+        "evidence": 3131
+      },
+      "private_peak": 3229
+    },
+    {
+      "id": "case2_migraine_v01",
+      "label": "偏头痛咨询 v01",
+      "total": 16914,
+      "groups": {
+        "system": 9644,
+        "structure": 137,
+        "case": 1089,
+        "rubric": 642,
+        "conversation": 1220,
+        "evidence": 4182
+      },
+      "private_peak": 3554
+    },
+    {
+      "id": "case2_migraine_v02",
+      "label": "偏头痛咨询 v02",
+      "total": 18239,
+      "groups": {
+        "system": 9727,
+        "structure": 137,
+        "case": 1089,
+        "rubric": 642,
+        "conversation": 1520,
+        "evidence": 5124
+      },
+      "private_peak": 3796
+    },
+    {
+      "id": "case2_migraine_v03",
+      "label": "偏头痛咨询 v03",
+      "total": 19461,
+      "groups": {
+        "system": 9885,
+        "structure": 137,
+        "case": 1089,
+        "rubric": 642,
+        "conversation": 1543,
+        "evidence": 6165
+      },
+      "private_peak": 3836
+    },
+    {
+      "id": "case2_migraine_v04",
+      "label": "偏头痛咨询 v04",
+      "total": 14105,
+      "groups": {
+        "system": 9522,
+        "structure": 137,
+        "case": 1089,
+        "rubric": 642,
+        "conversation": 659,
+        "evidence": 2056
+      },
+      "private_peak": 2958
+    },
+    {
+      "id": "case2_migraine_v05",
+      "label": "偏头痛咨询 v05",
+      "total": 16228,
+      "groups": {
+        "system": 9712,
+        "structure": 137,
+        "case": 1089,
+        "rubric": 642,
+        "conversation": 1057,
+        "evidence": 3591
+      },
+      "private_peak": 3380
+    }
+  ]
+}

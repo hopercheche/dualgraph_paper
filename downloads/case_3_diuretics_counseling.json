@@ -1,0 +1,292 @@
+{
+  "case_id": "cuhk_di_03_diuretics_counseling",
+  "version": "2026-09-28-faculty-clarifications-v1",
+  "faculty_status": "faculty_confirmation_required",
+  "title": "Counseling - Diuretics and Rosuvastatin",
+  "station": "Patient Counseling",
+  "student_role": "Junior pharmacist",
+  "counterpart_role": "patient",
+  "release_status": "internal_pilot",
+  "faculty_clarifications": {
+    "document": "CUHK_Pharmacy_Four_Case_Interpretation_and_Faculty_Confirmations_20260902_YT.pdf",
+    "pages": [
+      13,
+      14,
+      15
+    ],
+    "authority": "Faculty PDF annotations take precedence over the earlier questions in its body; station-specific teaching conventions, not universal prescribing advice."
+  },
+  "interaction": {
+    "mode": "pharmacist clinic counselling",
+    "languages": [
+      "Hong Kong Cantonese"
+    ],
+    "urgency": "Scheduled counselling visit; no invented time limit"
+  },
+  "doctor": {
+    "name": "陳百強",
+    "role": "Patient",
+    "opening": "啱啱睇完醫生，姑娘叫我走之前同藥劑師傾下點食藥。"
+  },
+  "patient": {
+    "name": "陳百強",
+    "patient_code": "PKC",
+    "age": 72,
+    "sex": "male",
+    "hkrid": "A1234567",
+    "date_of_birth": "1954-01-01",
+    "allergies": "NKDA",
+    "otc_tcm": "No OTC medicines or TCM supplements",
+    "current_illness": "No current acute illness; no oedema now",
+    "medical_history": [
+      "Heart failure",
+      "STEMI in December 2024",
+      "Hypertension",
+      "Type 2 diabetes",
+      "Chronic kidney disease",
+      "Depression and anxiety",
+      "Migraine"
+    ],
+    "medicines": [
+      "Silodosin 8 mg orally daily",
+      "Metoprolol succinate ER 50 mg orally daily",
+      "Dapagliflozin 10 mg orally daily",
+      "Spironolactone 25 mg orally daily",
+      "Aspirin 80 mg orally daily",
+      "Clopidogrel 75 mg orally daily",
+      "Pantoprazole 40 mg orally daily",
+      "Citalopram 20 mg orally daily",
+      "Entresto 100 mg orally twice daily",
+      "Frusemide 20 mg orally daily as required for leg oedema, maximum 20 mg/day",
+      "Rosuvastatin 20 mg orally daily, starting today"
+    ],
+    "experience": "Two earlier episodes of leg swelling improved after reducing salt and fluid. Has not taken frusemide yet and does not know when to use it. Reports taking the existing medicines regularly."
+  },
+  "dialogue_policy": {
+    "reveal_only_when_asked": [
+      "Known patient identity, allergy, medicines and history; respond only to the requested topic."
+    ],
+    "do_not_reveal": [
+      "Teaching key, grading rules, calculated results, unasked complete history and unsolicited medication counselling."
+    ],
+    "challenge_rules": [
+      "At a natural transition, ask one unanswered checklist question, with its prompt code. Never repeat a consumed prompt or answer the question yourself."
+    ]
+  },
+  "station_policy": {
+    "counseling_scope": "Prescription already checked; counsel within faculty station, do not infer general prescribing safety."
+  },
+  "assessment_rules": [
+    "Use English feedback, Cantonese lay language and English drug names.",
+    "Identity: no name inquiry/confirmation auto-fail; name checked but no second identifier is feedback only, no deduction.",
+    "Allergy omission is auto-fail; asking later in the consultation is not omission. Feedback should recommend checking early.",
+    "Optional items and the second identifier cannot lower the raw score.",
+    "Evaluate logical ordering, understandable explanations and response to patient questions; do not infer tone or spoken fluency from text.",
+    "D07 auto-fail concerns inability to identify ANY heart-failure symptom. Recognising one correct symptom meets this limited safety screen. Incomplete broader explanation belongs to D18, not D07; D18 incomplete after its prompt receives one subgrade reduction."
+  ],
+  "faculty_confirmation_required": [
+    "Numeric conversion and station time limit require calibration; pilot feedback is not an official grade.",
+    "Nuanced unsafe-advice examples, including dismissing muscle breakdown, require faculty calibration."
+  ],
+  "manual_review_rubric_ids": [],
+  "rubric": [
+    {
+      "id": "D01",
+      "label": "Ask or confirm patient name",
+      "dimension": "skills",
+      "level": "safety_critical"
+    },
+    {
+      "id": "D02",
+      "label": "Ask about drug allergies",
+      "dimension": "skills",
+      "level": "safety_critical"
+    },
+    {
+      "id": "D03",
+      "label": "Introduce self and ask current medicines, OTC/TCM and medical history",
+      "dimension": "skills",
+      "level": "required"
+    },
+    {
+      "id": "D04",
+      "label": "Explain rosuvastatin indication, 20 mg daily, consistent time, with/without food",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "D_STATIN_INTRO"
+    },
+    {
+      "id": "D05",
+      "label": "Explain muscle/liver adverse effects and appropriate urgent action",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_codes": [
+        "D_STATIN_MYOPATHY",
+        "D_STATIN_RHABDO"
+      ]
+    },
+    {
+      "id": "D06",
+      "label": "Explain statin adherence and missed dose: under 12 hours take, 12 hours or more skip, never double",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "D_MISSED_DOSE"
+    },
+    {
+      "id": "D07",
+      "label": "Identify at least one heart-failure symptom; absence of any symptom recognition triggers the source failure rule",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "D_HF_SYMPTOMS"
+    },
+    {
+      "id": "D08",
+      "label": "Frusemide 20 mg during daytime PRN fluid retention, maximum 20 mg/day; no self-adjustment",
+      "dimension": "knowledge",
+      "level": "safety_critical",
+      "prompt_code": "D_DIURETIC_USE"
+    },
+    {
+      "id": "D09",
+      "label": "Explain pitting oedema checks and daily weight/BP monitoring",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "D_OEDEMA"
+    },
+    {
+      "id": "D10",
+      "label": "Avoid PRN frusemide with dizziness, low BP or dehydration; seek help if not improving",
+      "dimension": "knowledge",
+      "level": "core"
+    },
+    {
+      "id": "D11",
+      "label": "Discuss salt and individualized fluid management",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "D_FLUID"
+    },
+    {
+      "id": "D12",
+      "label": "Explain at least two urgent red flags: severe breathlessness, chest pain, faint/confusion, rapidly worsening swelling",
+      "dimension": "knowledge",
+      "level": "safety_critical"
+    },
+    {
+      "id": "D13",
+      "label": "Counselling is logically organised, understandable and professional",
+      "dimension": "skills",
+      "level": "required"
+    },
+    {
+      "id": "D14",
+      "label": "Optional vaccination, activity or leg-elevation advice",
+      "dimension": "knowledge",
+      "level": "bonus"
+    },
+    {
+      "id": "D15",
+      "label": "Optional teach-back to check understanding",
+      "dimension": "skills",
+      "level": "bonus"
+    },
+    {
+      "id": "D16",
+      "label": "Optional second identifier after confirming name",
+      "dimension": "skills",
+      "level": "bonus"
+    },
+    {
+      "id": "D17",
+      "label": "Explain antacid separation by at least two hours after rosuvastatin and no significant grapefruit interaction",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "D_JUICE"
+    },
+    {
+      "id": "D18",
+      "label": "Explain the relevant heart-failure symptoms and self-care beyond identifying one symptom",
+      "dimension": "knowledge",
+      "level": "core",
+      "prompt_code": "D_HF_SYMPTOMS"
+    }
+  ],
+  "expected_clinical_answer": [
+    "Counsel frusemide 20 mg orally during daytime only as needed for fluid build-up, maximum 20 mg daily; no self-increase. Explain pitting checks by pressing shin/top of foot for a few seconds.",
+    "Recognise breathlessness (including lying flat/night), leg/ankle/abdominal swelling, fatigue/exercise intolerance and poor appetite. No HF symptom recognition remains an auto-fail under the original rubric.",
+    "Urgent referral: at least two of severe breathlessness, chest pain, fainting/confusion or rapidly worsening swelling (YT 3.6).",
+    "Limit salt; individualized fluid plan, usual educational range 1.5-2 L/day, not a universal patient instruction. Monitor BP/weight; do not invent a numeric weight escalation threshold absent faculty confirmation.",
+    "Avoid PRN use if dizzy, dehydrated/diarrhoea or SBP below 100 mmHg; rise carefully; seek help for non-improving symptoms.",
+    "Rosuvastatin 20 mg daily for cholesterol control, same time, with/without food. Unexplained muscle pain/weakness warrants prompt professional review; severe symptoms with dark urine warrant stopping and urgent care. Discuss liver warning signs and blood monitoring.",
+    "Per station checklist, missed rosuvastatin: under 12 hours take when remembered and use that time thereafter; 12 hours or more skip until next dose; never double.",
+    "Antacids containing magnesium/aluminium at least two hours after rosuvastatin. Rosuvastatin does not have a significant grapefruit interaction. Ask which juice, avoid class-wide statin advice.",
+    "YT 3.5: correct completion after an allowed prompt has no prompt penalty. Still incomplete after that prompt lowers one subgrade. Apply once per rubric, not per missing phrase.",
+    "YT 3.7: mentioning vaccination/activity/leg elevation can earn a single one-subgrade bonus; omission is not a deficit. Teach-back and second identifier are feedback-only enrichment, not bonus points."
+  ],
+  "guidance_permissions": {
+    "D_MISSED_DOSE": "Ask what to do if a rosuvastatin dose is forgotten, only if not answered.",
+    "D_HF_SYMPTOMS": "Ask how to recognise heart failure symptoms when not explained.",
+    "D_DIURETIC_USE": "Ask when/how to use the prescribed water tablet if not explained.",
+    "D_OEDEMA": "Ask how to tell if leg swelling is fluid retention if not explained.",
+    "D_FLUID": "Ask about drinking fluids if that advice is absent.",
+    "D_JUICE": "Ask whether fruit juice must be avoided if not addressed; do not claim a personal juice preference not in the source.",
+    "D_STATIN_INTRO": "If the learner has not initiated new-statin counselling at a natural transition, ask about the additional new medicine the doctor prescribed; do not supply the counselling answer.",
+    "D_STATIN_MYOPATHY": "If muscle-pain action is not explained, ask what to do if muscle pain occurs; do not supply the action.",
+    "D_STATIN_RHABDO": "If severe muscle breakdown is not discussed, ask about the concern that cholesterol medicine can cause muscle breakdown; this is a hypothetical concern, not a current symptom."
+  },
+  "patient_question_checklist": [
+    {
+      "prompt_code": "D_MISSED_DOSE",
+      "condition": "Ask what to do if a rosuvastatin dose is forgotten, only if not answered."
+    },
+    {
+      "prompt_code": "D_HF_SYMPTOMS",
+      "condition": "Ask how to recognise heart failure symptoms when not explained."
+    },
+    {
+      "prompt_code": "D_DIURETIC_USE",
+      "condition": "Ask when/how to use the prescribed water tablet if not explained."
+    },
+    {
+      "prompt_code": "D_OEDEMA",
+      "condition": "Ask how to tell if leg swelling is fluid retention if not explained."
+    },
+    {
+      "prompt_code": "D_FLUID",
+      "condition": "Ask about drinking fluids if that advice is absent."
+    },
+    {
+      "prompt_code": "D_JUICE",
+      "condition": "Ask whether fruit juice must be avoided if not addressed; do not claim a personal juice preference not in the source."
+    },
+    {
+      "prompt_code": "D_STATIN_INTRO",
+      "condition": "If the learner has not initiated new-statin counselling at a natural transition, ask about the additional new medicine the doctor prescribed; do not supply the counselling answer."
+    },
+    {
+      "prompt_code": "D_STATIN_MYOPATHY",
+      "condition": "If muscle-pain action is not explained, ask what to do if muscle pain occurs; do not supply the action."
+    },
+    {
+      "prompt_code": "D_STATIN_RHABDO",
+      "condition": "If severe muscle breakdown is not discussed, ask about the concern that cholesterol medicine can cause muscle breakdown; this is a hypothetical concern, not a current symptom."
+    }
+  ],
+  "asr": {
+    "context": "Cantonese patient counselling. Transcribe only spoken words, English drug names, numbers and negation. Vocabulary is not a source of answers.",
+    "critical_hotwords": [
+      "frusemide",
+      "furosemide",
+      "rosuvastatin",
+      "Entresto",
+      "20 mg",
+      "PRN",
+      "NKDA",
+      "heart failure",
+      "muscle pain",
+      "rhabdomyolysis",
+      "antacid",
+      "12 hours"
+    ]
+  }
+}

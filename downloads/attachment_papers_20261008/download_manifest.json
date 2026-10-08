@@ -1,0 +1,421 @@
+[
+  {
+    "name": "Duan",
+    "doi": "10.3389/fmed.2024.1512329",
+    "pdf_url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1512329/pdf",
+    "metadata_error": "HTTP Error 429: Too Many Requests",
+    "status": 200,
+    "content_type": "application/pdf",
+    "size": 3366303,
+    "final_url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1512329/pdf",
+    "local_pdf": "E:\\che\\apricot\\hoper\\CUHK_EDUCON2027_论文研究_20260927\\Evidence_Graph_Judge_论文方案_20260930\\downloads\\attachment_papers_20261008\\Duan.pdf"
+  },
+  {
+    "name": "Trevena",
+    "doi": "10.3389/fphys.2024.1424931",
+    "pdf_url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2024.1424931/pdf",
+    "metadata": {
+      "title": [
+        "Model-driven engineering for digital twins: a graph model-based patient simulation application"
+      ],
+      "author": [
+        {
+          "given": "William",
+          "family": "Trevena",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Xiang",
+          "family": "Zhong",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Amos",
+          "family": "Lal",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lucrezia",
+          "family": "Rovati",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Edin",
+          "family": "Cubro",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yue",
+          "family": "Dong",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Phillip",
+          "family": "Schulte",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Ognjen",
+          "family": "Gajic",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Frontiers in Physiology"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            12
+          ]
+        ]
+      },
+      "volume": "15",
+      "issue": null,
+      "article-number": "1424931",
+      "page": null
+    },
+    "status": 200,
+    "content_type": "application/pdf",
+    "size": 11614670,
+    "final_url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2024.1424931/pdf",
+    "local_pdf": "E:\\che\\apricot\\hoper\\CUHK_EDUCON2027_论文研究_20260927\\Evidence_Graph_Judge_论文方案_20260930\\downloads\\attachment_papers_20261008\\Trevena.pdf"
+  },
+  {
+    "name": "Wu",
+    "doi": "10.3389/fmed.2022.855403",
+    "pdf_url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.855403/pdf",
+    "metadata": {
+      "title": [
+        "Virtual Simulation in Undergraduate Medical Education: A Scoping Review of Recent Practice"
+      ],
+      "author": [
+        {
+          "given": "Qingming",
+          "family": "Wu",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yubin",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lili",
+          "family": "Lu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Yong",
+          "family": "Chen",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Hui",
+          "family": "Long",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Jun",
+          "family": "Wang",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "Frontiers in Medicine"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2022,
+            3,
+            30
+          ]
+        ]
+      },
+      "volume": "9",
+      "issue": null,
+      "article-number": "855403",
+      "page": null
+    },
+    "status": 200,
+    "content_type": "application/pdf",
+    "size": 1117204,
+    "final_url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.855403/pdf",
+    "local_pdf": "E:\\che\\apricot\\hoper\\CUHK_EDUCON2027_论文研究_20260927\\Evidence_Graph_Judge_论文方案_20260930\\downloads\\attachment_papers_20261008\\Wu.pdf"
+  },
+  {
+    "name": "Brugge",
+    "doi": "10.1186/s12909-024-06399-7",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1186/s12909-024-06399-7.pdf",
+    "metadata": {
+      "title": [
+        "Large language models improve clinical decision making of medical students through patient simulation and structured feedback: a randomized controlled trial"
+      ],
+      "author": [
+        {
+          "given": "Emilia",
+          "family": "Brügge",
+          "sequence": "first",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Sarah",
+          "family": "Ricchizzi",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Malin",
+          "family": "Arenbeck",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Marius Niklas",
+          "family": "Keller",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Lina",
+          "family": "Schur",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Walter",
+          "family": "Stummer",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Markus",
+          "family": "Holling",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Max Hao",
+          "family": "Lu",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        },
+        {
+          "given": "Dogus",
+          "family": "Darici",
+          "sequence": "additional",
+          "affiliation": [],
+          "role": [
+            {
+              "vocabulary": "crossref",
+              "role": "author"
+            }
+          ]
+        }
+      ],
+      "container-title": [
+        "BMC Medical Education"
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2024,
+            11,
+            28
+          ]
+        ]
+      },
+      "volume": "24",
+      "issue": "1",
+      "article-number": "1391",
+      "page": null
+    },
+    "status": 200,
+    "content_type": "application/pdf",
+    "size": 2770942,
+    "final_url": "https://link.springer.com/content/pdf/10.1186/s12909-024-06399-7.pdf?error=cookies_not_supported&code=cf153e1e-da90-4ad5-a21b-c5b50fdebb4b",
+    "local_pdf": "E:\\che\\apricot\\hoper\\CUHK_EDUCON2027_论文研究_20260927\\Evidence_Graph_Judge_论文方案_20260930\\downloads\\attachment_papers_20261008\\Brugge.pdf"
+  },
+  {
+    "name": "Sezer",
+    "doi": "10.1186/s12909-023-04860-7",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1186/s12909-023-04860-7.pdf",
+    "metadata_error": "HTTP Error 429: Too Many Requests",
+    "status": 200,
+    "content_type": "application/pdf",
+    "size": 1131600,
+    "final_url": "https://link.springer.com/content/pdf/10.1186/s12909-023-04860-7.pdf?error=cookies_not_supported&code=b7c62fad-413d-4310-a3bb-6b938a4e1682",
+    "local_pdf": "E:\\che\\apricot\\hoper\\CUHK_EDUCON2027_论文研究_20260927\\Evidence_Graph_Judge_论文方案_20260930\\downloads\\attachment_papers_20261008\\Sezer.pdf"
+  },
+  {
+    "name": "Song",
+    "doi": "10.1371/journal.pdig.0001474",
+    "pdf_url": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001474&type=printable",
+    "metadata_error": "HTTP Error 429: Too Many Requests",
+    "status": 200,
+    "content_type": "application/pdf",
+    "size": 1871463,
+    "final_url": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001474&type=printable",
+    "local_pdf": "E:\\che\\apricot\\hoper\\CUHK_EDUCON2027_论文研究_20260927\\Evidence_Graph_Judge_论文方案_20260930\\downloads\\attachment_papers_20261008\\Song.pdf"
+  },
+  {
+    "name": "Zhang",
+    "doi": "10.1186/s12909-024-05982-2",
+    "pdf_url": "https://link.springer.com/content/pdf/10.1186/s12909-024-05982-2.pdf",
+    "metadata_error": "HTTP Error 429: Too Many Requests",
+    "status": 200,
+    "content_type": "application/pdf",
+    "size": 1630407,
+    "final_url": "https://link.springer.com/content/pdf/10.1186/s12909-024-05982-2.pdf?error=cookies_not_supported&code=bf9a7cca-55c5-4e46-8737-3ff7254bec1f",
+    "local_pdf": "E:\\che\\apricot\\hoper\\CUHK_EDUCON2027_论文研究_20260927\\Evidence_Graph_Judge_论文方案_20260930\\downloads\\attachment_papers_20261008\\Zhang.pdf"
+  }
+]

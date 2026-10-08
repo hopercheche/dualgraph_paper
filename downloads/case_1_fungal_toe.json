@@ -1,0 +1,273 @@
+{
+  "case_id": "cuhk_di_01_fungal_toe",
+  "version": "2026-09-28-faculty-clarifications-v1",
+  "faculty_status": "faculty_confirmation_required",
+  "title": "Drug Information Case 1 - Fungal Toe",
+  "station": "Drug Information",
+  "student_role": "Junior pharmacist",
+  "interaction": {
+    "mode": "simulated phone call",
+    "languages": [
+      "Hong Kong Cantonese",
+      "English"
+    ],
+    "urgency": "ASAP because the patient may be discharged soon"
+  },
+  "doctor": {
+    "name": "Dr Anson Lo",
+    "role": "Resident doctor",
+    "telephone": "3943 1000",
+    "opening": "藥劑師你好，我有位病人可能好快出院，佢有多隻腳趾甲真菌感染。我諗緊用 itraconazole，可唔可以幫我睇下應該點樣用？"
+  },
+  "patient": {
+    "patient_code": "PKC",
+    "age": 78,
+    "sex": "female",
+    "location": "PWH Ward 10A Bed 5",
+    "admission_date": "2025-04-13",
+    "weight_lb": 141,
+    "height_cm": 150,
+    "allergies": "NKDA",
+    "medical_history": [
+      "Heart failure with reduced ejection fraction, LVEF 35%",
+      "Hypertension",
+      "Type 2 diabetes mellitus",
+      "Hyperlipidaemia"
+    ],
+    "admission_problem": [
+      "Fever, shortness of breath, wheezing and increasing sputum",
+      "SpO2 88% at Accident and Emergency",
+      "Suspected pneumonia with right lower-zone haziness or possible collapse",
+      "Silent aspiration"
+    ],
+    "vital_signs": {
+      "temperature_c": 38.4,
+      "blood_pressure_mmHg": "145/85",
+      "heart_rate_per_min": 99,
+      "respiratory_rate_per_min": 28,
+      "spo2": "95% on oxygen 2 L/min"
+    },
+    "laboratory_results": [
+      {
+        "test": "Potassium",
+        "value": "5.4 mmol/L",
+        "flag": "high"
+      },
+      {
+        "test": "Urea",
+        "value": "10.1 mmol/L",
+        "flag": "high"
+      },
+      {
+        "test": "Creatinine",
+        "value": "154 micromol/L",
+        "flag": "high",
+        "note": "baseline approximately 118"
+      },
+      {
+        "test": "Estimated creatinine clearance",
+        "value": "approximately 27 mL/min",
+        "method": "Cockcroft-Gault"
+      },
+      {
+        "test": "Albumin",
+        "value": "30 g/L",
+        "flag": "low"
+      },
+      {
+        "test": "CRP",
+        "value": "89.8 mg/L",
+        "flag": "high"
+      },
+      {
+        "test": "WBC",
+        "value": "12.9 x10^9/L",
+        "flag": "high"
+      },
+      {
+        "test": "Haemoglobin",
+        "value": "8.9 g/dL",
+        "flag": "low"
+      },
+      {
+        "test": "MCV",
+        "value": "72.6 fL",
+        "flag": "low"
+      },
+      {
+        "test": "Platelets",
+        "value": "379 x10^9/L",
+        "flag": "high"
+      }
+    ],
+    "medicines": [
+      "Amoxicillin/clavulanate IV",
+      "Metoprolol tartrate 50 mg orally daily",
+      "Atorvastatin 40 mg orally daily",
+      "Amlodipine 10 mg orally daily",
+      "Metformin 250 mg orally daily - hold during admission",
+      "Sacubitril/valsartan 100 mg orally twice daily",
+      "Spironolactone 25 mg orally daily",
+      "Dapagliflozin 10 mg orally daily",
+      "Paracetamol as required"
+    ],
+    "toe_problem": {
+      "extent": "Approximately 8 of 10 toenails affected",
+      "duration": "Several months",
+      "symptoms": "Great-toe pain when walking",
+      "prior_treatment": "No previous oral or topical antifungal treatment",
+      "exhibit": "Multiple yellow-brown, thickened and dystrophic toenails; the image alone does not establish microbiological diagnosis"
+    }
+  },
+  "dialogue_policy": {
+    "reveal_only_when_asked": [
+      "Extent and duration of the nail problem",
+      "Pain when walking",
+      "Previous antifungal treatment",
+      "Relevant chart details already available to the student"
+    ],
+    "do_not_reveal": [
+      "The expected recommendation",
+      "Rubric wording, grade caps or auto-fail rules",
+      "Unasked-for contraindications or interactions"
+    ],
+    "challenge_rules": [
+      "If the student recommends topical treatment alone, ask whether it is adequate for the extent and likely adherence.",
+      "If the student proposes lowering atorvastatin, explain that high-intensity secondary prevention is important and ask for a safer antifungal plan.",
+      "After the main recommendation is complete, ask what carbamide is, what it does, and which strength is appropriate."
+    ]
+  },
+  "expected_clinical_answer": [
+    "Avoid itraconazole because of heart failure and ventricular dysfunction.",
+    "Identify the clinically important itraconazole-atorvastatin interaction; the supplied rubric notes a maximum atorvastatin dose of 20 mg if co-administered.",
+    "Recommend terbinafine 125 mg orally once daily for 12 weeks under the supplied case teaching key, which applies a 50% dose reduction at creatinine clearance 20 to below 50 mL/min.",
+    "Topical therapy alone is not the expected first-line answer for this extensive presentation.",
+    "Carbamide is urea, acts as a keratolytic, and the expected strength is 40% cream.",
+    "YT 1.4-1.5 confirms terbinafine 125 mg once daily for 12 weeks as the required alternative in THIS renal case. Do not generalize this dose to other patients.",
+    "Diagnosis is already established by the doctor; no mandatory mycological confirmation is added (YT 1.3). Carbamide frequency/duration is optional enrichment (YT 1.6)."
+  ],
+  "asr": {
+    "context": "CUHK pharmacy OSCE phone call. Preserve Cantonese-English code-switching, drug names, dose, duration, contraindication, interaction and negation exactly.",
+    "critical_hotwords": [
+      "itraconazole",
+      "terbinafine",
+      "atorvastatin",
+      "onychomycosis",
+      "carbamide",
+      "urea",
+      "HFrEF",
+      "heart failure",
+      "CYP3A4",
+      "creatinine clearance",
+      "CrCl",
+      "125 mg",
+      "250 mg",
+      "once daily",
+      "12 weeks",
+      "40% cream",
+      "contraindication",
+      "drug interaction"
+    ]
+  },
+  "rubric": [
+    {
+      "id": "F01",
+      "label": "Identify Dr Anson Lo and resident-doctor role",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "F02",
+      "label": "Confirm urgency and construct the complete information need",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "F03",
+      "label": "Obtain relevant patient, disease, renal and medicine information",
+      "level": "core",
+      "dimension": "skills"
+    },
+    {
+      "id": "F04",
+      "label": "Use and communicate at least two drug-information sources",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "F05",
+      "label": "Recognise that itraconazole is unsuitable because of HFrEF",
+      "level": "safety_critical",
+      "prompt_code": "FUNGAL_CHF_PROMPT",
+      "prompted_cap": "C+",
+      "missing_after_prompt": "auto_fail_candidate",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "F06",
+      "label": "Identify the itraconazole-atorvastatin interaction",
+      "level": "safety_critical",
+      "prompt_code": "FUNGAL_STATIN_PROMPT",
+      "prompted_cap": "C+",
+      "missing_after_prompt": "auto_fail_candidate",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "F07",
+      "label": "Recommend terbinafine as the systemic alternative",
+      "level": "core",
+      "missing_cap": "B-",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "F08",
+      "label": "Give terbinafine 125 mg once daily for 12 weeks under the supplied teaching key",
+      "level": "safety_critical",
+      "wrong_final_answer": "auto_fail_candidate",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "F09",
+      "label": "Provide an organised, professional answer within the station time",
+      "level": "required",
+      "dimension": "skills"
+    },
+    {
+      "id": "F10",
+      "label": "Identify carbamide as urea",
+      "level": "bonus",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "F11",
+      "label": "Explain the keratolytic action",
+      "level": "bonus",
+      "dimension": "knowledge"
+    },
+    {
+      "id": "F12",
+      "label": "Recommend 40% cream",
+      "level": "bonus",
+      "dimension": "knowledge"
+    }
+  ],
+  "faculty_confirmation_required": [
+    "Official numeric grade conversion, station time limit and faculty calibration samples.",
+    "Additional concrete auto-fail examples requested at the 23 September meeting."
+  ],
+  "counterpart_role": "doctor",
+  "faculty_clarifications": {
+    "document": "CUHK_Pharmacy_Four_Case_Interpretation_and_Faculty_Confirmations_20260902_YT.pdf",
+    "pages": [
+      13,
+      14,
+      15
+    ],
+    "authority": "Faculty PDF annotations take precedence over the earlier questions in its body; station-specific teaching conventions, not universal prescribing advice."
+  },
+  "assessment_rules": [
+    "English feedback, Cantonese dialogue and English drug names. Do not return student-assessed calculation results.",
+    "The numeric conversion is an Apricot AI proposal pending faculty calibration.",
+    "Clinical prompting is restricted to original rubric permissions, each at most once."
+  ]
+}

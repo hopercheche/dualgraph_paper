@@ -1,0 +1,899 @@
+{
+  "verified_date": "2026-10-08",
+  "selected": [
+    {
+      "id": "R40",
+      "name": "Brugge",
+      "title": "Large language models improve clinical decision making of medical students through patient simulation and structured feedback: a randomized controlled trial",
+      "authors": "Emilia Brügge, Sarah Ricchizzi, Malin Arenbeck, Marius Niklas Keller, Lina Schur, Walter Stummer, Markus Holling, Max Hao Lu, and Dogus Darici",
+      "year": 2024,
+      "venue": "BMC Medical Education, vol. 24, article 1391",
+      "doi": "10.1186/s12909-024-06399-7",
+      "priority": "Core: conversational patient simulation and independent assessment",
+      "question": "Can feedback generated after an LLM-simulated patient encounter improve students’ clinical decision-making?",
+      "method": "The randomized study used ChatGPT 3.5 to simulate four neurological or neurosurgical patient cases. Both groups used the same case prompts and completed the same training opportunities; the feedback group received additional CRI-HTI-based feedback after each encounter. Each case allowed six minutes. Twenty-four students were randomized, and 21 were analyzed after three technical data losses (10 feedback; 11 control). Two blinded human raters assessed the transcripts; reported consistency ICC was 0.924.",
+      "result": "After four cases, the feedback group’s reported CRI-HTI mean was 3.60 versus 3.02 in the control group, with p = .049 and partial η² = .198. This supports a short-term training benefit from structured feedback. It does not establish that the LLM’s grades exactly match human scores.",
+      "limit": "The trial compares feedback versus no feedback, not paired-graph versus conventional assessment. It involves medical history-taking, not pharmacy counseling, and uses a small sample. Its ICC describes agreement between the human raters and uses a consistency model; it is not an AI–faculty exact-concordance metric. The abstract and results print different ANOVA degrees of freedom, so a citation should retain the central result rather than silently resolve that reporting discrepancy.",
+      "relevance": "This is a useful example of a conventional architecture that uses prompts for the patient and generates feedback after an encounter. It provides a concrete comparison practice: hold the clinical task and case exposure constant, then isolate the added mechanism. DualGraph-OSCE should preserve the case, role LLM, knowledge access, and transcript across methods; the comparison should change rule execution and shared event state. The paper does not show that sequential feedback is necessarily unreliable.",
+      "cite_where": "Introduction: explain why LLM patient simulation is educationally plausible. Related work: describe prompt-based simulation followed by structured feedback. Evaluation: justify blinded faculty review of transcripts, while choosing absolute decision agreement rather than borrowing the study’s human-rater consistency ICC.",
+      "draft": "Prompt-based LLM patient simulation combined with structured post-encounter feedback has improved short-term clinical decision-making in a randomized study. DualGraph-OSCE addresses a different question: whether simulation permissions and assessment consequences remain consistent when both depend on the same delivered prompts and corrections.",
+      "implications": [
+        "Keep participant learning effects separate from technical decision accuracy. A single-session recording cohort is not a pre/post learning trial.",
+        "Use blinded review where feasible, preserve technical failures in the flow of records, and report analyzed participants separately from collected dialogue segments.",
+        "Do not use 21 students as a universal minimum. The number of independent benchmark units and the expected paired difference determine technical precision."
+      ],
+      "evidence": [
+        {
+          "id": "R40-E1",
+          "page": 4,
+          "title": "Case exposure and six-minute consultation",
+          "reason": "Six-minute patient encounter; the full paragraph continues across the column.",
+          "rectangles": [
+            [
+              55.692901611,
+              474.42359433600006,
+              291.551311914,
+              486.2235943360001
+            ],
+            [
+              55.692901611,
+              486.42359433600006,
+              291.529721625945,
+              498.2235943360001
+            ],
+            [
+              55.692901611,
+              498.42359433600006,
+              291.55814160725646,
+              510.2235943360001
+            ],
+            [
+              55.692901611,
+              510.42359433600006,
+              148.76136160351282,
+              522.2235943360001
+            ],
+            [
+              55.692901611,
+              532.10019447925,
+              95.32090082981,
+              543.30019428825
+            ]
+          ]
+        },
+        {
+          "id": "R40-E2",
+          "page": 5,
+          "title": "Blinded reference assessment",
+          "reason": "Two independent raters, blinded to group, evaluated transcripts.",
+          "rectangles": [
+            [
+              55.692901611,
+              486.42359433600006,
+              291.56010161474364,
+              498.2235943360001
+            ],
+            [
+              55.692901611,
+              498.42359433600006,
+              291.528741611,
+              510.2235943360001
+            ],
+            [
+              55.692901611,
+              510.42359433600006,
+              291.554221611,
+              522.2235943360001
+            ],
+            [
+              55.692901611,
+              522.4235943360001,
+              291.578721611,
+              534.2235943360001
+            ],
+            [
+              55.692901611,
+              534.423594336,
+              291.54736160351285,
+              546.223594336
+            ],
+            [
+              55.692901611,
+              544.0715943360001,
+              291.544502636,
+              558.223594336
+            ],
+            [
+              55.692901611,
+              558.423594336,
+              291.5551272712564,
+              570.223594336
+            ],
+            [
+              55.692901611,
+              570.423594336,
+              168.831903662,
+              582.223594336
+            ]
+          ]
+        },
+        {
+          "id": "R40-E3",
+          "page": 8,
+          "title": "Observed feedback effect",
+          "reason": "Training result after four cases; use as educational background, not as a DualGraph result.",
+          "rectangles": [
+            [
+              55.692901611,
+              486.42359433600006,
+              291.5397818355128,
+              498.2235943360001
+            ],
+            [
+              55.692901611,
+              496.07159433600003,
+              291.55700661599997,
+              510.2235943360001
+            ],
+            [
+              55.692901611,
+              508.07159433600003,
+              291.55168660180937,
+              522.2235943360001
+            ],
+            [
+              55.692901611,
+              520.0715943360001,
+              291.55099248,
+              534.2235943360001
+            ],
+            [
+              55.692901611,
+              531.876591426,
+              200.1856,
+              546.223594336
+            ]
+          ]
+        }
+      ],
+      "original_pdf": "pdf/original/R40.pdf",
+      "highlighted_pdf": "pdf/R40_highlighted.pdf",
+      "reading": "papers/R40.html",
+      "pages": 11,
+      "sha256": "8210a5e57d7256e23d79a52052f7f0584be398797857b327789bb3600979030b",
+      "download_url": "https://link.springer.com/content/pdf/10.1186/s12909-024-06399-7.pdf"
+    },
+    {
+      "id": "R41",
+      "name": "Zhang",
+      "title": "Analysis of virtual standardized patients for assessing clinical fundamental skills of medical students: a prospective study",
+      "authors": "Xinyu Zhang, Duo Zeng, Xiandi Wang, Yaoyu Fu, Ying Han, Manqing He, Xiaoling Chen, and Dan Pu",
+      "year": 2024,
+      "venue": "BMC Medical Education, vol. 24, article 981",
+      "doi": "10.1186/s12909-024-05982-2",
+      "priority": "Core: item-level assessment against a human reference",
+      "question": "How accurately can an automated virtual-standardized-patient system score history-taking, and does accuracy change across system versions?",
+      "method": "The prospective study analyzed 476 of 502 participants across three years and four cases. Importantly, its tested mode used a human SP interacting with the student while the VSP listened silently and scored. Speech recognition was followed by intent-template matching. The established local scale contained 70 scoring points. Scoring accuracy was the number of points receiving the same VSP and SP score divided by all scoring points.",
+      "result": "The latest version’s reported scoring accuracy ranged from 85.40% to 89.62% across cases. Newer versions improved on the original system, but VSP 3.0 did not clearly improve scoring accuracy over VSP 2.0. VSP and SP total scores differed, and automated scores were generally lower.",
+      "limit": "This is not a modern generative-LLM role-versus-grading trial. The paper explicitly states that it did not test conversational response accuracy in its dialogue mode. The 70-point denominator is specific to its scale, and its statistical choices should not be transferred without checking the paired structure. The PDF is CC BY-NC-ND; the unaltered source is preserved, and marked copies here are private reading aids.",
+      "relevance": "This paper directly supports comparing decisions at the level where the rubric is executed. For DualGraph-OSCE, matching a total grade alone could hide a wrong prompt cap or an incorrectly resolved error. Its item-level definition is therefore useful, but the proposed metric should additionally require all applicable consequences to agree. A fulfilled item with the wrong cap remains a failed exact-decision comparison. The human–machine collaborative design also illustrates why one cannot infer virtual-role fidelity from a scoring-only study.",
+      "cite_where": "Evaluation methods: define faculty-reference item agreement. Related work: distinguish assessment-only virtual-SP systems from systems that also generate role dialogue. Limitations: explain why score accuracy does not establish patient-role accuracy.",
+      "draft": "A prospective virtual-SP study evaluated scoring by counting rubric points whose automated and human-SP scores agreed. We extend this decision-level comparison to completion states and the applicable prompt, correction, and safety consequences, and evaluate role behavior separately.",
+      "implications": [
+        "Preserve faculty item decisions and their reason, rather than retaining only a final grade.",
+        "Use the same transcript for both assessment methods; otherwise the comparator answers a different student performance.",
+        "Report role outcomes independently. Scoring agreement cannot certify disclosure permissions or realistic patient behavior."
+      ],
+      "evidence": [
+        {
+          "id": "R41-E1",
+          "page": 3,
+          "title": "Definition of scoring accuracy",
+          "reason": "The numerator is exactly matching scoring points; the denominator is all scoring points.",
+          "rectangles": [
+            [
+              303.724395751,
+              610.615907569,
+              539.6190357472564,
+              622.415907569
+            ],
+            [
+              303.724395751,
+              622.611107569,
+              539.5710157472564,
+              634.411107569
+            ],
+            [
+              303.724395751,
+              634.606307569,
+              378.69421574725635,
+              646.406307569
+            ]
+          ]
+        },
+        {
+          "id": "R41-E2",
+          "page": 4,
+          "title": "Human SP speaks; VSP scores silently",
+          "reason": "This passage identifies the tested collaborative mode.",
+          "rectangles": [
+            [
+              55.692901611,
+              639.5782031,
+              291.551311914,
+              651.3782031
+            ],
+            [
+              55.692901611,
+              651.5782031,
+              291.57872161099976,
+              663.3782031
+            ],
+            [
+              55.692901611,
+              663.5734031,
+              291.5650016035127,
+              675.3734031
+            ]
+          ]
+        },
+        {
+          "id": "R41-E3",
+          "page": 11,
+          "title": "Latest scoring accuracy and remaining limitations",
+          "reason": "The reported range is not 100% and is not role-response fidelity.",
+          "rectangles": [
+            [
+              55.692901611,
+              381.85678711,
+              291.568921611,
+              393.65678711000004
+            ],
+            [
+              55.692901611,
+              393.85198711000004,
+              291.551311914,
+              405.67118711
+            ]
+          ]
+        }
+      ],
+      "original_pdf": "pdf/original/R41.pdf",
+      "highlighted_pdf": "pdf/R41_highlighted.pdf",
+      "reading": "papers/R41.html",
+      "pages": 14,
+      "sha256": "fa5fcfdae19ad4b7ebd2fc4351f61d155966a0b8d5ba64c23d2cb829776db735",
+      "download_url": "https://link.springer.com/content/pdf/10.1186/s12909-024-05982-2.pdf"
+    },
+    {
+      "id": "R42",
+      "name": "Song",
+      "title": "Augmenting large language models with clinical knowledge graph for personalized perioperative fluid therapy question answering",
+      "authors": "Jie Song, Jinhua Feng, Yuxin Zhang, Cheng Bi, Xin Zheng, Zhichuan Xu, Jiale Du, Mengqiao He, Meng Xiao, Xiaoran Li, Qiongfang Cao, Chi Zhang, Hao Yang, Rongrong Wu, and Bairong Shen",
+      "year": 2026,
+      "venue": "PLOS Digital Health, vol. 5, no. 6, e0001474",
+      "doi": "10.1371/journal.pdig.0001474",
+      "priority": "Core: a strong clinical GraphRAG comparator and paired evaluation",
+      "question": "Does retrieval from structured clinical knowledge improve personalized fluid-therapy question answering over document retrieval and prompting alone?",
+      "method": "The graph contained 6,490 entities and 15,687 relations. Hierarchical community summaries were divided into finding-level chunks. Retrieval selected three candidates by similarity, then an LLM selected a context for answer generation. GPT-4o, Claude Opus 4, and Gemini 2.5 Pro were tested with Vanilla, CoT, RoT, DocRAG, and GraphRAG. Evaluation used 300 knowledge-derived questions plus 262 retrospectively case-derived questions from 206 surgical patients. Two clinicians independently reviewed responses, resolving disagreement together; the study reported Wilson intervals and paired McNemar comparisons with Holm correction.",
+      "result": "On the retrospective case-derived set, average GraphRAG accuracy was 71.12% versus 62.47% for DocRAG. Its paired advantage over DocRAG was statistically significant for Claude and Gemini; the GPT-4o advantage was numerical. Results remained well below perfect performance.",
+      "limit": "The task is clinical question answering, not OSCE disclosure control or nonlinear grading. KG-derived questions can favor in-domain retrieval; the additional case-derived set is retrospective, not prospective clinical validation. The single nurse comparison is exploratory. Neither graph grounding nor the reported performance establishes deterministic safety.",
+      "relevance": "This is a strong reason to give the conventional comparator meaningful knowledge access rather than compare DualGraph-OSCE with an ungrounded LLM. It also exposes the precise distinction: GraphRAG selects clinical context for a generative answer, while DualGraph executes confirmed station rules against actual delivered events. Retrieval and rule execution address different failure modes and can be shared. The paper supports paired evaluation and independent clinical labels, but cannot justify claiming that paired graphs eliminate errors before measurement.",
+      "cite_where": "Related work: clinical KG-grounded generation. Baseline description: justify document- or graph-retrieval support in the conventional method. Evaluation methods: support paired binary comparisons, confidence intervals, and independent clinician annotation.",
+      "draft": "Clinical GraphRAG can improve answer accuracy over document retrieval, yet its reported retrospective case accuracy remains imperfect. We retain knowledge grounding in both systems and test whether explicit event-linked rule execution adds value for role permissions and rubric consequences.",
+      "implications": [
+        "Keep the same pharmacy knowledge corpus and retrieval configuration in the two systems, or disclose and separately test any difference.",
+        "Use two independent faculty labels where resources permit. If only one professor labels all cases, add an independently reviewed subset and report that limitation.",
+        "Apply paired tests only to valid independent units. Multiple turns from one consultation require cluster-aware intervals or consultation-level aggregation."
+      ],
+      "evidence": [
+        {
+          "id": "R42-E1",
+          "page": 5,
+          "title": "Retrieval and generation mechanism",
+          "reason": "Finding-level candidate retrieval followed by LLM context selection.",
+          "rectangles": [
+            [
+              47.0,
+              489.7096,
+              562.1099999999992,
+              501.7096
+            ],
+            [
+              35.0,
+              503.7096,
+              570.1599999999988,
+              515.7096
+            ],
+            [
+              35.0,
+              517.7096,
+              559.940999999999,
+              529.7096
+            ],
+            [
+              35.0,
+              531.7095999999999,
+              566.3399999999991,
+              543.7096
+            ],
+            [
+              35.0,
+              545.7096,
+              564.3699999999993,
+              557.7096
+            ]
+          ]
+        },
+        {
+          "id": "R42-E2",
+          "page": 8,
+          "title": "Reference review and paired statistical comparison",
+          "reason": "Wilson intervals, McNemar paired tests, and Holm correction.",
+          "rectangles": [
+            [
+              47.0,
+              123.70960000000002,
+              567.5199999999995,
+              135.70960000000002
+            ],
+            [
+              35.0,
+              137.70960000000002,
+              572.3689999999993,
+              149.70960000000002
+            ],
+            [
+              35.0,
+              151.70960000000002,
+              424.23789999999997,
+              163.70960000000002
+            ]
+          ]
+        },
+        {
+          "id": "R42-E3",
+          "page": 12,
+          "title": "Retrospective case performance",
+          "reason": "Case-derived accuracy and a comparator; not a pharmacy-OSCE result.",
+          "rectangles": [
+            [
+              35.0,
+              183.70960000000002,
+              560.7669999999994,
+              195.70960000000002
+            ],
+            [
+              35.0,
+              197.70960000000002,
+              538.3799999999993,
+              209.70960000000002
+            ],
+            [
+              35.0,
+              211.70960000000002,
+              559.9799999999996,
+              223.70960000000002
+            ],
+            [
+              35.0,
+              225.70960000000002,
+              548.5089999999994,
+              237.70960000000002
+            ],
+            [
+              35.0,
+              239.70960000000002,
+              410.2989999999999,
+              251.70960000000002
+            ],
+            [
+              47.0,
+              253.70960000000002,
+              558.8679999999995,
+              265.7096
+            ],
+            [
+              35.0,
+              267.7096,
+              569.8679999999995,
+              279.7096
+            ]
+          ]
+        }
+      ],
+      "original_pdf": "pdf/original/R42.pdf",
+      "highlighted_pdf": "pdf/R42_highlighted.pdf",
+      "reading": "papers/R42.html",
+      "pages": 18,
+      "sha256": "e0f01676fbd178047a83eedf53e195aa42ceb45de84508c246fc22e4faab0244",
+      "download_url": "https://journals.plos.org/digitalhealth/article/file?id=10.1371/journal.pdig.0001474&type=printable"
+    },
+    {
+      "id": "R43",
+      "name": "Duan",
+      "title": "Research on a traditional Chinese medicine case-based question-answering system integrating large language models and knowledge graphs",
+      "authors": "Yuchen Duan, Qingqing Zhou, Yu Li, Chi Qin, Ziyang Wang, Hongxing Kan, and Jili Hu",
+      "year": 2025,
+      "venue": "Frontiers in Medicine, vol. 11 (2024), article 1512329; published 7 January 2025",
+      "doi": "10.3389/fmed.2024.1512329",
+      "priority": "Supporting: clinical entity extraction and KG-grounded QA",
+      "question": "How can a language model make historical TCM case knowledge accessible through natural-language queries?",
+      "method": "The authors selected 679 complete case records across 41 diseases. LLM entity extraction was followed by expert terminology normalization, manual checking, and Neo4j storage. Query processing extracted entities, inserted them into a predefined Cypher structure, queried graph nodes, and generated an answer. Five model APIs were compared on 200 annotated sentences. QA evaluation used 20 questions, RAGAS, and five TCM-background evaluators rating safety, usability, and smoothness on a three-point scale.",
+      "result": "GLM-3-Turbo had the strongest reported entity-extraction F1 (0.9617). GPT-3.5-Turbo had the strongest reported RAGAS scores: faithfulness 0.9375, answer relevance 0.9686, and context recall 0.9500. Those are retrieval/generation evaluation scores, not faculty agreement on OSCE marks.",
+      "limit": "The evaluation is small and concerns case querying. Its “SUS” means Safety, Usability, Smoothness, not the standard ten-item System Usability Scale. It does not evaluate herb–drug interaction safety, disclosure timing, automatic-failure enforcement, or deterministic clinical judging. The attachment’s claim of deterministic safety guardrails is stronger than the demonstrated method.",
+      "relevance": "The reusable idea is a controlled interface between natural language and structured queries: semantic interpretation can populate a bounded schema while ordinary code queries authoritative data. DualGraph-OSCE can use the same separation for evidence events and rule predicates. Its innovation must remain in the paired permission/assessment execution rather than claiming that LLM plus KG or structured extraction is new. The station rules remain faculty-defined; a language model cannot invent a penalty merely because a medically plausible relation was retrieved.",
+      "cite_where": "Related work: domain KG-assisted QA and structured extraction. Method rationale: explain why semantic matching and logical execution have different responsibilities. Use this citation only if the paper discusses the clinical KG layer in enough detail.",
+      "draft": "Domain-specific QA systems have separated language-based entity interpretation from structured graph querying. DualGraph-OSCE uses this division within an OSCE-specific execution model, recording delivered dialogue evidence and applying confirmed role and rubric rules to the same event state.",
+      "implications": [
+        "Validate extracted actor, drug, frequency, intent, and correction links separately from rule-engine behavior.",
+        "Use bounded query schemas and source identifiers; do not permit unconstrained generated queries to alter faculty rules.",
+        "Do not borrow RAGAS faithfulness as the primary role or grading accuracy metric."
+      ],
+      "evidence": [
+        {
+          "id": "R43-E1",
+          "page": 8,
+          "title": "Bounded Cypher query interface",
+          "reason": "Extracted entities populate a predetermined Cypher structure.",
+          "rectangles": [
+            [
+              303.7144,
+              81.25509999999997,
+              546.6924804,
+              92.25509999999997
+            ],
+            [
+              303.7144,
+              93.25509999999997,
+              361.26825,
+              104.25509999999997
+            ]
+          ]
+        },
+        {
+          "id": "R43-E2",
+          "page": 11,
+          "title": "Twenty-question QA evaluation",
+          "reason": "The small QA set and its RAGAS evaluation are explicit.",
+          "rectangles": [
+            [
+              48.6063,
+              453.25509999999997,
+              291.56174660000016,
+              464.25509999999997
+            ],
+            [
+              48.6063,
+              465.25509999999997,
+              291.5344820000002,
+              476.25509999999997
+            ],
+            [
+              48.6063,
+              477.25509999999997,
+              291.5416694000001,
+              488.25509999999997
+            ],
+            [
+              48.6063,
+              489.25509999999997,
+              291.55356722000016,
+              500.25509999999997
+            ],
+            [
+              48.6063,
+              501.25509999999997,
+              291.55012152000023,
+              512.2551
+            ],
+            [
+              48.6063,
+              513.2551,
+              291.53362520000024,
+              524.2551
+            ],
+            [
+              48.6063,
+              525.2551,
+              216.12418,
+              536.2551
+            ]
+          ]
+        },
+        {
+          "id": "R43-E3",
+          "page": 11,
+          "title": "Meaning of SUS in this paper",
+          "reason": "This acronym is not the standard System Usability Scale.",
+          "rectangles": [
+            [
+              303.7244,
+              441.25509999999997,
+              546.6940163200002,
+              452.25509999999997
+            ],
+            [
+              303.7244,
+              453.25509999999997,
+              546.6660086400004,
+              464.25509999999997
+            ],
+            [
+              303.7244,
+              465.25509999999997,
+              546.6889348000003,
+              476.25509999999997
+            ],
+            [
+              303.7244,
+              477.25509999999997,
+              546.6516731800003,
+              488.25509999999997
+            ],
+            [
+              303.7244,
+              489.25509999999997,
+              546.6843907000004,
+              500.25509999999997
+            ],
+            [
+              303.7244,
+              501.25509999999997,
+              546.6709032000003,
+              512.2551
+            ],
+            [
+              303.7244,
+              513.2551,
+              546.6944590000003,
+              524.2551
+            ]
+          ]
+        }
+      ],
+      "original_pdf": "pdf/original/R43.pdf",
+      "highlighted_pdf": "pdf/R43_highlighted.pdf",
+      "reading": "papers/R43.html",
+      "pages": 14,
+      "sha256": "df19fc3bf784b3d11b198becc092290f82350e72e0087bc1f6a1d1b562a93081",
+      "download_url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2024.1512329/pdf"
+    },
+    {
+      "id": "R44",
+      "name": "Wu",
+      "title": "Virtual Simulation in Undergraduate Medical Education: A Scoping Review of Recent Practice",
+      "authors": "Qingming Wu, Yubin Wang, Lili Lu, Yong Chen, Hui Long, and Jun Wang",
+      "year": 2022,
+      "venue": "Frontiers in Medicine, vol. 9, article 855403",
+      "doi": "10.3389/fmed.2022.855403",
+      "priority": "Optional background: educational scope and limits of claims",
+      "question": "What forms of virtual simulation were used in undergraduate medical education in recent published practice, and what outcomes were evaluated?",
+      "method": "The scoping review searched MEDLINE/PubMed for English peer-reviewed practical studies published in 2020–2021. Two researchers screened and appraised full texts. Ninety-two studies were included, covering diverse tools and tasks rather than a single conversational architecture. Outcomes were mapped to an adapted Kirkpatrick evaluation framework.",
+      "result": "Sixty-seven studies (73%) evaluated knowledge or skills (Level 2b), while no included study measured practice change (Level 3) or health outcomes (Level 4). The review describes broad educational promise while noting that simulated gains may not transfer to clinical practice.",
+      "limit": "This is a pre-generative-LLM review of varied virtual simulations, much of it immersive VR. Its population is undergraduate medicine, not a clinical pharmacy cohort. It does not supply a pooled effect estimate proving universal improvement in communication or diagnostic reasoning. The attachment overgeneralizes those conclusions.",
+      "relevance": "This paper is useful for defining what the present evaluation can establish. Faculty agreement on role and scoring decisions is a technical-validation result; a satisfaction survey describes experience. Neither is proof that students learn more, clinical practice changes, or patient safety improves. If the manuscript has very limited space, a more directly relevant pharmacy simulation review can replace this broad background source.",
+      "cite_where": "Introduction: one sentence situating virtual simulation in education. Discussion and limitations: distinguish technical fidelity, participant experience, learning, and clinical transfer.",
+      "draft": "Virtual simulation research has mainly evaluated learner knowledge, skills, and experience, with limited evidence on clinical transfer. The present study therefore focuses on role-control fidelity and faculty-referenced assessment decisions rather than claiming improved clinical outcomes.",
+      "implications": [
+        "Label the student questionnaire as perceived usability or practice suitability, not proof of learning.",
+        "Do not infer long-term educational benefit from 16 consultations or from a 120-turn technical benchmark.",
+        "Retain pharmacy-specific sources for the actual station and role challenges."
+      ],
+      "evidence": [
+        {
+          "id": "R44-E1",
+          "page": 2,
+          "title": "Review eligibility and independent screening",
+          "reason": "The review covers undergraduate medicine in a limited time window.",
+          "rectangles": [
+            [
+              302.66599999999994,
+              485.5804999999994,
+              551.3999999999999,
+              497.0899999999994
+            ],
+            [
+              302.66599999999994,
+              497.0374999999994,
+              551.4,
+              508.5374999999994
+            ],
+            [
+              302.66599999999994,
+              508.4944999999994,
+              551.3999999999999,
+              519.9944999999993
+            ],
+            [
+              302.66599999999994,
+              519.9514999999994,
+              551.4,
+              531.4514999999994
+            ],
+            [
+              302.66599999999994,
+              531.4084999999993,
+              551.3999999999997,
+              542.9084999999993
+            ],
+            [
+              302.66599999999994,
+              542.8654999999994,
+              551.3999999999999,
+              554.3654999999994
+            ],
+            [
+              302.66599999999994,
+              554.3224999999993,
+              551.3999999999999,
+              565.8224999999993
+            ],
+            [
+              302.66599999999994,
+              565.7794999999994,
+              551.3999999999999,
+              577.2794999999994
+            ],
+            [
+              302.66599999999994,
+              577.2364999999993,
+              551.4,
+              588.7364999999993
+            ]
+          ]
+        },
+        {
+          "id": "R44-E2",
+          "page": 3,
+          "title": "Outcome levels and lack of clinical-transfer evidence",
+          "reason": "The review distinguishes knowledge/skills from practice and health outcomes.",
+          "rectangles": [
+            [
+              302.666,
+              355.49649999999997,
+              551.4,
+              366.99649999999997
+            ],
+            [
+              302.666,
+              366.95349999999996,
+              537.0835,
+              378.45349999999996
+            ]
+          ]
+        },
+        {
+          "id": "R44-E3",
+          "page": 8,
+          "title": "Simulation supplements clinical practice",
+          "reason": "The discussion explicitly limits replacement and transfer claims.",
+          "rectangles": [
+            [
+              43.98,
+              325.1814999999999,
+              292.71399999999994,
+              336.6814999999999
+            ],
+            [
+              43.98,
+              336.6384999999999,
+              292.714,
+              348.1384999999999
+            ],
+            [
+              43.98,
+              348.0954999999999,
+              292.714,
+              359.5954999999999
+            ],
+            [
+              43.98,
+              359.5524999999999,
+              292.714,
+              371.0524999999999
+            ],
+            [
+              43.98,
+              371.0094999999999,
+              292.71400000000006,
+              382.5094999999999
+            ]
+          ]
+        }
+      ],
+      "original_pdf": "pdf/original/R44.pdf",
+      "highlighted_pdf": "pdf/R44_highlighted.pdf",
+      "reading": "papers/R44.html",
+      "pages": 12,
+      "sha256": "7f4dbe979231f3027835f1ee11a9655dbb02e1f03eaef3834132c77447654916",
+      "download_url": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2022.855403/pdf"
+    },
+    {
+      "id": "R45",
+      "name": "Trevena",
+      "title": "Model-driven engineering for digital twins: a graph model-based patient simulation application",
+      "authors": "William Trevena, Xiang Zhong, Amos Lal, Lucrezia Rovati, Edin Cubro, Yue Dong, Phillip Schulte, and Ognjen Gajic",
+      "year": 2024,
+      "venue": "Frontiers in Physiology, vol. 15, article 1424931",
+      "doi": "10.3389/fphys.2024.1424931",
+      "priority": "Optional methodological precedent: graph rule execution",
+      "question": "Can expert-defined graph relations drive a scalable simulation of a critically ill patient’s physiological trajectory?",
+      "method": "The application combines a cross-platform interface, cloud simulation engine, and Neo4j expert-rule graph. Rules include triggering marker changes, duration, delayed effects, conditions, probability, and state bounds. Explicit procedures apply rules and update patient states. A short respiratory-acidosis case demonstrates the engine’s progression and the rules applied at each 15-minute step.",
+      "result": "The worked case followed the prescribed expert-rule trajectory. The study presents architectural and algorithmic feasibility, not a controlled test of student performance or an LLM simulation/assessment comparison.",
+      "limit": "Its graph represents physiological effects, not disclosure permissions or rubric items. Some clinical effects are probabilistic, so the whole simulator is not deterministic in the sense proposed for confirmed grading rules. It does not validate a paired rule/evidence judge. The attachment’s claims about consistent conversational behavior and preserved interpretability during trainee dialogue are not directly tested.",
+      "relevance": "This is an important prior example of executing clinical expert rules from a graph, including temporal conditions. It means DualGraph-OSCE should not claim to invent graph-based rule execution or patient-state tracking. The specific contribution is instead using one provenance- and delivery-aware evidence state to execute separate role permissions and assessment requirements, preserving their event-linked consequences. The paper also makes a valuable engineering distinction: a wrong clinical rule and a wrongly implemented rule are different errors.",
+      "cite_where": "Related work: clinical graph-driven simulations and temporal expert rules. Method: explain the separation between faculty-confirmed rule content and executable engine logic. Discussion: state what is added beyond existing rule-driven patient-state simulations.",
+      "draft": "Graph-driven patient simulators already execute temporal expert rules and distinguish errors in a rule from errors in its implementation. DualGraph-OSCE extends explicit execution to conversational evidence, linking delivered role actions to assessment consequences without merging role and rubric nodes.",
+      "implications": [
+        "Maintain rule provenance and versioning so a faculty correction can be distinguished from an execution bug.",
+        "Test engine predicates with fixed events before evaluating semantic extraction.",
+        "Restrict the deterministic claim to the execution of confirmed rules; LLM extraction and generation remain fallible."
+      ],
+      "evidence": [
+        {
+          "id": "R45-E1",
+          "page": 4,
+          "title": "Expert graph-rule definition",
+          "reason": "Clinical graph rules have conditions and defined state effects.",
+          "rectangles": [
+            [
+              304.107,
+              617.5764563884,
+              546.6749754,
+              628.5428363884
+            ],
+            [
+              304.107,
+              629.6494563884,
+              546.6749754000001,
+              640.6158363884
+            ],
+            [
+              304.107,
+              641.7234563884,
+              546.6660090199999,
+              652.6898363884
+            ],
+            [
+              304.107,
+              653.7974563884,
+              546.6749754,
+              664.7638363884
+            ],
+            [
+              304.107,
+              665.8704563884,
+              546.66600902,
+              676.8368363884
+            ],
+            [
+              304.107,
+              677.9444563884,
+              546.66600902,
+              688.9108363884
+            ],
+            [
+              304.107,
+              690.0184563884,
+              546.6749754,
+              700.9848363884
+            ]
+          ]
+        },
+        {
+          "id": "R45-E2",
+          "page": 8,
+          "title": "Explicit rule-execution procedures",
+          "reason": "Rule application, conditions, state updates, and bounds are separate procedures.",
+          "rectangles": [
+            [
+              48.60599999999997,
+              714.7614563884,
+              291.1739754000001,
+              725.7278363884
+            ],
+            [
+              48.60599999999997,
+              726.6864563884,
+              291.1650090199999,
+              737.6528363883999
+            ],
+            [
+              48.60599999999997,
+              738.6104563884,
+              291.17397539999985,
+              749.5768363884
+            ],
+            [
+              48.60599999999997,
+              750.5354563884,
+              291.1739753999998,
+              761.5018363884
+            ],
+            [
+              48.60599999999997,
+              762.4604563884,
+              115.61225499999998,
+              773.4268363884
+            ]
+          ]
+        },
+        {
+          "id": "R45-E3",
+          "page": 10,
+          "title": "Rule validity versus rule implementation",
+          "reason": "The architecture separates rule-content validation from execution errors.",
+          "rectangles": [
+            [
+              318.055,
+              642.0954563884,
+              546.67128812,
+              653.0618363884
+            ],
+            [
+              304.107,
+              654.1324563884,
+              546.6749753999999,
+              665.0988363884
+            ],
+            [
+              304.107,
+              666.1684563884,
+              546.6749754000001,
+              677.1348363884
+            ],
+            [
+              304.107,
+              678.2054563884,
+              546.66600902,
+              689.1718363883999
+            ],
+            [
+              304.107,
+              690.2414563884,
+              546.6749754,
+              701.2078363884
+            ],
+            [
+              304.107,
+              702.2784563884,
+              546.66600902,
+              713.2448363884
+            ],
+            [
+              304.107,
+              714.3144563884,
+              546.6660090199999,
+              725.2808363884
+            ],
+            [
+              304.107,
+              726.3514563884,
+              546.6749753999999,
+              737.3178363884
+            ]
+          ]
+        }
+      ],
+      "original_pdf": "pdf/original/R45.pdf",
+      "highlighted_pdf": "pdf/R45_highlighted.pdf",
+      "reading": "papers/R45.html",
+      "pages": 13,
+      "sha256": "b64fd89975ac4dd4aa3aa540804915d25167f861b1a457f72ce11aa3bb84e0e5",
+      "download_url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2024.1424931/pdf"
+    }
+  ],
+  "archive_only": [
+    {
+      "name": "Sezer",
+      "doi": "10.1186/s12909-023-04860-7",
+      "title": "Developing a virtual patient: design, usability, and learning effect in communication skills training",
+      "year": 2023,
+      "pages": 9,
+      "original_pdf": "downloads/attachment_papers_20261008/Sezer.pdf",
+      "reason": "The study concerns development and one-group posttest evaluation of a speech-enabled, non-LLM virtual patient for communication training. It can support an interface/usability discussion, but it does not test shared role–assessment rule execution. The attachment’s claim that acoustic accuracy or synchronized pacing correlates with communication skill acquisition is not an established causal finding from this design. It is retained as a complete downloaded source rather than forced into the present reference list."
+    }
+  ],
+  "all_seven_originals_folder": "downloads/attachment_papers_20261008"
+}

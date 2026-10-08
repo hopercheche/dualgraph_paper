@@ -1,0 +1,1 @@
+﻿student_id,session_id,case_id,criterion_id,prediction_track,transcript_version,rater_id,gold_status,predicted_status,consequence_applicable,gold_consequence,predicted_consequence,revision_applicable,gold_revision,predicted_revision,review_applicable,gold_review,predicted_review,source_spans,reason

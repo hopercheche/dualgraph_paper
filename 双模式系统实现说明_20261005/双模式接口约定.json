@@ -1,0 +1,116 @@
+{
+  "status": "implementation_specification_not_deployed",
+  "mode_values": [
+    "conventional_rag",
+    "egj"
+  ],
+  "mode_selection": "trusted_backend_at_session_creation_only",
+  "mode_mutation": "forbidden_for_existing_session",
+  "rule_graph_version_by_mode": {
+    "conventional_rag": null,
+    "egj": "required_frozen_version"
+  },
+  "public_mode_selector": false,
+  "common_components": [
+    "faculty_case_sources",
+    "raw_rule_source_pack",
+    "static_role_visibility",
+    "pharmacy_knowledge_retrieval",
+    "role_llm",
+    "assessment_llm",
+    "asr",
+    "tts",
+    "authoritative_transcript",
+    "schema_and_quote_integrity",
+    "delivery_journal",
+    "public_report_renderer"
+  ],
+  "common_control_versions": [
+    "case_content_digest",
+    "raw_rule_source_digest",
+    "knowledge_version",
+    "retrieval_policy_version",
+    "model_identity",
+    "generation_settings_digest",
+    "speech_version",
+    "report_contract_version",
+    "common_guard_version"
+  ],
+  "conventional_rag": {
+    "role": "full_permitted_case_context+raw_role_rules+prior_dialogue+same_rag_candidates",
+    "assessment": "completed_authoritative_dialogue+raw_rubric+same_rag_candidates; independent_LLM_item_judgments",
+    "egj_execution": false
+  },
+  "egj": {
+    "rule_graph": "frozen_before_formal_inputs; separate_role_and_assessment_nodes",
+    "evidence_graph": "append_only_source_grounded_events",
+    "semantic_alignment": "LLM_leaf_matching; may_return_uncertain",
+    "rule_execution": "deterministic_operators_and_state_reducer",
+    "outputs": [
+      "actor_view",
+      "assessment_view"
+    ],
+    "draft_delivery": "never_counts_as_issued_prompt"
+  },
+  "session_context_required": [
+    "session_id",
+    "mode",
+    "assignment_id",
+    "case_id",
+    "case_content_digest",
+    "knowledge_version",
+    "retrieval_policy_version",
+    "strategy_version",
+    "rule_graph_version",
+    "model_identity",
+    "generation_settings_digest",
+    "state_revision"
+  ],
+  "cache_key_fields": [
+    "mode",
+    "case_content_digest",
+    "history_revision",
+    "history_digest",
+    "strategy_version",
+    "knowledge_version",
+    "retrieval_policy_version",
+    "model_identity",
+    "generation_settings_digest",
+    "rule_graph_version",
+    "state_revision"
+  ],
+  "counterpart_roles": {
+    "cuhk_di_01_fungal_toe": "doctor",
+    "cuhk_di_02_migraine": "doctor",
+    "cuhk_di_03_diuretics_counseling": "patient",
+    "cuhk_di_04_mtx_counseling": "patient"
+  },
+  "state_labels": {
+    "runtime": [
+      "PENDING",
+      "MET",
+      "NOT_MET",
+      "UNCERTAIN",
+      "N/A"
+    ],
+    "revision": [
+      "NO_ERROR",
+      "UNRESOLVED",
+      "CORRECTED_HISTORY_RETAINED"
+    ],
+    "delivery": [
+      "DRAFT",
+      "APPROVED",
+      "SERVER_EMITTED",
+      "PLAYBACK_ACKNOWLEDGED",
+      "PARTIAL",
+      "UNKNOWN",
+      "CANCELLED"
+    ]
+  },
+  "evaluation_boundary": "NOT_MET from absence only after applicable observation window closes and usable evidence is complete",
+  "grade_conversion": "use_faculty_confirmed_station_policy_only; no_new_sum_of_items",
+  "switching_failure": "no_silent_egj_to_conventional_fallback",
+  "research_export": "mode_in_restricted_manifest; anonymised_teacher_view_has_neutral_labels",
+  "counts": "manifest_driven; do_not_hard_code_80_or_120"
+}

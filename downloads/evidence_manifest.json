@@ -1,0 +1,1299 @@
+[
+  {
+    "id": "R01",
+    "original_pages": 8,
+    "combined_start": 1,
+    "sha256": "d2f3cc6bd8bfdf30a8582da6ed710da82787ac4d757479f1e86cd27177fe0cec",
+    "source": "https://doi.org/10.1186/s41077-017-0043-4",
+    "evidence": [
+      {
+        "id": "R01-E1",
+        "index": 1,
+        "page": 5,
+        "purpose": "角色表现的一致性和准确性",
+        "phrase": "SP educators are expected",
+        "combined_page": 5,
+        "image": "R01-E1.png",
+        "full_image": "R01-p5.png"
+      },
+      {
+        "id": "R01-E2",
+        "index": 2,
+        "page": 6,
+        "purpose": "评价工具的理解与准确填写",
+        "phrase": "3.4.1 Ensure",
+        "combined_page": 6,
+        "image": "R01-E2.png",
+        "full_image": "R01-p6.png"
+      },
+      {
+        "id": "R01-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "统一学习者简报与评分员训练",
+        "phrase": "2.2.8",
+        "combined_page": 5,
+        "image": "R01-E3.png",
+        "full_image": "R01-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R02",
+    "original_pages": 11,
+    "combined_start": 9,
+    "sha256": "b40fd67a98263ebb6ffad009703d6b2ca2b1c99750c456f54ec3c9b2f6b04e1e",
+    "source": "https://doi.org/10.1016/j.rcsop.2023.100316",
+    "evidence": [
+      {
+        "id": "R02-E1",
+        "index": 1,
+        "page": 2,
+        "purpose": "综述纳入范围",
+        "phrase": "Articles were included",
+        "combined_page": 10,
+        "image": "R02-E1.png",
+        "full_image": "R02-p2.png"
+      },
+      {
+        "id": "R02-E2",
+        "index": 2,
+        "page": 7,
+        "purpose": "教学证据的综合解释",
+        "phrase": "Discussion",
+        "combined_page": 15,
+        "image": "R02-E2.png",
+        "full_image": "R02-p7.png"
+      }
+    ]
+  },
+  {
+    "id": "R03",
+    "original_pages": 9,
+    "combined_start": 20,
+    "sha256": "8186fca59d8d99d19567237533355a466a20d76b87a18246fe286f53e6d0104b",
+    "source": "https://doi.org/10.1016/j.cptl.2025.102503",
+    "evidence": [
+      {
+        "id": "R03-E1",
+        "index": 1,
+        "page": 2,
+        "purpose": "系统开发与研究设计",
+        "phrase": "The study consisted of two main phases",
+        "combined_page": 21,
+        "image": "R03-E1.png",
+        "full_image": "R03-p2.png"
+      },
+      {
+        "id": "R03-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "患者过度知情的访谈发现",
+        "phrase": "overly knowledgeable",
+        "combined_page": 24,
+        "image": "R03-E2.png",
+        "full_image": "R03-p5.png"
+      },
+      {
+        "id": "R03-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "反馈误差与药物治疗反馈不足",
+        "phrase": "occasional inaccuracies in the automated feedback",
+        "combined_page": 24,
+        "image": "R03-E3.png",
+        "full_image": "R03-p5.png"
+      },
+      {
+        "id": "R03-E4",
+        "index": 4,
+        "page": 3,
+        "purpose": "十分钟试用与即时反馈",
+        "phrase": "Each test round lasted",
+        "combined_page": 22,
+        "image": "R03-E4.png",
+        "full_image": "R03-p3.png"
+      },
+      {
+        "id": "R03-E5",
+        "index": 5,
+        "page": 4,
+        "purpose": "九名学生、五位教师及体验研究用途",
+        "phrase": "In total, 14 participants",
+        "combined_page": 23,
+        "image": "R03-E5.png",
+        "full_image": "R03-p4.png"
+      }
+    ]
+  },
+  {
+    "id": "R04",
+    "original_pages": 12,
+    "combined_start": 29,
+    "sha256": "82650b71013afac911d67390b4a79efd86914b938fe3cb132c1b6739f9148a3e",
+    "source": "https://doi.org/10.1038/s43856-025-01283-x",
+    "evidence": [
+      {
+        "id": "R04-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "多智能体工作流",
+        "phrase": "Reasoning RAG agentic",
+        "combined_page": 31,
+        "image": "R04-E1.png",
+        "full_image": "R04-p3.png"
+      },
+      {
+        "id": "R04-E2",
+        "index": 2,
+        "page": 4,
+        "purpose": "问答准确性的消融设计",
+        "phrase": "we conduct ablation studies",
+        "combined_page": 32,
+        "image": "R04-E2.png",
+        "full_image": "R04-p4.png"
+      },
+      {
+        "id": "R04-E3",
+        "index": 3,
+        "page": 7,
+        "purpose": "真人交叉评价的参与者和任务",
+        "phrase": "20 medical students",
+        "combined_page": 35,
+        "image": "R04-E3.png",
+        "full_image": "R04-p7.png"
+      },
+      {
+        "id": "R04-E4",
+        "index": 4,
+        "page": 5,
+        "purpose": "临床交叉体验的方法与方法部分SP人数",
+        "phrase": "Clinical veri",
+        "combined_page": 33,
+        "image": "R04-E4.png",
+        "full_image": "R04-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R05",
+    "original_pages": 22,
+    "combined_start": 41,
+    "sha256": "c8c092d8d62f8f5ec4ea154c0cdce3a87905c297e62a2e0db05983d6e4509349",
+    "source": "https://arxiv.org/abs/2606.17441",
+    "evidence": [
+      {
+        "id": "R05-E1",
+        "index": 1,
+        "page": 4,
+        "purpose": "事实披露的受控表示",
+        "phrase": "Disclosure grid.",
+        "combined_page": 44,
+        "image": "R05-E1.png",
+        "full_image": "R05-p4.png"
+      },
+      {
+        "id": "R05-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "每轮识别字段并生成回答",
+        "phrase": "Only fields in",
+        "combined_page": 45,
+        "image": "R05-E2.png",
+        "full_image": "R05-p5.png"
+      },
+      {
+        "id": "R05-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "真人标注设计",
+        "phrase": "seven resident clinicians",
+        "combined_page": 45,
+        "image": "R05-E3.png",
+        "full_image": "R05-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R06",
+    "original_pages": 18,
+    "combined_start": 63,
+    "sha256": "4e40af1f7d5bcd7fff822dc65725f2766fbf0bfc9581ca297b7489bd83fda7a9",
+    "source": "https://arxiv.org/abs/2606.28526",
+    "evidence": [
+      {
+        "id": "R06-E1",
+        "index": 1,
+        "page": 4,
+        "purpose": "语料规模与站点范围",
+        "phrase": "Generated dialogues",
+        "combined_page": 66,
+        "image": "R06-E1.png",
+        "full_image": "R06-p4.png"
+      },
+      {
+        "id": "R06-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "控制及纠正循环",
+        "phrase": "Controller module:",
+        "combined_page": 67,
+        "image": "R06-E2.png",
+        "full_image": "R06-p5.png"
+      },
+      {
+        "id": "R06-E3",
+        "index": 3,
+        "page": 6,
+        "purpose": "人工评价的能力范围",
+        "phrase": "without medical training",
+        "combined_page": 68,
+        "image": "R06-E3.png",
+        "full_image": "R06-p6.png"
+      }
+    ]
+  },
+  {
+    "id": "R07",
+    "original_pages": 11,
+    "combined_start": 81,
+    "sha256": "a00735e2cb28823c60f96b897ef251d7aff346707a90600e04e6307d038d8e7f",
+    "source": "https://arxiv.org/abs/2608.12097",
+    "evidence": [
+      {
+        "id": "R07-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "准则图的执行语义",
+        "phrase": "GSR turns a hierarchical rubric policy",
+        "combined_page": 83,
+        "image": "R07-E1.png",
+        "full_image": "R07-p3.png"
+      },
+      {
+        "id": "R07-E2",
+        "index": 2,
+        "page": 4,
+        "purpose": "编译及静态验证",
+        "phrase": "A deterministic validator",
+        "combined_page": 84,
+        "image": "R07-E2.png",
+        "full_image": "R07-p4.png"
+      },
+      {
+        "id": "R07-E3",
+        "index": 3,
+        "page": 8,
+        "purpose": "消融比较的目的",
+        "phrase": "Ablation Study",
+        "combined_page": 88,
+        "image": "R07-E3.png",
+        "full_image": "R07-p8.png"
+      }
+    ]
+  },
+  {
+    "id": "R08",
+    "original_pages": 21,
+    "combined_start": 92,
+    "sha256": "c25b7ded5508a2e2b2b82381e014bcd4c0a542f0dc3452a637e7423f863ba78f",
+    "source": "https://arxiv.org/abs/2601.08654",
+    "evidence": [
+      {
+        "id": "R08-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "规范编译与锁定",
+        "phrase": "Although bundle induction",
+        "combined_page": 94,
+        "image": "R08-E1.png",
+        "full_image": "R08-p3.png"
+      },
+      {
+        "id": "R08-E2",
+        "index": 2,
+        "page": 4,
+        "purpose": "证据化执行与校验",
+        "phrase": "To make attribution auditable",
+        "combined_page": 95,
+        "image": "R08-E2.png",
+        "full_image": "R08-p4.png"
+      },
+      {
+        "id": "R08-E3",
+        "index": 3,
+        "page": 4,
+        "purpose": "人类刻度标定",
+        "phrase": "The structured signals from Phase II",
+        "combined_page": 95,
+        "image": "R08-E3.png",
+        "full_image": "R08-p4.png"
+      }
+    ]
+  },
+  {
+    "id": "R09",
+    "original_pages": 12,
+    "combined_start": 113,
+    "sha256": "247a2f1c29f6f5c0f756184af8b873524c42b1b64c9ffa50a1999cfde97c6f75",
+    "source": "https://arxiv.org/abs/2407.10793",
+    "evidence": [
+      {
+        "id": "R09-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "原文对三元组及不使用属性的说明",
+        "phrase": "Formally, a KG",
+        "combined_page": 115,
+        "image": "R09-E1.png",
+        "full_image": "R09-p3.png"
+      },
+      {
+        "id": "R09-E2",
+        "index": 2,
+        "page": 3,
+        "purpose": "逐条 NLI 判别",
+        "phrase": "For stage 2, we leverage",
+        "combined_page": 115,
+        "image": "R09-E2.png",
+        "full_image": "R09-p3.png"
+      },
+      {
+        "id": "R09-E3",
+        "index": 3,
+        "page": 6,
+        "purpose": "主要结果及短文本边界",
+        "phrase": "On average",
+        "combined_page": 118,
+        "image": "R09-E3.png",
+        "full_image": "R09-p6.png"
+      }
+    ]
+  },
+  {
+    "id": "R10",
+    "original_pages": 22,
+    "combined_start": 125,
+    "sha256": "f7531c280e23b43abac80677db0a9b174e7a20c1f36adef63bcdfd792069fbaa",
+    "source": "https://havelund.com/Publications/saiv-2026-temporal-guardrails.pdf",
+    "evidence": [
+      {
+        "id": "R10-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "自然语言命题识别及方法比较",
+        "phrase": "semantic grounding layer",
+        "combined_page": 127,
+        "image": "R10-E1.png",
+        "full_image": "R10-p3.png"
+      },
+      {
+        "id": "R10-E2",
+        "index": 2,
+        "page": 6,
+        "purpose": "时序逻辑适用范围",
+        "phrase": "We model an LLM conversation",
+        "combined_page": 130,
+        "image": "R10-E2.png",
+        "full_image": "R10-p6.png"
+      },
+      {
+        "id": "R10-E3",
+        "index": 3,
+        "page": 7,
+        "purpose": "增量监控算法",
+        "phrase": "Monitoring algorithm",
+        "combined_page": 131,
+        "image": "R10-E3.png",
+        "full_image": "R10-p7.png"
+      }
+    ]
+  },
+  {
+    "id": "R11",
+    "original_pages": 22,
+    "combined_start": 147,
+    "sha256": "75f38f8a8472ad6f08bb9e69b23c7e045304e37da004e120419ceb9564dcc814",
+    "source": "https://arxiv.org/abs/2508.20131",
+    "evidence": [
+      {
+        "id": "R11-E1",
+        "index": 1,
+        "page": 2,
+        "purpose": "ArgRAG 的证据与论证流程",
+        "phrase": "In Step 1",
+        "combined_page": 148,
+        "image": "R11-E1.png",
+        "full_image": "R11-p2.png"
+      },
+      {
+        "id": "R11-E2",
+        "index": 2,
+        "page": 4,
+        "purpose": "论证语义",
+        "phrase": "The QE update function",
+        "combined_page": 150,
+        "image": "R11-E2.png",
+        "full_image": "R11-p4.png"
+      },
+      {
+        "id": "R11-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "事实裁决与回退条件",
+        "phrase": "Fact Verification with ArgRAG.",
+        "combined_page": 151,
+        "image": "R11-E3.png",
+        "full_image": "R11-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R12",
+    "original_pages": 12,
+    "combined_start": 169,
+    "sha256": "3f75bedc5f7c213691b92901caaef754afe8d4d9d98ba690dca5e739a4ee0966",
+    "source": "https://arxiv.org/abs/2510.12224",
+    "evidence": [
+      {
+        "id": "R12-E1",
+        "index": 1,
+        "page": 4,
+        "purpose": "药物咨询任务",
+        "phrase": "Medication Consultation:",
+        "combined_page": 172,
+        "image": "R12-E1.png",
+        "full_image": "R12-p4.png"
+      },
+      {
+        "id": "R12-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "控制器、患者和裁判分工",
+        "phrase": "Director Agent.",
+        "combined_page": 173,
+        "image": "R12-E2.png",
+        "full_image": "R12-p5.png"
+      },
+      {
+        "id": "R12-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "正确性与完整性指标",
+        "phrase": "For Medication Consultation",
+        "combined_page": 173,
+        "image": "R12-E3.png",
+        "full_image": "R12-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R13",
+    "original_pages": 17,
+    "combined_start": 181,
+    "sha256": "57f2c5cff0fca363c2bf614227a5a9646b98a87fbbc31f83192b0d694eb6e450",
+    "source": "https://arxiv.org/abs/2601.03023",
+    "evidence": [
+      {
+        "id": "R13-E1",
+        "index": 1,
+        "page": 6,
+        "purpose": "患者事实与生成控制",
+        "phrase": "Phase 2",
+        "combined_page": 186,
+        "image": "R13-E1.png",
+        "full_image": "R13-p6.png"
+      },
+      {
+        "id": "R13-E2",
+        "index": 2,
+        "page": 7,
+        "purpose": "循证量表构建",
+        "phrase": "Phase 3",
+        "combined_page": 187,
+        "image": "R13-E2.png",
+        "full_image": "R13-p7.png"
+      },
+      {
+        "id": "R13-E3",
+        "index": 3,
+        "page": 11,
+        "purpose": "专家比较的局部样本",
+        "phrase": "Ensemble Strategies and Implementation",
+        "combined_page": 191,
+        "image": "R13-E3.png",
+        "full_image": "R13-p11.png"
+      }
+    ]
+  },
+  {
+    "id": "R14",
+    "original_pages": 11,
+    "combined_start": 198,
+    "sha256": "329d5d1803930bf8619e93e0181a2411cc741906b28ca28fdc0dbfbdb283cf33",
+    "source": "https://aclanthology.org/2026.lrec-1.831/",
+    "evidence": [
+      {
+        "id": "R14-E1",
+        "index": 1,
+        "page": 4,
+        "purpose": "受控扰动生成",
+        "phrase": "Criteria Perturbation:",
+        "combined_page": 201,
+        "image": "R14-E1.png",
+        "full_image": "R14-p4.png"
+      },
+      {
+        "id": "R14-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "固定提示与改变严格度的差异",
+        "phrase": "When the same data",
+        "combined_page": 202,
+        "image": "R14-E2.png",
+        "full_image": "R14-p5.png"
+      },
+      {
+        "id": "R14-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "说话者与行为归属的评价口径",
+        "phrase": "In the soft mode",
+        "combined_page": 202,
+        "image": "R14-E3.png",
+        "full_image": "R14-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R15",
+    "original_pages": 6,
+    "combined_start": 209,
+    "sha256": "de3e586552ddeb7de992590f3c5d753f04755cd2593885f7fb0f75a1d7020648",
+    "source": "https://doi.org/10.3233/SHTI241062",
+    "evidence": [
+      {
+        "id": "R15-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "本体与论证方法",
+        "phrase": "We applied the IBIS",
+        "combined_page": 211,
+        "image": "R15-E1.png",
+        "full_image": "R15-p3.png"
+      },
+      {
+        "id": "R15-E2",
+        "index": 2,
+        "page": 3,
+        "purpose": "药学相互作用算例",
+        "phrase": "For example, let us consider",
+        "combined_page": 211,
+        "image": "R15-E2.png",
+        "full_image": "R15-p3.png"
+      },
+      {
+        "id": "R15-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "原型研究的评价边界",
+        "phrase": "lack of a proper evaluation",
+        "combined_page": 213,
+        "image": "R15-E3.png",
+        "full_image": "R15-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R16",
+    "original_pages": 32,
+    "combined_start": 215,
+    "sha256": "0cb0b83119c502fb8ab7d3d5201bae6a4dd59a80a82ef5b21386fed47b449db1",
+    "source": "https://arxiv.org/abs/2606.18203",
+    "evidence": [
+      {
+        "id": "R16-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "临床原子准则资源",
+        "phrase": "Expert-aligned rubric resource",
+        "combined_page": 217,
+        "image": "R16-E1.png",
+        "full_image": "R16-p3.png"
+      },
+      {
+        "id": "R16-E2",
+        "index": 2,
+        "page": 4,
+        "purpose": "层级树与专家迭代",
+        "phrase": "hierarchical taxonomy",
+        "combined_page": 218,
+        "image": "R16-E2.png",
+        "full_image": "R16-p4.png"
+      },
+      {
+        "id": "R16-E3",
+        "index": 3,
+        "page": 8,
+        "purpose": "上下文扰动评价",
+        "phrase": "perturbation",
+        "combined_page": 222,
+        "image": "R16-E3.png",
+        "full_image": "R16-p8.png"
+      }
+    ]
+  },
+  {
+    "id": "R17",
+    "original_pages": 12,
+    "combined_start": 247,
+    "sha256": "e4f243819b7f0131ecf62bd106c86c00ae03ed1775c9fec5f736db6c3d9fbd4e",
+    "source": "https://doi.org/10.1186/s41077-016-0033-y",
+    "evidence": [
+      {
+        "id": "R17-E1",
+        "index": 1,
+        "page": 4,
+        "purpose": "评分、概化、外推与决策",
+        "phrase": "four key inferences",
+        "combined_page": 250,
+        "image": "R17-E1.png",
+        "full_image": "R17-p4.png"
+      },
+      {
+        "id": "R17-E2",
+        "index": 2,
+        "page": 6,
+        "purpose": "从观察到分数的证据要求",
+        "phrase": "transformed into a consistent numeric score",
+        "combined_page": 252,
+        "image": "R17-E2.png",
+        "full_image": "R17-p6.png"
+      }
+    ]
+  },
+  {
+    "id": "R18",
+    "original_pages": 29,
+    "combined_start": 259,
+    "sha256": "e1474f341ef97b4f37cf884ea15fdd5c25bb68ac52aedb1f0e974116e0208c52",
+    "source": "https://doi.org/10.1525/collabra.33267",
+    "evidence": [
+      {
+        "id": "R18-E1",
+        "index": 1,
+        "page": 2,
+        "purpose": "样本量论证的目的",
+        "phrase": "The key aim",
+        "combined_page": 260,
+        "image": "R18-E1.png",
+        "full_image": "R18-p2.png"
+      },
+      {
+        "id": "R18-E2",
+        "index": 2,
+        "page": 8,
+        "purpose": "以精度规划样本",
+        "phrase": "Planning for Precision",
+        "combined_page": 266,
+        "image": "R18-E2.png",
+        "full_image": "R18-p8.png"
+      },
+      {
+        "id": "R18-E3",
+        "index": 3,
+        "page": 3,
+        "purpose": "资源约束下的研究范围",
+        "phrase": "Resource constraints",
+        "combined_page": 261,
+        "image": "R18-E3.png",
+        "full_image": "R18-p3.png"
+      },
+      {
+        "id": "R18-E4",
+        "index": 4,
+        "page": 4,
+        "purpose": "资源约束的样本量论证正文",
+        "phrase": "A common reason for",
+        "combined_page": 262,
+        "image": "R18-E4.png",
+        "full_image": "R18-p4.png"
+      }
+    ]
+  },
+  {
+    "id": "R19",
+    "original_pages": 5,
+    "combined_start": 288,
+    "sha256": "452e87a19569d3ce8d995bcc9e5df17bc76b14f38d7c3e50966d29205597aff0",
+    "source": "https://doi.org/10.24926/iip.v12i1.2110",
+    "evidence": [
+      {
+        "id": "R19-E1",
+        "index": 1,
+        "page": 2,
+        "purpose": "14 站与考试安排",
+        "phrase": "In this OSCE iteration",
+        "combined_page": 289,
+        "image": "R19-E1.png",
+        "full_image": "R19-p2.png"
+      },
+      {
+        "id": "R19-E2",
+        "index": 2,
+        "page": 4,
+        "purpose": "增加站点的估计效果",
+        "phrase": "Decision-studies",
+        "combined_page": 291,
+        "image": "R19-E2.png",
+        "full_image": "R19-p4.png"
+      },
+      {
+        "id": "R19-E3",
+        "index": 3,
+        "page": 5,
+        "purpose": "迁移范围的限制",
+        "phrase": "other institutions may differ",
+        "combined_page": 292,
+        "image": "R19-E3.png",
+        "full_image": "R19-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R20",
+    "original_pages": 9,
+    "combined_start": 293,
+    "sha256": "cc7b16b5913b031624254c592479de92df15fa9e9696b330300c96ca7018a839",
+    "source": "https://doi.org/10.1016/j.heliyon.2023.e15768",
+    "evidence": [
+      {
+        "id": "R20-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "咨询行为框架",
+        "phrase": "Three Prime Questions",
+        "combined_page": 295,
+        "image": "R20-E1.png",
+        "full_image": "R20-p3.png"
+      },
+      {
+        "id": "R20-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "评价样本与测量性质",
+        "phrase": "247 student counseling",
+        "combined_page": 297,
+        "image": "R20-E2.png",
+        "full_image": "R20-p5.png"
+      },
+      {
+        "id": "R20-E3",
+        "index": 3,
+        "page": 7,
+        "purpose": "患者主动信息与条目适用性",
+        "phrase": "When additional information",
+        "combined_page": 299,
+        "image": "R20-E3.png",
+        "full_image": "R20-p7.png"
+      }
+    ]
+  },
+  {
+    "id": "R21",
+    "original_pages": 35,
+    "combined_start": 302,
+    "sha256": "1f3a7c8b763b9f5f49dae5fcba9830d00064875db5318a5dd709acc6c175158d",
+    "source": "https://doi.org/10.1371/journal.pone.0219854",
+    "evidence": [
+      {
+        "id": "R21-E1",
+        "index": 1,
+        "page": 2,
+        "purpose": "单次测量及不同 ICC 形式",
+        "phrase": "We limit the present",
+        "combined_page": 303,
+        "image": "R21-E1.png",
+        "full_image": "R21-p2.png"
+      },
+      {
+        "id": "R21-E2",
+        "index": 2,
+        "page": 10,
+        "purpose": "绝对一致与一致性",
+        "phrase": "if we are satisfied with just consistency",
+        "combined_page": 311,
+        "image": "R21-E2.png",
+        "full_image": "R21-p10.png"
+      },
+      {
+        "id": "R21-E3",
+        "index": 3,
+        "page": 19,
+        "purpose": "区间估计",
+        "phrase": "confidence limits",
+        "combined_page": 320,
+        "image": "R21-E3.png",
+        "full_image": "R21-p19.png"
+      }
+    ]
+  },
+  {
+    "id": "R22",
+    "original_pages": 15,
+    "combined_start": 337,
+    "sha256": "719c18e218547f22429ca0e3370d95a39045ac7b0cd0b0db3c3619210d8d46da",
+    "source": "https://arxiv.org/abs/2501.13957",
+    "evidence": [
+      {
+        "id": "R22-E1",
+        "index": 1,
+        "page": 4,
+        "purpose": "数据和专家参考",
+        "phrase": "10 unique OSCE video",
+        "combined_page": 340,
+        "image": "R22-E1.png",
+        "full_image": "R22-p4.png"
+      },
+      {
+        "id": "R22-E2",
+        "index": 2,
+        "page": 8,
+        "purpose": "不同准确率口径",
+        "phrase": "exact accuracy was low",
+        "combined_page": 344,
+        "image": "R22-E2.png",
+        "full_image": "R22-p8.png"
+      },
+      {
+        "id": "R22-E3",
+        "index": 3,
+        "page": 8,
+        "purpose": "重复稳定性",
+        "phrase": "intra-rater",
+        "combined_page": 344,
+        "image": "R22-E3.png",
+        "full_image": "R22-p8.png"
+      }
+    ]
+  },
+  {
+    "id": "R23",
+    "original_pages": 16,
+    "combined_start": 352,
+    "sha256": "4c0eed6b443257f3d07cb8ce3f10844dfbc004567a30eefd0d78de76a6be1704",
+    "source": "https://www.accp.com/cmm_care_process",
+    "evidence": [
+      {
+        "id": "R23-E1",
+        "index": 1,
+        "page": 7,
+        "purpose": "药物评估维度",
+        "phrase": "Obtain and reconcile",
+        "combined_page": 358,
+        "image": "R23-E1.png",
+        "full_image": "R23-p7.png"
+      },
+      {
+        "id": "R23-E2",
+        "index": 2,
+        "page": 8,
+        "purpose": "IESA 顺序及专业含义",
+        "phrase": "The order of the medication assessment",
+        "combined_page": 359,
+        "image": "R23-E2.png",
+        "full_image": "R23-p8.png"
+      }
+    ]
+  },
+  {
+    "id": "R24",
+    "original_pages": 9,
+    "combined_start": 368,
+    "sha256": "49105bc40da6457957ad71213cda1861f141d8804c5379b0fce65844f3665fcb",
+    "source": "https://www.ijcai.org/proceedings/2025/1065",
+    "evidence": [
+      {
+        "id": "R24-E1",
+        "index": 1,
+        "page": 3,
+        "purpose": "三阶段方法",
+        "phrase": "This section outlines",
+        "combined_page": 370,
+        "image": "R24-E1.png",
+        "full_image": "R24-p3.png"
+      },
+      {
+        "id": "R24-E2",
+        "index": 2,
+        "page": 5,
+        "purpose": "行为与来电者响应分别判断",
+        "phrase": "The address check categorizes",
+        "combined_page": 372,
+        "image": "R24-E2.png",
+        "full_image": "R24-p5.png"
+      },
+      {
+        "id": "R24-E3",
+        "index": 3,
+        "page": 6,
+        "purpose": "真实及模拟评价设计",
+        "phrase": "1,244",
+        "combined_page": 373,
+        "image": "R24-E3.png",
+        "full_image": "R24-p6.png"
+      }
+    ]
+  },
+  {
+    "id": "R25",
+    "original_pages": 17,
+    "combined_start": 377,
+    "sha256": "7de504567d4afd3595cb0c67ea93b82023562e590284a44196385876a3af6cd2",
+    "source": "https://doi.org/10.3758/BF03193146",
+    "evidence": [
+      {
+        "id": "R25-E1",
+        "index": 1,
+        "page": 13,
+        "purpose": "配对二值结果及精确McNemar功效",
+        "phrase": "Also new in G",
+        "combined_page": 389,
+        "image": "R25-E1.png",
+        "full_image": "R25-p13.png"
+      },
+      {
+        "id": "R25-E2",
+        "index": 2,
+        "page": 3,
+        "purpose": "资源受限时的敏感度分析",
+        "phrase": "Sensitivity Analyses",
+        "combined_page": 379,
+        "image": "R25-E2.png",
+        "full_image": "R25-p3.png"
+      }
+    ]
+  },
+  {
+    "id": "R26",
+    "original_pages": 6,
+    "combined_start": 394,
+    "sha256": "49d499469bbe5b7835ca9bed4a7e8386c659a57c4938a8665678d2c375076f8a",
+    "source": "https://doi.org/10.1109/TE.2014.2313036",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 2,
+        "phrase": "The key idea is",
+        "purpose": "设计应让评价方法与研究目标相符",
+        "id": "R26-E1",
+        "combined_page": 395,
+        "image": "R26-E1.png",
+        "full_image": "R26-p2.png"
+      },
+      {
+        "index": 2,
+        "page": 4,
+        "phrase": "Collect and analyze",
+        "purpose": "使用与研究问题相符的方法收集和分析数据",
+        "id": "R26-E2",
+        "combined_page": 397,
+        "image": "R26-E2.png",
+        "full_image": "R26-p4.png"
+      },
+      {
+        "index": 3,
+        "page": 5,
+        "phrase": "on student opinion data",
+        "purpose": "学生意见的用途与结论边界",
+        "id": "R26-E3",
+        "combined_page": 398,
+        "image": "R26-E3.png",
+        "full_image": "R26-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R27",
+    "original_pages": 6,
+    "combined_start": 400,
+    "sha256": "d4a7fb0d4c913a8e26ccf5078388b346eb7013e6dd77b39b2031469042be3423",
+    "source": "https://doi.org/10.1109/EDUCON60312.2024.10578654",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 4,
+        "phrase": "52 samples",
+        "purpose": "52 份参考说明及成对生成设计",
+        "id": "R27-E1",
+        "combined_page": 403,
+        "image": "R27-E1.png",
+        "full_image": "R27-p4.png"
+      },
+      {
+        "index": 2,
+        "page": 4,
+        "phrase": "To ensure a",
+        "purpose": "控制生成长度",
+        "id": "R27-E2",
+        "combined_page": 403,
+        "image": "R27-E2.png",
+        "full_image": "R27-p4.png"
+      },
+      {
+        "index": 3,
+        "page": 4,
+        "phrase": "Qualitatively",
+        "purpose": "8 名学习者、5 名专家与问卷",
+        "id": "R27-E3",
+        "combined_page": 403,
+        "image": "R27-E3.png",
+        "full_image": "R27-p4.png"
+      }
+    ]
+  },
+  {
+    "id": "R28",
+    "original_pages": 10,
+    "combined_start": 406,
+    "sha256": "0db8c0a307800d871258774eaf10e62243f027a3205abc9f9c74e2140c373feb",
+    "source": "https://doi.org/10.1109/EDUCON62633.2025.11016377",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 6,
+        "phrase": "Evaluators included",
+        "purpose": "专家组成与核验流程",
+        "id": "R28-E1",
+        "combined_page": 411,
+        "image": "R28-E1.png",
+        "full_image": "R28-p6.png"
+      },
+      {
+        "index": 2,
+        "page": 7,
+        "phrase": "A total of 1197",
+        "purpose": "抽取项数量与指标",
+        "id": "R28-E2",
+        "combined_page": 412,
+        "image": "R28-E2.png",
+        "full_image": "R28-p7.png"
+      },
+      {
+        "index": 3,
+        "page": 7,
+        "phrase": "To evaluate the resulting",
+        "purpose": "图结构测量的实际用途",
+        "id": "R28-E3",
+        "combined_page": 412,
+        "image": "R28-E3.png",
+        "full_image": "R28-p7.png"
+      }
+    ]
+  },
+  {
+    "id": "R29",
+    "original_pages": 11,
+    "combined_start": 416,
+    "sha256": "9c0614620e317b4d22ea6fdd6f65ee3f9a2ef3af7bc83c2dae05a871730e58e6",
+    "source": "https://doi.org/10.1109/TE.2021.3116202",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 5,
+        "phrase": "Two third-year",
+        "purpose": "七周评分员训练与独立评分",
+        "id": "R29-E1",
+        "combined_page": 420,
+        "image": "R29-E1.png",
+        "full_image": "R29-p5.png"
+      },
+      {
+        "index": 2,
+        "page": 5,
+        "phrase": "To check reliability",
+        "purpose": "共同评分样本与可靠性检查",
+        "id": "R29-E2",
+        "combined_page": 420,
+        "image": "R29-E2.png",
+        "full_image": "R29-p5.png"
+      },
+      {
+        "index": 3,
+        "page": 7,
+        "phrase": "37 Cryptocurrency",
+        "purpose": "37 篇文章、两名专家的论证标注",
+        "id": "R29-E3",
+        "combined_page": 422,
+        "image": "R29-E3.png",
+        "full_image": "R29-p7.png"
+      },
+      {
+        "index": 4,
+        "page": 7,
+        "phrase": "Logistic regression",
+        "purpose": "5 折验证、QWK 与特征组合",
+        "id": "R29-E4",
+        "combined_page": 422,
+        "image": "R29-E4.png",
+        "full_image": "R29-p7.png"
+      }
+    ]
+  },
+  {
+    "id": "R30",
+    "original_pages": 12,
+    "combined_start": 427,
+    "sha256": "8d8a091870a678ac358354d7eef49422a9bfa959f8ee5ea732bca0ca32a28a71",
+    "source": "https://doi.org/10.1109/TLT.2025.3561332",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 6,
+        "phrase": "Trained on 100",
+        "purpose": "100 份教学设计标注，非学生数",
+        "id": "R30-E1",
+        "combined_page": 432,
+        "image": "R30-E1.png",
+        "full_image": "R30-p6.png"
+      },
+      {
+        "index": 2,
+        "page": 8,
+        "phrase": "Furthermore, we conduct",
+        "purpose": "组件贡献的消融目的",
+        "id": "R30-E2",
+        "combined_page": 434,
+        "image": "R30-E2.png",
+        "full_image": "R30-p8.png"
+      },
+      {
+        "index": 3,
+        "page": 10,
+        "phrase": "ABLATION STUDY",
+        "purpose": "Table II：六种组件组合",
+        "id": "R30-E3",
+        "combined_page": 436,
+        "image": "R30-E3.png",
+        "full_image": "R30-p10.png"
+      }
+    ]
+  },
+  {
+    "id": "R31",
+    "original_pages": 7,
+    "combined_start": 439,
+    "sha256": "d09a90cecc5a6a39272c9ef8efb4ea4e4a4a6c0eb6204fb451e23e99160121a0",
+    "source": "https://doi.org/10.1109/EDUCON67543.2026.11574212",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 4,
+        "phrase": "A. Datasets",
+        "purpose": "数据集、划分及 CWQ 评估说明",
+        "id": "R31-E1",
+        "combined_page": 442,
+        "image": "R31-E1.png",
+        "full_image": "R31-p4.png"
+      },
+      {
+        "index": 2,
+        "page": 5,
+        "phrase": "E. Ablation Study",
+        "purpose": "逐部件移除的实验说明",
+        "id": "R31-E2",
+        "combined_page": 443,
+        "image": "R31-E2.png",
+        "full_image": "R31-p5.png"
+      },
+      {
+        "index": 3,
+        "page": 5,
+        "phrase": "Fig. 6.",
+        "purpose": "图 6：MetaQA 消融图及图例",
+        "id": "R31-E3",
+        "combined_page": 443,
+        "image": "R31-E3.png",
+        "full_image": "R31-p5.png"
+      }
+    ]
+  },
+  {
+    "id": "R32",
+    "original_pages": 10,
+    "combined_start": 446,
+    "sha256": "211481aabb988910a4f4445201ba2c81f2081c71b7888bc56a84eb88deb29663",
+    "source": "https://doi.org/10.1109/EDUCON62633.2025.11016486",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 4,
+        "phrase": "cohort of 60",
+        "purpose": "课程实施人数与研究方式",
+        "id": "R32-E1",
+        "combined_page": 449,
+        "image": "R32-E1.png",
+        "full_image": "R32-p4.png"
+      },
+      {
+        "index": 2,
+        "page": 7,
+        "phrase": "completed by 60",
+        "purpose": "60 份问卷及问题类型",
+        "id": "R32-E2",
+        "combined_page": 452,
+        "image": "R32-E2.png",
+        "full_image": "R32-p7.png"
+      },
+      {
+        "index": 3,
+        "page": 8,
+        "phrase": "91%",
+        "purpose": "自报感受结果及其测量对象",
+        "id": "R32-E3",
+        "combined_page": 453,
+        "image": "R32-E3.png",
+        "full_image": "R32-p8.png"
+      }
+    ]
+  },
+  {
+    "id": "R33",
+    "original_pages": 11,
+    "combined_start": 456,
+    "sha256": "8a8f9dcc4fb5776f138b264ab1d6bed415e9fe0481a62ba16453947ab53e30e2",
+    "source": "https://doi.org/10.1109/FIE63693.2025.11328530",
+    "evidence": [
+      {
+        "index": 1,
+        "page": 3,
+        "phrase": "A total of 251",
+        "purpose": "参与者组成",
+        "id": "R33-E1",
+        "combined_page": 458,
+        "image": "R33-E1.png",
+        "full_image": "R33-p3.png"
+      },
+      {
+        "index": 2,
+        "page": 3,
+        "phrase": "pilot study",
+        "purpose": "问卷预测试与题型",
+        "id": "R33-E2",
+        "combined_page": 458,
+        "image": "R33-E2.png",
+        "full_image": "R33-p3.png"
+      },
+      {
+        "index": 3,
+        "page": 3,
+        "phrase": "Quantitative data were",
+        "purpose": "描述统计和开放回答分析",
+        "id": "R33-E3",
+        "combined_page": 458,
+        "image": "R33-E3.png",
+        "full_image": "R33-p3.png"
+      }
+    ]
+  }
+]

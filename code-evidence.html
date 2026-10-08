@@ -1,0 +1,388 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Implementation source notes | DualGraph-OSCE</title><link rel="stylesheet" href="assets/style.css"><link rel="stylesheet" href="assets/support.css"></head><body><div class="topbar"><div class="topbar-inner"><a href="index.html"><b>DualGraph-OSCE / Pharmacy OSCE</b></a><nav><a href="index.html#problem">Problem</a><a href="index.html#innovation">Method</a><a href="index.html#architecture">Architecture</a><a href="index.html#metrics">Metrics</a><a href="index.html#experiments">Study</a><a href="index.html#references">References</a><a href="implementation.html">Implementation</a></nav></div></div><main class="layout"><header class="hero small"><p class="eyebrow">RESEARCH AND STUDY MATERIALS</p><h1>Implementation source notes</h1><p>Source-level interpretation supporting the framework; explanatory English glosses retain the original line anchors.</p></header><section id="doctor"><h2>Doctor-role permissions</h2><p>The snapshot selects a permitted prompt or challenge based on a quoted student trigger. This already contains explicit control logic; a fair conventional baseline must distinguish shared safety checks from the proposed paired-graph rule execution.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\services\cuhk_doctor_role.py</code></p><pre><span class="code-line"><span class="ln">110</span>def allowed_plan(raw, payload):</span>
+<span class="code-line"><span class="ln">111</span>    plan = Plan.model_validate(raw)</span>
+<span class="code-line"><span class="ln">112</span>    permissions, rules = {}, []</span>
+<span class="code-line"><span class="ln">113</span>    if plan.mode != 'recommendation':</span>
+<span class="code-line"><span class="ln">114</span>        return plan.mode, permissions, rules</span>
+<span class="code-line"><span class="ln">115</span>    student = payload['conversation_memory'][-1]['text']</span>
+<span class="code-line"><span class="ln">116</span>    if not plan.trigger_quote or plan.trigger_quote not in student:</span>
+<span class="code-line"><span class="ln">117</span>        return 'dialogue', permissions, rules</span>
+<span class="code-line"><span class="ln">118</span>    if plan.prompt_code and plan.rule_index is not None:</span>
+<span class="code-line"><span class="ln">119</span>        return 'dialogue', permissions, rules</span>
+<span class="code-line"><span class="ln">120</span>    permitted = payload.get('guidance_permissions', {})</span>
+<span class="code-line"><span class="ln">121</span>    if plan.prompt_code in permitted:</span>
+<span class="code-line"><span class="ln">122</span>        permissions[plan.prompt_code] = permitted[plan.prompt_code]</span>
+<span class="code-line"><span class="ln">123</span>    elif not plan.prompt_code and plan.rule_index is not None:</span>
+<span class="code-line"><span class="ln">124</span>        source = payload.get('dialogue_policy', {}).get('challenge_rules', [])</span>
+<span class="code-line"><span class="ln">125</span>        if plan.rule_index &lt; len(source):</span>
+<span class="code-line"><span class="ln">126</span>            rules = [source[plan.rule_index]]</span>
+<span class="code-line"><span class="ln">127</span>    return plan.mode, permissions, rules</span>
+<span class="code-line"><span class="ln">128</span></span>
+<span class="code-line"><span class="ln">129</span></span>
+<span class="code-line"><span class="ln">130</span>async def prepare_payload(case, payload, client, model):</span>
+<span class="code-line"><span class="ln">131</span>    if not applies(case) or payload.get('opening'):</span>
+<span class="code-line"><span class="ln">132</span>        return payload</span>
+<span class="code-line"><span class="ln">133</span>    from services.cuhk_model_transport import complete</span>
+<span class="code-line"><span class="ln">134</span>    from services.cuhk_model_json import parse_object, normalize_shape</span>
+<span class="code-line"><span class="ln">135</span>    from services.cuhk_drug_information_agent import doctor_model_parameters</span>
+<span class="code-line"><span class="ln">136</span>    from services import cuhk_drug_information_diagnostics as diag</span>
+<span class="code-line"><span class="ln">137</span>    facts = payload['source_facts']</span>
+<span class="code-line"><span class="ln">138</span>    mode, permissions, rules = 'dialogue', {}, []</span>
+<span class="code-line"><span class="ln">139</span>    try:</span>
+<span class="code-line"><span class="ln">140</span>        response = await complete(client, model=model, temperature=0, max_tokens=800,</span>
+<span class="code-line"><span class="ln">141</span>            attempts=2, timeout=15, attempt_timeout=12, hedge_after=6,</span>
+<span class="code-line"><span class="ln">142</span>            extra_body=doctor_model_parameters(model, 'low'),</span>
+<span class="code-line"><span class="ln">143</span>            messages=[{'role':'system','content':VERIFY}, {'role':'user','content':json.dumps(</span>
+<span class="code-line"><span class="ln">144</span>                {**payload, 'teaching_key':case.get('expected_clinical_answer',[])},</span>
+<span class="code-line"><span class="ln">145</span>                ensure_ascii=False, separators=(',', ':'))}])</span>
+<span class="code-line"><span class="ln">146</span>        if response.choices[0].finish_reason != 'stop':</span>
+<span class="code-line"><span class="ln">147</span>            raise ValueError('Incomplete private decision check')</span>
+<span class="code-line"><span class="ln">148</span>        mode, permissions, rules = allowed_plan(normalize_shape(parse_object(</span>
+<span class="code-line"><span class="ln">149</span>            response.choices[0].message.content), Plan), payload)</span>
+<span class="code-line"><span class="ln">150</span>    except Exception as exc:</span>
+<span class="code-line"><span class="ln">151</span>        diag.emit('doctor_decision_check_unavailable', case=case['case_id'], error_type=type(exc).__name__)</span>
+<span class="code-line"><span class="ln">152</span>        mode = 'unavailable'</span>
+<span class="code-line"><span class="ln">153</span>    permitted = {k:v for k,v in facts.items() if k.startswith(('doctor.', 'interaction.')) or k in IDENTITY}</span>
+<span class="code-line"><span class="ln">154</span>    diag.emit('doctor_chart_disclosure', case=case['case_id'], mode=mode, prompts=len(permissions))</span>
+<span class="code-line"><span class="ln">155</span>    return {**payload, 'source_facts':permitted, 'source_obligations':[],</span>
+<span class="code-line"><span class="ln">156</span>        'doctor_disclosure_contract':VERSION,</span>
+<span class="code-line"><span class="ln">157</span>        'retrieval_scope':{'mode':mode, 'selected':list(permitted), 'unknown_questions':[]},</span>
+<span class="code-line"><span class="ln">158</span>        'guidance_permissions':permissions,</span>
+<span class="code-line"><span class="ln">159</span>        'dialogue_policy':{'challenge_rules':rules, 'information_access':'Pharmacist reads hospital record independently; doctor does not recite or verify entries.'},</span>
+<span class="code-line"><span class="ln">160</span>        'disclosure_instruction':RULES + ('\nPrivate decision check is unavailable: do not approve safety or challenge clinical details. Briefly ask for time to consider the recommendation, or direct an information query to the chart. Keep the consultation open.' if mode=='unavailable' else '')}</span></pre></section><section id="patient"><h2>Lay-patient knowledge boundaries</h2><p>The patient view excludes examiner-only prescribing and laboratory detail, retains supplied history and uses ordinary patient language. The English glosses below explain Cantonese output expressions; they are not a replacement for the source program.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\services\cuhk_patient_role.py</code></p><pre><span class="code-line"><span class="ln">1</span>"""Separate the two CUHK lay actors' knowledge from the examiner's chart.</span>
+<span class="code-line"><span class="ln">2</span></span>
+<span class="code-line"><span class="ln">3</span>This is a performance/knowledge boundary, not an age-based medical inference.</span>
+<span class="code-line"><span class="ln">4</span>Full case files remain available to the assessor. No clinical facts are added.</span>
+<span class="code-line"><span class="ln">5</span>"""</span>
+<span class="code-line"><span class="ln">6</span>from __future__ import annotations</span>
+<span class="code-line"><span class="ln">7</span>import re</span>
+<span class="code-line"><span class="ln">8</span></span>
+<span class="code-line"><span class="ln">9</span>VERSION = '20260928-lay-patient-v1'</span>
+<span class="code-line"><span class="ln">10</span>LAY_HISTORY = {</span>
+<span class="code-line"><span class="ln">11</span>    'Heart failure': 'my heart is not working well', 'STEMI in December 2024': 'I had a heart attack in December 2024',</span>
+<span class="code-line"><span class="ln">12</span>    'Hypertension': 'high blood pressure', 'Type 2 diabetes': 'diabetes',</span>
+<span class="code-line"><span class="ln">13</span>    'Chronic kidney disease': 'my kidneys are not working well', 'Depression and anxiety': 'problems with mood and worry',</span>
+<span class="code-line"><span class="ln">14</span>    'Migraine': 'migraine', 'Rheumatoid arthritis': 'rheumatoid arthritis',</span>
+<span class="code-line"><span class="ln">15</span>    'Atrial fibrillation': 'an irregular heartbeat', 'Dyslipidemia': 'high cholesterol',</span>
+<span class="code-line"><span class="ln">16</span>}</span>
+<span class="code-line"><span class="ln">17</span></span>
+<span class="code-line"><span class="ln">18</span>def patient_facts(case, facts):</span>
+<span class="code-line"><span class="ln">19</span>    if case.get('counterpart_role') != 'patient':</span>
+<span class="code-line"><span class="ln">20</span>        return facts</span>
+<span class="code-line"><span class="ln">21</span>    if case.get('base_case_id', case.get('case_id')) not in {</span>
+<span class="code-line"><span class="ln">22</span>        'cuhk_di_03_diuretics_counseling', 'cuhk_di_04_mtx_counseling'}:</span>
+<span class="code-line"><span class="ln">23</span>        return facts</span>
+<span class="code-line"><span class="ln">24</span>    result={}</span>
+<span class="code-line"><span class="ln">25</span>    for key,value in facts.items():</span>
+<span class="code-line"><span class="ln">26</span>        # The actor does not read the examiner's prescribing exhibit aloud.</span>
+<span class="code-line"><span class="ln">27</span>        if key.startswith(('patient.medicines.', 'patient.laboratory_results.')):</span>
+<span class="code-line"><span class="ln">28</span>            continue</span>
+<span class="code-line"><span class="ln">29</span>        if key == 'patient.other_medicines':</span>
+<span class="code-line"><span class="ln">30</span>            result[key]='Current medicine details are not confirmed in the supplied material. Do not name old medicines or claim no other medicines.'</span>
+<span class="code-line"><span class="ln">31</span>        elif key.startswith('patient.medical_history.'):</span>
+<span class="code-line"><span class="ln">32</span>            result[key]=LAY_HISTORY.get(value,value)</span>
+<span class="code-line"><span class="ln">33</span>        elif key == 'patient.experience':</span>
+<span class="code-line"><span class="ln">34</span>            # Preserve source history, without giving a drug-name recital.</span>
+<span class="code-line"><span class="ln">35</span>            result[key]=value.replace('frusemide','the newly prescribed medicine for swelling')</span>
+<span class="code-line"><span class="ln">36</span>        else:</span>
+<span class="code-line"><span class="ln">37</span>            result[key]=value</span>
+<span class="code-line"><span class="ln">38</span>    # A station acting instruction explicitly requested by the platform owner;</span>
+<span class="code-line"><span class="ln">39</span>    # not a diagnosis of memory loss, illiteracy or impaired cognition.</span>
+<span class="code-line"><span class="ln">40</span>    result['patient.medicine_familiarity']=(</span>
+<span class="code-line"><span class="ln">41</span>        'This actor does not recall or read out the English medicine names, doses or complete prescription. '</span>
+<span class="code-line"><span class="ln">42</span>        'Ask the pharmacist to explain the medicines. Do not invent taking new medicines already, '</span>
+<span class="code-line"><span class="ln">43</span>        'tablet colours, packaging, bringing a medicine bag, or a previous conversation. '</span>
+<span class="code-line"><span class="ln">44</span>        'Use this medicine / the other medicine / the medicine you just mentioned as context permits. '</span>
+<span class="code-line"><span class="ln">45</span>        'The actor can repeat clear dosing instructions ONLY after the student has actually taught them.')</span>
+<span class="code-line"><span class="ln">46</span>    return result</span>
+<span class="code-line"><span class="ln">47</span></span>
+<span class="code-line"><span class="ln">48</span>PATIENT_LANGUAGE = '''</span>
+<span class="code-line"><span class="ln">49</span>LAY MEDICINE KNOWLEDGE: source_facts is this patient's own knowledge, not a chart.</span>
+<span class="code-line"><span class="ln">50</span>For these two actors, an English name appearing in a checklist, station heading,</span>
+<span class="code-line"><span class="ln">51</span>student question or prior generated reply does not mean the patient can read,</span>
+<span class="code-line"><span class="ln">52</span>pronounce or recall it. Do not speak or spell a technical drug name, enumerate</span>
+<span class="code-line"><span class="ln">53</span>medicines, recite doses from the case, diagnose, or give the standard answer.</span>
+<span class="code-line"><span class="ln">54</span>Refer naturally to this medicine / the other medicine / the medicine mentioned earlier; use a familiar purpose only</span>
+<span class="code-line"><span class="ln">55</span>when already explained by the student or explicitly known in source_facts.</span>
+<span class="code-line"><span class="ln">56</span>If two medicines could be confused, ask which one; do not guess their identity.</span>
+<span class="code-line"><span class="ln">57</span>You may ask how/when to take a medicine, what to do if forgotten, or what an</span>
+<span class="code-line"><span class="ln">58</span>unexplained term means. Do not introduce a missed-dose rule or contraindication.</span>
+<span class="code-line"><span class="ln">59</span>When asked for all medicines, briefly say you do not know their names and ask</span>
+<span class="code-line"><span class="ln">60</span>the pharmacist to explain. Do not pretend the prescription or chart was read.</span>
+<span class="code-line"><span class="ln">61</span>For teach-back, faithfully recall what the student taught using everyday words;</span>
+<span class="code-line"><span class="ln">62</span>do not repair their wrong advice yourself. A patient's repetition is never</span></pre></section><section id="agent"><h2>Role generation and review</h2><p>The role model receives the service-selected model/client. Private preparation can overlap generation, but release still depends on review. A prepared draft is not an event already heard by the student.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\services\cuhk_drug_information_agent.py</code></p><pre><span class="code-line"><span class="ln">548</span>async def doctor_reply(case, history, student_text, client, model, *, opening=False, on_candidate=None, combine_scope=False):</span>
+<span class="code-line"><span class="ln">549</span>    # The service supplies the same model and client as other cases/scoring.</span>
+<span class="code-line"><span class="ln">550</span>    # No CUHK-only override or alternate provider is consulted here.</span>
+<span class="code-line"><span class="ln">551</span>    model = str(model)</span>
+<span class="code-line"><span class="ln">552</span>    review_model = model</span>
+<span class="code-line"><span class="ln">553</span>    async def generate(stage, **kwargs):</span>
+<span class="code-line"><span class="ln">554</span>        started=time.perf_counter();prepared=False;success=False</span>
+<span class="code-line"><span class="ln">555</span>        try:</span>
+<span class="code-line"><span class="ln">556</span>            if PROGRESS.get() is None:</span>
+<span class="code-line"><span class="ln">557</span>                result=await complete(client, **kwargs)</span>
+<span class="code-line"><span class="ln">558</span>                success=True</span>
+<span class="code-line"><span class="ln">559</span>                return result</span>
+<span class="code-line"><span class="ln">560</span>            # Real upstream streaming; private speech can overlap the rest of</span>
+<span class="code-line"><span class="ln">561</span>            # generation, but no text/audio is published before independent review.</span>
+<span class="code-line"><span class="ln">562</span>            from types import SimpleNamespace</span>
+<span class="code-line"><span class="ln">563</span>            from services.cuhk_model_transport import complete_stream_text</span>
+<span class="code-line"><span class="ln">564</span>            from services.cuhk_drug_information_preparation import private_first_sentence</span>
+<span class="code-line"><span class="ln">565</span>            await progress(stage)</span>
+<span class="code-line"><span class="ln">566</span>            async def prefix(text):</span>
+<span class="code-line"><span class="ln">567</span>                nonlocal prepared</span>
+<span class="code-line"><span class="ln">568</span>                await progress(stage, len(text))</span>
+<span class="code-line"><span class="ln">569</span>                if combine_scope and stage=='generating' and on_candidate is not None and not prepared:</span>
+<span class="code-line"><span class="ln">570</span>                    first=private_first_sentence(text)</span>
+<span class="code-line"><span class="ln">571</span>                    if first:</span>
+<span class="code-line"><span class="ln">572</span>                        prepared=True</span>
+<span class="code-line"><span class="ln">573</span>                        try:on_candidate(first)</span>
+<span class="code-line"><span class="ln">574</span>                        except Exception as exc:</span>
+<span class="code-line"><span class="ln">575</span>                            logger.info('[cuhk-doctor-agent] private_audio_prepare_unavailable type=%s',type(exc).__name__)</span>
+<span class="code-line"><span class="ln">576</span>            stream_options = dict(kwargs)</span>
+<span class="code-line"><span class="ln">577</span>            if combine_scope and not opening:</span>
+<span class="code-line"><span class="ln">578</span>                # Only private doctor generation/review, not grading or ASR.</span>
+<span class="code-line"><span class="ln">579</span>                # Normal fast requests stay single; one slow-call backup only.</span>
+<span class="code-line"><span class="ln">580</span>                stream_options.update(attempts=2,hedge_after=4.0)</span>
+<span class="code-line"><span class="ln">581</span>            raw = await complete_stream_text(client, on_prefix=prefix, **stream_options)</span>
+<span class="code-line"><span class="ln">582</span>            success=True</span>
+<span class="code-line"><span class="ln">583</span>            return SimpleNamespace(choices=[SimpleNamespace(</span>
+<span class="code-line"><span class="ln">584</span>                finish_reason='stop', message=SimpleNamespace(content=raw))])</span>
+<span class="code-line"><span class="ln">585</span>        finally:</span>
+<span class="code-line"><span class="ln">586</span>            logger.info('[cuhk-doctor-agent] model_stage stage=%s pipeline=%s elapsed_ms=%.1f completed=%s',</span>
+<span class="code-line"><span class="ln">587</span>                stage,'joint-reviewed' if combine_scope and not opening else 'scoped-reviewed',</span>
+<span class="code-line"><span class="ln">588</span>                (time.perf_counter()-started)*1000,success)</span>
+<span class="code-line"><span class="ln">589</span>    turns = [{'turn_index': i, 'role': t.role, 'text': t.text,</span>
+<span class="code-line"><span class="ln">590</span>              'prompt_codes': list(t.prompt_codes)} for i, t in enumerate(history)]</span>
+<span class="code-line"><span class="ln">591</span>    if not opening:</span>
+<span class="code-line"><span class="ln">592</span>        turns.append({'turn_index': len(turns), 'role': 'student', 'text': student_text, 'prompt_codes': []})</span>
+<span class="code-line"><span class="ln">593</span>    payload = {'case_id': case['case_id'], 'opening': opening,</span>
+<span class="code-line"><span class="ln">594</span>               'source_facts': source_facts(case), 'dialogue_policy': case['dialogue_policy'],</span>
+<span class="code-line"><span class="ln">595</span>               'guidance_permissions': guidance_for(case, history, student_text), 'conversation_memory': turns, **actor_policy(case)}</span>
+<span class="code-line"><span class="ln">596</span>    if len(json.dumps(payload,ensure_ascii=False))&gt;180000:</span>
+<span class="code-line"><span class="ln">597</span>        raise ValueError('Doctor conversation exceeds validated context capacity; history was not truncated')</span>
+<span class="code-line"><span class="ln">598</span>    from services.cuhk_doctor_role import prepare_payload</span>
+<span class="code-line"><span class="ln">599</span>    private_chart = payload['source_facts']</span>
+<span class="code-line"><span class="ln">600</span>    payload = await prepare_payload(case, payload, client, model)</span>
+<span class="code-line"><span class="ln">601</span>    full_source=payload['source_facts']</span>
+<span class="code-line"><span class="ln">602</span>    if opening:</span>
+<span class="code-line"><span class="ln">603</span>        # The initial consultation must leave assessed identity for inquiry.</span>
+<span class="code-line"><span class="ln">604</span>        # Nonopening retrieval still has doctor details; nothing is erased.</span>
+<span class="code-line"><span class="ln">605</span>        payload['source_facts'] = {k:v for k,v in payload['source_facts'].items()</span>
+<span class="code-line"><span class="ln">606</span>                                   if k in {'doctor.opening','interaction.urgency','interaction.mode'}}</span>
+<span class="code-line"><span class="ln">607</span>    elif not combine_scope and 'retrieval_scope' not in payload:</span>
+<span class="code-line"><span class="ln">608</span>        # Production default: retrieve before writing. Parallel full-chart</span>
+<span class="code-line"><span class="ln">609</span>        # drafting was slower and over-disclosed in live regression.</span>
+<span class="code-line"><span class="ln">610</span>        response=await generate('retrieving',attempts=1,timeout=20,attempt_timeout=20,</span>
+<span class="code-line"><span class="ln">611</span>            model=review_model,temperature=0,max_tokens=3500,extra_body=doctor_model_parameters(review_model,getattr(config,'CUHK_DI_DOCTOR_SCOPE_REASONING','low')),</span></pre></section><section id="judge"><h2>Exact evidence validation</h2><p>The assessment must contain every case rubric once. Credit requires a real student quotation at a valid history index. A quotation rejected by the student is distinguished from an adopted erroneous recommendation.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\services\cuhk_drug_information_judge.py</code></p><pre><span class="code-line"><span class="ln">201</span>def validate_evidence(result: JudgeResult, case, history):</span>
+<span class="code-line"><span class="ln">202</span>    expected = {r["id"] for r in case["rubric"]}</span>
+<span class="code-line"><span class="ln">203</span>    observed = [f.rubric_id for f in result.findings]</span>
+<span class="code-line"><span class="ln">204</span>    if len(observed) != len(expected) or set(observed) != expected:</span>
+<span class="code-line"><span class="ln">205</span>        raise ValueError("Judge must return every case rubric exactly once")</span>
+<span class="code-line"><span class="ln">206</span>    for finding in [*result.findings, *result.critical_errors]:</span>
+<span class="code-line"><span class="ln">207</span>        if finding.rubric_id not in expected:</span>
+<span class="code-line"><span class="ln">208</span>            raise ValueError("Wrong-case rubric from judge")</span>
+<span class="code-line"><span class="ln">209</span>        if isinstance(finding, Finding) and finding.status == "met" and not finding.evidence:</span>
+<span class="code-line"><span class="ln">210</span>            raise ValueError("Credit without quoted student evidence")</span>
+<span class="code-line"><span class="ln">211</span>        for ev in finding.evidence:</span>
+<span class="code-line"><span class="ln">212</span>            if ev.turn_index &gt;= len(history):</span>
+<span class="code-line"><span class="ln">213</span>                raise ValueError("Evidence turn outside conversation")</span>
+<span class="code-line"><span class="ln">214</span>            turn = history[ev.turn_index]</span>
+<span class="code-line"><span class="ln">215</span>            if turn.role != "student" or ev.quote not in turn.text:</span>
+<span class="code-line"><span class="ln">216</span>                raise ValueError("Evidence is not an exact student quote")</span>
+<span class="code-line"><span class="ln">217</span>        if isinstance(finding, CriticalError) and admits_unadopted_example(finding.rationale):</span>
+<span class="code-line"><span class="ln">218</span>            raise ValueError(f'{finding.rubric_id}: critical_errors contradicts its own rationale describing an unadopted example, not the student\'s recommendation. '</span>
+<span class="code-line"><span class="ln">219</span>                'Re-evaluate the ORIGINAL conversation and whole report. Quoting and rejecting another answer is not a prior student error, even with resolved=true. '</span>
+<span class="code-line"><span class="ln">220</span>                'Keep an actual adopted-then-corrected student error; never remove it just because it later became a quotation. No score has been changed locally.')</span>
+<span class="code-line"><span class="ln">221</span>        if isinstance(finding, Finding) and finding.allergy_sequence is not None:</span>
+<span class="code-line"><span class="ln">222</span>            if finding.rubric_id != 'M04':</span>
+<span class="code-line"><span class="ln">223</span>                raise ValueError('Action chronology belongs only to M04')</span>
+<span class="code-line"><span class="ln">224</span>            # Supplied proof is never discarded just because the result is</span>
+<span class="code-line"><span class="ln">225</span>            # not_met. Its original source/position must still be authentic;</span>
+<span class="code-line"><span class="ln">226</span>            # only a met decision additionally requires correct action order.</span>
+<span class="code-line"><span class="ln">227</span>            action_evidence_position(finding.allergy_sequence.allergy_question, history)</span>
+<span class="code-line"><span class="ln">228</span>            if finding.allergy_sequence.first_recommendation is not None:</span>
+<span class="code-line"><span class="ln">229</span>                action_evidence_position(finding.allergy_sequence.first_recommendation, history)</span>
+<span class="code-line"><span class="ln">230</span>    for finding in result.findings:</span>
+<span class="code-line"><span class="ln">231</span>        if (finding.rubric_id == 'M15' and finding.status in {'unclear','manual_review'}</span>
+<span class="code-line"><span class="ln">232</span>                and withholds_acknowledged_written_baseline(finding.rationale)):</span>
+<span class="code-line"><span class="ln">233</span>            raise ValueError('M15: rationale acknowledges actual adoption of the written baseline but withholds it solely for the different-video conflict. '</span>
+<span class="code-line"><span class="ln">234</span>                'YT has confirmed the written key; the alternative video regimen is not approved by that clarification. '</span>
+<span class="code-line"><span class="ln">235</span>                'Re-read the actual final advice and return a consistent full review; do not invent credit if adoption is genuinely unclear.')</span>
+<span class="code-line"><span class="ln">236</span>        if finding.status == "met":</span>
+<span class="code-line"><span class="ln">237</span>            if (finding.rubric_id in {'F08','M10'} and admits_corrected_student_dose_error(finding.rationale)</span>
+<span class="code-line"><span class="ln">238</span>                    and not any(error.rubric_id == finding.rubric_id and error.resolved for error in result.critical_errors)):</span>
+<span class="code-line"><span class="ln">239</span>                raise ValueError(f'{finding.rubric_id}: rationale acknowledges an actual prior student dose error and its correction but resolved error history is missing. '</span>
+<span class="code-line"><span class="ln">240</span>                    'Re-evaluate the original conversation. Preserve an actual previous wrong dose with its exact original quote and resolved=true; '</span>
+<span class="code-line"><span class="ln">241</span>                    'do not invent an error if it was a doctor statement, hypothetical example or negated recommendation. The validator has not changed any score.')</span>
+<span class="code-line"><span class="ln">242</span>            if finding.rubric_id in {'F01','M01'} and re.search(</span>
+<span class="code-line"><span class="ln">243</span>                r'[multilingual negation and role-query pattern omitted]',</span>
+<span class="code-line"><span class="ln">244</span>                finding.rationale,re.I):</span>
+<span class="code-line"><span class="ln">245</span>                # Reject the model's own contradictory judgment, do not turn</span>
+<span class="code-line"><span class="ln">246</span>                # it into a locally invented score. The existing one-shot</span>
+<span class="code-line"><span class="ln">247</span>                # regeneration re-evaluates the original conversation.</span>
+<span class="code-line"><span class="ln">248</span>                raise ValueError(f'{finding.rubric_id}: rationale admits the required doctor role was not confirmed but status is met. Identity AND role are required; partial salutation evidence is not complete.')</span>
+<span class="code-line"><span class="ln">249</span>            if finding.rubric_id == 'M04' and admits_late_allergy_check(finding.rationale):</span>
+<span class="code-line"><span class="ln">250</span>                # Check the model's own stated reasoning, not a keyword score</span>
+<span class="code-line"><span class="ln">251</span>                # for the student. Reject/regenerate the whole judgment; never</span>
+<span class="code-line"><span class="ln">252</span>                # locally flip a finding or change the holistic score.</span>
+<span class="code-line"><span class="ln">253</span>                raise ValueError('M04: rationale admits the allergy question followed the alternative recommendation but status is met. The allergy question must PRECEDE the recommendation, including within one turn. Re-evaluate the original clause order; same-turn completion alone does not meet this criterion.')</span>
+<span class="code-line"><span class="ln">254</span>            if finding.rubric_id == 'M04':</span>
+<span class="code-line"><span class="ln">255</span>                validate_allergy_sequence(finding, history)</span>
+<span class="code-line"><span class="ln">256</span>            if finding.rubric_id == 'M15' and admits_unresolved_magnesium_conflict(finding.rationale):</span>
+<span class="code-line"><span class="ln">257</span>                # Reject the model's own admission of an unresolved source</span>
+<span class="code-line"><span class="ln">258</span>                # conflict with full credit, never calculate a substitute mark.</span>
+<span class="code-line"><span class="ln">259</span>                raise ValueError('M15: rationale acknowledges the conflicting Best-video regimen but grants met without establishing final adoption of the written key. '</span>
+<span class="code-line"><span class="ln">260</span>                    'The two teaching ranges are not an approved combined range. Re-read which advice the student actually adopts; '</span>
+<span class="code-line"><span class="ln">261</span>                    'assess the video regimen against the YT-confirmed written key; use met only for demonstrated adoption of the written key, '</span>
+<span class="code-line"><span class="ln">262</span>                    'and not_met for an actual omission. Do not invent faculty approval or treat comparison as adoption.')</span>
+<span class="code-line"><span class="ln">263</span>            if finding.completed_at_turn is None or finding.completed_at_turn not in {e.turn_index for e in finding.evidence}:</span>
+<span class="code-line"><span class="ln">264</span>                raise ValueError(f"{finding.rubric_id}: met requires completed_at_turn to identify an exactly quoted student evidence turn; got {finding.completed_at_turn}")</span>
+<span class="code-line"><span class="ln">265</span>        elif finding.completed_at_turn is not None:</span>
+<span class="code-line"><span class="ln">266</span>            raise ValueError("Unmet criterion cannot claim a completion turn")</span>
+<span class="code-line"><span class="ln">267</span>        if finding.rubric_id in {"F09", "M14", *case.get('manual_review_rubric_ids',[])}:</span>
+<span class="code-line"><span class="ln">268</span>            finding.status = "manual_review"</span>
+<span class="code-line"><span class="ln">269</span>            finding.completed_at_turn = None</span>
+<span class="code-line"><span class="ln">270</span>    from services.cuhk_drug_information_source_evidence import enforce_source_use</span>
+<span class="code-line"><span class="ln">271</span>    return enforce_source_use(result, case, history)</span>
+<span class="code-line"><span class="ln">272</span></span>
+<span class="code-line"><span class="ln">273</span></span>
+<span class="code-line"><span class="ln">274</span>def admits_unadopted_example(rationale):</span>
+<span class="code-line"><span class="ln">275</span>    """Reject explicit model self-contradiction, not keyword-grade the student."""</span>
+<span class="code-line"><span class="ln">276</span>    example = re.search(r'[multilingual quotation/hypothesis patterns omitted]', rationale, re.I)</span></pre></section><section id="sequence"><h2>Within-turn chronology</h2><p>Allergy-question and recommendation evidence are checked against their original span positions. Being in one utterance does not establish the required order.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\services\cuhk_drug_information_judge.py</code></p><pre><span class="code-line"><span class="ln">311</span></span>
+<span class="code-line"><span class="ln">312</span></span>
+<span class="code-line"><span class="ln">313</span>def action_evidence_position(evidence, history):</span>
+<span class="code-line"><span class="ln">314</span>    """Resolve a trusted or legacy exact span without changing its position."""</span>
+<span class="code-line"><span class="ln">315</span>    if evidence.turn_index &gt;= len(history):</span>
+<span class="code-line"><span class="ln">316</span>        raise ValueError('M04 action quote outside conversation')</span>
+<span class="code-line"><span class="ln">317</span>    turn = history[evidence.turn_index]</span>
+<span class="code-line"><span class="ln">318</span>    if turn.role != 'student' or evidence.quote not in turn.text:</span>
+<span class="code-line"><span class="ln">319</span>        raise ValueError('M04 action must quote exact student text, not doctor text or paraphrase')</span>
+<span class="code-line"><span class="ln">320</span>    start = evidence.source_start if evidence.source_start is not None else turn.text.find(evidence.quote)</span>
+<span class="code-line"><span class="ln">321</span>    if turn.text[start:start+len(evidence.quote)] != evidence.quote:</span>
+<span class="code-line"><span class="ln">322</span>        raise ValueError('M04 action position does not match its exact source text')</span>
+<span class="code-line"><span class="ln">323</span>    return evidence.turn_index, start, start + len(evidence.quote)</span>
+<span class="code-line"><span class="ln">324</span></span>
+<span class="code-line"><span class="ln">325</span></span>
+<span class="code-line"><span class="ln">326</span>def validate_allergy_sequence(finding, history):</span>
+<span class="code-line"><span class="ln">327</span>    """Verify model-selected action quotes against their actual source order.</span>
+<span class="code-line"><span class="ln">328</span></span>
+<span class="code-line"><span class="ln">329</span>    The AI identifies the semantic actions and still assigns the holistic score.</span>
+<span class="code-line"><span class="ln">330</span>    Source chronology cannot be replaced by a rationale saying 'same turn'.</span>
+<span class="code-line"><span class="ln">331</span>    """</span>
+<span class="code-line"><span class="ln">332</span>    sequence = finding.allergy_sequence</span>
+<span class="code-line"><span class="ln">333</span>    if sequence is None:</span>
+<span class="code-line"><span class="ln">334</span>        raise ValueError('M04 met requires allergy_sequence with exact separate action quotes; same-turn completion is not proof of before-recommendation order')</span>
+<span class="code-line"><span class="ln">335</span>    question = action_evidence_position(sequence.allergy_question, history)</span>
+<span class="code-line"><span class="ln">336</span>    reject_denied_allergy_action(sequence.allergy_question, history)</span>
+<span class="code-line"><span class="ln">337</span>    if finding.completed_at_turn != question[0]:</span>
+<span class="code-line"><span class="ln">338</span>        raise ValueError('M04 completion must identify the quoted allergy inquiry turn')</span>
+<span class="code-line"><span class="ln">339</span>    if sequence.first_recommendation is not None:</span>
+<span class="code-line"><span class="ln">340</span>        recommendation = action_evidence_position(sequence.first_recommendation, history)</span>
+<span class="code-line"><span class="ln">341</span>        if (question[0], question[2]) &gt; (recommendation[0], recommendation[1]):</span>
+<span class="code-line"><span class="ln">342</span>            raise ValueError('M04 action quotes prove the allergy question is AFTER or overlaps the first recommendation. Re-evaluate the original conversation; met is not supported. Do not select a later repeated recommendation or remove an actual recommendation to obtain credit.')</span>
+<span class="code-line"><span class="ln">343</span></span>
+<span class="code-line"><span class="ln">344</span></span>
+<span class="code-line"><span class="ln">345</span>def reject_denied_allergy_action(evidence, history):</span>
+<span class="code-line"><span class="ln">346</span>    """An explicitly denied action cannot itself prove the action occurred.</span>
+<span class="code-line"><span class="ln">347</span></span>
+<span class="code-line"><span class="ln">348</span>    Check original left context too, so quoting only 'does the patient have any allergies' cannot</span>
+<span class="code-line"><span class="ln">349</span>    remove an adjacent 'I have not asked'. This rejects an inconsistent candidate; the</span>
+<span class="code-line"><span class="ln">350</span>    model, not this validator, reassesses status and the overall grade.</span></pre></section><section id="holistic"><h2>Approved consequences and error history</h2><p>The snapshot preserves resolved and unresolved errors and applies confirmed consequences. These existing constraints must be accounted for when defining A/B; they are not evidence that the complete proposed dual-graph method has been empirically validated.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\services\cuhk_drug_information_holistic.py</code></p><pre><span class="code-line"><span class="ln">310</span>                            "before": before, "after": score})</span>
+<span class="code-line"><span class="ln">311</span>    if not any(t.role == "student" for t in history):</span>
+<span class="code-line"><span class="ln">312</span>        score = 0</span>
+<span class="code-line"><span class="ln">313</span>    grade = grade_for(score, policy)</span>
+<span class="code-line"><span class="ln">314</span>    raw_grade = grade_for(review.raw_score, policy)</span>
+<span class="code-line"><span class="ln">315</span>    applied = [a for a in adjustments if a["before"] != a["after"]]</span>
+<span class="code-line"><span class="ln">316</span>    decision = f"The initial holistic AI assessment is {review.raw_score}/100 ({raw_grade}). "</span>
+<span class="code-line"><span class="ln">317</span>    if failures:</span>
+<span class="code-line"><span class="ln">318</span>        decision += "Source auto-fail conditions were met: " + "；".join(dict.fromkeys(f["reason"] for f in failures)) + " "</span>
+<span class="code-line"><span class="ln">319</span>    elif applied:</span>
+<span class="code-line"><span class="ln">320</span>        decision += "Source constraints applied: " + "；".join(dict.fromkeys(a["reason"] for a in applied)) + " "</span>
+<span class="code-line"><span class="ln">321</span>    else:</span>
+<span class="code-line"><span class="ln">322</span>        decision += "Source constraints did not further change the score. "</span>
+<span class="code-line"><span class="ln">323</span>    decision += f"The final AI recommendation is {score}/100 ({grade})."</span>
+<span class="code-line"><span class="ln">324</span>    assessment = review.model_dump(exclude={"raw_score", "explanation"})</span>
+<span class="code-line"><span class="ln">325</span>    scope_limit = 'This report evaluates a simulated conversation, not treatment outcomes, licensure or verified clinical safety. Nonverbal performance is unobserved; station timing is displayed by the browser and is not a scoring input.'</span>
+<span class="code-line"><span class="ln">326</span>    assessment['limitations'] = list(dict.fromkeys([*assessment['limitations'], scope_limit]))</span>
+<span class="code-line"><span class="ln">327</span>    # Preserve the already-validated original student quotes and their source</span>
+<span class="code-line"><span class="ln">328</span>    # indexes for both resolved and final errors. This is an evidence ledger,</span>
+<span class="code-line"><span class="ln">329</span>    # not additional penalties or a claim that the model/faculty is infallible.</span>
+<span class="code-line"><span class="ln">330</span>    error_history = [error.model_dump(mode='json') for error in reviewed.critical_errors]</span>
+<span class="code-line"><span class="ln">331</span>    blocking = list(dict.fromkeys([*score_blocking_findings(case, rubric_results), *review_errors]))</span>
+<span class="code-line"><span class="ln">332</span>    if review.explanation:</span>
+<span class="code-line"><span class="ln">333</span>        blocking=list(dict.fromkeys([*blocking,*[rid for c in review.explanation.concerns if c.affects_score for rid in c.rubric_ids]]))</span>
+<span class="code-line"><span class="ln">334</span>    from services.cuhk_drug_information_report import public_report</span>
+<span class="code-line"><span class="ln">335</span>    explained=public_report(case,reviewed,score,adjustments,failures,blocking)</span>
+<span class="code-line"><span class="ln">336</span>    if blocking:</span>
+<span class="code-line"><span class="ln">337</span>        # Keep all supported feedback and explicit safety findings. Do not</span>
+<span class="code-line"><span class="ln">338</span>        # turn missing information into zero points or expose a raw candidate</span>
+<span class="code-line"><span class="ln">339</span>        # that bypassed an unknown cap/auto-fail/clinical requirement.</span>
+<span class="code-line"><span class="ln">340</span>        pending_notice = 'Score-affecting evidence requires faculty review: ' + ', '.join(blocking) + '. Uncertain items are neither passed nor deducted; the total score and grade are withheld.'</span>
+<span class="code-line"><span class="ln">341</span>        assessment['limitations'] = list(dict.fromkeys([*assessment['limitations'], pending_notice]))</span>
+<span class="code-line"><span class="ln">342</span>        decision = pending_notice</span>
+<span class="code-line"><span class="ln">343</span>        if failures:</span>
+<span class="code-line"><span class="ln">344</span>            decision += ' Explicit evidence-supported auto-fail findings are retained: ' + '；'.join(dict.fromkeys(f['reason'] for f in failures))</span>
+<span class="code-line"><span class="ln">345</span>        return {</span>
+<span class="code-line"><span class="ln">346</span>            'numeric_score': None, 'final_grade': None, 'review_status': 'faculty_review_required',</span>
+<span class="code-line"><span class="ln">347</span>            'overall_assessment': assessment,</span>
+<span class="code-line"><span class="ln">348</span>            'score_basis': {'training_mode':case.get('station_policy',{}).get('mode','assessment'), 'counterpart_style':case.get('station_policy',{}).get('counterpart_style','standard'), 'framework_version': policy['version'], 'evidence_policy_version': '20260915-score-evidence-v2', 'method': 'holistic_with_source_constraints',</span>
+<span class="code-line"><span class="ln">349</span>                'raw_ai_score': None, 'raw_ai_grade': None, 'final_decision': decision,</span>
+<span class="code-line"><span class="ln">350</span>                'adjustments': [], 'auto_fail_reasons': failures, 'error_history': error_history, 'student_report':explained,</span>
+<span class="code-line"><span class="ln">351</span>                'is_faculty_approved_grade': False, 'release_status': 'evidence_resolution_required',</span>
+<span class="code-line"><span class="ln">352</span>                'blocking_rubric_ids': blocking,</span>
+<span class="code-line"><span class="ln">353</span>                'unresolved_rubric_ids': [r.rubric_id for r in rubric_results if r.status in {'unclear', 'manual_review'}],</span>
+<span class="code-line"><span class="ln">354</span>                'scale_notice': 'Feedback and original evidence are retained. No candidate score is released while key evidence remains unresolved; item-completion percentages are not a substitute.'}}</span>
+<span class="code-line"><span class="ln">355</span>    return {</span>
+<span class="code-line"><span class="ln">356</span>        "numeric_score": score,</span>
+<span class="code-line"><span class="ln">357</span>        "final_grade": grade,</span>
+<span class="code-line"><span class="ln">358</span>        "review_status": "ai_assessment_complete",</span>
+<span class="code-line"><span class="ln">359</span>        "overall_assessment": assessment,</span>
+<span class="code-line"><span class="ln">360</span>        "score_basis": {"training_mode":case.get('station_policy',{}).get('mode','assessment'), "counterpart_style":case.get('station_policy',{}).get('counterpart_style','standard'), "framework_version": policy["version"], "evidence_policy_version": "20260915-score-evidence-v2", "method": "holistic_with_source_constraints",</span>
+<span class="code-line"><span class="ln">361</span>                        "raw_ai_score": review.raw_score, "raw_ai_grade": raw_grade,</span>
+<span class="code-line"><span class="ln">362</span>                        "final_decision": decision,</span>
+<span class="code-line"><span class="ln">363</span>                        "adjustments": adjustments, "auto_fail_reasons": failures, "error_history": error_history, "student_report":explained,</span>
+<span class="code-line"><span class="ln">364</span>                        "is_faculty_approved_grade": False, "release_status": "faculty_calibration_required",</span>
+<span class="code-line"><span class="ln">365</span>                        "unresolved_rubric_ids": [r.rubric_id for r in rubric_results if r.status in {"unclear", "manual_review"}],</span>
+<span class="code-line"><span class="ln">366</span>                        "scale_notice": "The 0-100 scale and grade conversion are a proposed AI framework. Source safety/grade constraints apply; this is not a faculty-approved official marks scheme."}}</span></pre></section><section id="case-mtx-rules"><h2>MTX: omission, wrong advice and corrections</h2><p>The station distinguishes missing counselling from actual unsafe advice and applies different consequences. Its weekly-dosing and correction requirements are station rules, not a general prescribing algorithm.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\data\cuhk_drug_information_cases\case_4_mtx_counseling.json</code></p><pre><span class="code-line" id="mtx-L57"><span class="ln">57</span>  "dialogue_policy": {</span>
+<span class="code-line" id="mtx-L58"><span class="ln">58</span>    "reveal_only_when_asked": [</span>
+<span class="code-line" id="mtx-L59"><span class="ln">59</span>      "Known patient identity, allergy, medicines and history; respond only to the requested topic."</span>
+<span class="code-line" id="mtx-L60"><span class="ln">60</span>    ],</span>
+<span class="code-line" id="mtx-L61"><span class="ln">61</span>    "do_not_reveal": [</span>
+<span class="code-line" id="mtx-L62"><span class="ln">62</span>      "Teaching key, grading rules, calculated results, unasked complete history and unsolicited medication counselling."</span>
+<span class="code-line" id="mtx-L63"><span class="ln">63</span>    ],</span>
+<span class="code-line" id="mtx-L64"><span class="ln">64</span>    "challenge_rules": [</span>
+<span class="code-line" id="mtx-L65"><span class="ln">65</span>      "At a natural transition, ask one unanswered checklist question, with its prompt code. Never repeat a consumed prompt or answer the question yourself."</span>
+<span class="code-line" id="mtx-L66"><span class="ln">66</span>    ]</span>
+<span class="code-line" id="mtx-L67"><span class="ln">67</span>  },</span>
+<span class="code-line" id="mtx-L68"><span class="ln">68</span>  "station_policy": {</span>
+<span class="code-line" id="mtx-L69"><span class="ln">69</span>    "counseling_scope": "Prescription already checked; counsel within faculty station, do not infer general prescribing safety."</span>
+<span class="code-line" id="mtx-L70"><span class="ln">70</span>  },</span>
+<span class="code-line" id="mtx-L71"><span class="ln">71</span>  "assessment_rules": [</span>
+<span class="code-line" id="mtx-L72"><span class="ln">72</span>    "Use English feedback, Cantonese lay language and English drug names.",</span>
+<span class="code-line" id="mtx-L73"><span class="ln">73</span>    "Identity: no name inquiry/confirmation auto-fail; name checked but no second identifier is feedback only, no deduction.",</span>
+<span class="code-line" id="mtx-L74"><span class="ln">74</span>    "Allergy omission is auto-fail; asking later in the consultation is not omission. Feedback should recommend checking early.",</span>
+<span class="code-line" id="mtx-L75"><span class="ln">75</span>    "Optional items and the second identifier cannot lower the raw score.",</span>
+<span class="code-line" id="mtx-L76"><span class="ln">76</span>    "Evaluate logical ordering, understandable explanations and response to patient questions; do not infer tone or spoken fluency from text.",</span>
+<span class="code-line" id="mtx-L77"><span class="ln">77</span><mark>    "T14: explicit double-dose advice is an unsafe critical error; omission alone does not trigger auto-fail. T06 day-window mistakes or incomplete explanation use the one-subgrade rule, not automatic failure. If the learner explicitly says never double, mark T14 met.",</mark></span>
+<span class="code-line" id="mtx-L78"><span class="ln">78</span><mark>    "T08 whole-grade deduction is for actual same-day advice, not mere omission. T07 purpose errors are feedback-only, not a lost base mark.",</mark></span>
+<span class="code-line" id="mtx-L79"><span class="ln">79</span><mark>    "T05 omission failure applies specifically to weekly frequency emphasis. Missing tablet strength or four-week duration belongs to T15, not an invented weekly-frequency omission. Explicitly wrong dosing/frequency still requires an exact student quote and separate safety assessment."</mark></span>
+<span class="code-line" id="mtx-L80"><span class="ln">80</span>  ],</span>
+<span class="code-line" id="mtx-L81"><span class="ln">81</span>  "faculty_confirmation_required": [</span>
+<span class="code-line" id="mtx-L82"><span class="ln">82</span>    "Numeric conversion and station time limit require calibration; pilot feedback is not an official grade.",</span>
+<span class="code-line" id="mtx-L83"><span class="ln">83</span>    "Nuanced unsafe-advice examples, including dismissing muscle breakdown, require faculty calibration."</span>
+<span class="code-line" id="mtx-L84"><span class="ln">84</span>  ],</span></pre></section><section id="case-fungal-prompts"><h2>Onychomycosis: authorised prompts and grade caps</h2><p>The original configuration binds F05/F06 to named prompts and a C+ ceiling when the relevant risk is identified only after prompting. C+ is a ceiling, not an automatic whole-station grade.</p><p class="note">Frozen implementation excerpt inspected September 30, 2026; English glosses are explanatory adaptations. Source identity and line anchors are retained. This page is not a current deployment audit.</p><p>Source: <code>E:\che\apricot\tw_teaching_system_new_bak2\data\cuhk_drug_information_cases\case_1_fungal_toe.json</code></p><pre><span class="code-line" id="fungal-L197"><span class="ln">197</span>    {</span>
+<span class="code-line" id="fungal-L198"><span class="ln">198</span>      "id": "F05",</span>
+<span class="code-line" id="fungal-L199"><span class="ln">199</span>      "label": "Recognise that itraconazole is unsuitable because of HFrEF",</span>
+<span class="code-line" id="fungal-L200"><span class="ln">200</span>      "level": "safety_critical",</span>
+<span class="code-line" id="fungal-L201"><span class="ln">201</span><mark>      "prompt_code": "FUNGAL_CHF_PROMPT",</mark></span>
+<span class="code-line" id="fungal-L202"><span class="ln">202</span><mark>      "prompted_cap": "C+",</mark></span>
+<span class="code-line" id="fungal-L203"><span class="ln">203</span>      "missing_after_prompt": "auto_fail_candidate",</span>
+<span class="code-line" id="fungal-L204"><span class="ln">204</span>      "dimension": "knowledge"</span>
+<span class="code-line" id="fungal-L205"><span class="ln">205</span>    },</span>
+<span class="code-line" id="fungal-L206"><span class="ln">206</span>    {</span>
+<span class="code-line" id="fungal-L207"><span class="ln">207</span>      "id": "F06",</span>
+<span class="code-line" id="fungal-L208"><span class="ln">208</span>      "label": "Identify the itraconazole-atorvastatin interaction",</span>
+<span class="code-line" id="fungal-L209"><span class="ln">209</span>      "level": "safety_critical",</span>
+<span class="code-line" id="fungal-L210"><span class="ln">210</span><mark>      "prompt_code": "FUNGAL_STATIN_PROMPT",</mark></span>
+<span class="code-line" id="fungal-L211"><span class="ln">211</span><mark>      "prompted_cap": "C+",</mark></span>
+<span class="code-line" id="fungal-L212"><span class="ln">212</span>      "missing_after_prompt": "auto_fail_candidate",</span>
+<span class="code-line" id="fungal-L213"><span class="ln">213</span>      "dimension": "knowledge"</span></pre></section></main><footer>DualGraph-OSCE · Paired Rule–Evidence Graphs for Pharmacy OSCE<br>Research protocol, source audit and worked examples. Demonstrations are not experimental results.</footer><a class="back-top" href="#">↑</a><script src="assets/app.js"></script></body></html>

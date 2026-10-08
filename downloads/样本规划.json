@@ -1,0 +1,13 @@
+{
+  "status": "ASSUMPTIONS_NOT_OBSERVATIONS",
+  "checkpoint_target": 120,
+  "balanced_station_allocation": 30,
+  "independent_pair_example": {
+    "B_only": 0.2,
+    "A_only": 0.05,
+    "two_sided_alpha_per_outcome": 0.025,
+    "power_at_108": 0.80146,
+    "power_at_120": 0.8529
+  },
+  "warning": "These powers do not apply to 120 dependent prefixes from 16 consultations. Cluster-aware pilot precision must be reported; no universal minimum or per-station superiority guarantee."
+}

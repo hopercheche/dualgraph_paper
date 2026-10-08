@@ -1,0 +1,1250 @@
+
+=== PAGE 1 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 1
+REVIEW
+published: 30 March 2022
+doi: 10.3389/fmed.2022.855403
+Edited by:
+Lynn Valerie Monrouxe,
+The University of Sydney, Australia
+Reviewed by:
+Julia Choate,
+Monash University, Australia
+Fiona Kent,
+Monash University, Australia
+*Correspondence:
+Jun Wang
+wangjun@wust.edu.cn
+Specialty section:
+This article was submitted to
+Healthcare Professions Education,
+a section of the journal
+Frontiers in Medicine
+Received: 15 January 2022
+Accepted: 10 March 2022
+Published: 30 March 2022
+Citation:
+Wu Q, Wang Y , Lu L, Chen Y ,
+Long H and Wang J (2022) Virtual
+Simulation in Undergraduate Medical
+Education: A Scoping Review
+of Recent Practice.
+Front. Med. 9:855403.
+doi: 10.3389/fmed.2022.855403
+Virtual Simulation in Undergraduate
+Medical Education: A Scoping
+Review of Recent Practice
+Qingming Wu 1,2, Yubin Wang 1, Lili Lu 1, Yong Chen 1, Hui Long 2 and Jun Wang 1*
+1 College of Medicine, Wuhan University of Science and Technology, Wuhan, China, 2 Tianyou Hospital, Wuhan University
+of Science and Technology, Wuhan, China
+Virtual simulation (VS) as an emerging interactive pedagogical strategy has been paid
+more and more attentions in the undergraduate medical education. Because of the fast
+development of modern computer simulation technologies, more and more advanced
+and emerging VS-based instructional practices are constantly increasing to promote
+medical education in diverse forms. In order to describe an overview of the current
+trends in VS-based medical teaching and learning, this scoping review presented a
+worldwide analysis of 92 recently published articles of VS in the undergraduate medical
+teaching and learning. The results indicated that 98% of included articles were from
+Europe, North America, and Asia, suggesting a possible inequity in digital medical
+education. Half (52%) studies reported the immersive virtual reality (VR) application.
+Evidence for educational effectiveness of VS in medical students’ knowledge or
+skills was sufﬁcient as per Kirkpatrick’s model of outcome evaluation. Recently, VS
+has been widely integrated in surgical procedural training, emergency and pediatric
+emergency medicine training, teaching of basic medical sciences, medical radiation and
+imaging, puncture or catheterization training, interprofessional medical education, and
+other case-based learning experiences. Some challenges, such as accessibility of VS
+instructional resources, lack of infrastructure, “decoupling” users from reality, as well as
+how to increase students’ motivation and engagement, should be addressed.
+Keywords: virtual simulation, virtual reality, undergraduate medical education, simulation-based learning,
+computer simulation
+INTRODUCTION
+As a positive, safe, and valid reality-based educational approach complementing the traditional
+teaching methods, simulation is increasingly used in the healthcare areas. Especially in the ﬁeld of
+undergraduate education as the cornerstone and starting point of training medical professionals,
+an extensive body of published studies (1ñ5) have demonstrated that, when the learners act
+as they would respond under an environment that they believe to be real, simulation-based
+learning (SBL) experiences are helpful in integrating theoretical knowledge with practice, and
+gaining skills necessary for independent practice. As deﬁned as “ a dynamic process involving
+the creation of a hypothetical opportunity that incorporates an authentic representation of reality,
+facilitates active student engagement, and integrates the complexities of practical and theoretical
+learning with opportunity for repetition, feedback, evaluation, and reﬂection ” (6), simulation used
+Frontiers in Medicine | www.frontiersin.org 1 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 2 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 2
+Wu et al. Virtual Simulation and Medical Education
+in undergraduate medical education often utilizes goal-based
+role-plays in the replicated clinical problematic scenarios or
+case settings in an interactive manner (1ñ5). Compared with
+real clinical learning experiences, SBL may be more eﬃcient
+because the learners intentionally practice skills and higher
+order thinking. The use of SBL can expose medical students
+in ethically safe environments without risk of jeopardizing real
+patients/animals, let them feel safe to make mistakes, and can
+enhance their conﬁdence while also developing professional
+knowledge, critical thinking skills, comprehensive decision-
+making skills, clinical judgment, better clinical preparation, as
+well as self-eﬃcacy, satisfaction and emotions. Moreover, SBL
+as a form of education oﬀers repeated practice opportunities
+especially for less common conditions, and reduces the time
+consuming to reach professional and clinical competence (1ñ
+5). Some previous systematic reviews (4, 7, 8) have shown that
+medical SBL is eﬀective for the acquisition of clinical skills and
+contributes to better care of patients. SBL in clinical training such
+as the use of high-ﬁdelity mannequins, partial task simulators,
+animal materials or standardized patients, etc. prepares future
+physicians with communication skills, physical diagnosis,
+medical interviewing, basic clinical procedures and basic surgical
+skills in safe and repeated manners, as well as without legal and
+ethical limits. In pre-clinical undergraduate medical education,
+the use of SBL serves to reinforce biomedical concepts and
+other professional knowledge via immediate feedback, and
+introduces low-risk clinical experiential learning amidst a
+shortage of qualiﬁed clinical preceptorships (1). Especially in
+a resource limited setting, SBL acts as a cost-eﬀective, easily
+accessible, safe, feasible and promising educational tool that
+provides more opportunities for medical students to interact with
+“patients”/“animals” and engage in team work (3, 5). However,
+multiple factors including the shortages of funding and simulator
+technologies, the low supply of simulators, the lack of full-time
+trained staﬀ, the poor motivation and experience limitations
+of instructors, the time intensive characteristic, etc. have been
+considered to have negative eﬀects on eﬀective implementation
+of current simulation-based undergraduate medical education
+(2, 9, 10).
+Driven by the advanced innovations of modern computer
+and Internet technologies as well as the recent evolution of
+the medical profession and its teaching dynamics, SBL has
+conspicuously shifted to virtual platforms, on which simulation-
+based e-learning is accessiblevia a Web browser, and an upgraded
+SBL strategy named as virtual simulation (VS) has been produced
+(11, 12). VS is deﬁned as “ a screen-based simulation where the
+graphics, sound, and navigation emphasize the three-dimensional
+(3D) nature of the environment ” (13). The boundaries between
+the term VS and other technologies such as virtual reality
+(VR), augmented reality (AR), and virtual standardized patient
+(VSP), etc. are diﬃcult to deﬁne and these terms have been
+interchangeably used in academic research (13).
+During the world wars, VS was initially used in the
+military area as an aviation training strategy based on a
+ﬂight simulator. Subsequently, this innovative teaching and
+learning technological strategy was gainfully applied to more
+and more technical and workplace training interventions in
+equipment design, ﬁreﬁghting, law enforcement, lathe operation,
+vehicle prototyping, crane driving, automotive spray painting,
+hazard detection, and forestry equipment operation, etc. (9, 12).
+Suﬃcient practical learning opportunities are critical for the
+training of future physicians. However, it is paradoxical that the
+clinical instructional resources and opportunities for practice are
+often limited within a university setting due to a large number of
+undergraduate medical students and ﬁnite resources. The positive
+outcomes of VS in occupational practical training led to its use
+in undergraduate medical education. Through the re-creation of
+realistic clinical situations depicted on a computer screen, VS
+applied in medical teaching based on virtual patients/animals and
+AR simulations can create an immersive, interactive and risk-
+free environment for learning practical activities and procedures,
+thus provide the learners with multiple training possibilities for
+clinical practices (9, 13). So far, a global interest in VS-based
+medical teaching programs has been stimulated, and the use
+of VR, artiﬁcial intelligence, machine learning technologies and
+computer-based serious games is increasingly incorporated into
+undergraduate medical education practice.
+However, because of the fast development of modern
+computer simulation technologies, more and more advanced
+and emerging VS teaching instruments, ideas, solutions and
+practical programs are installed to promote medical education in
+diverse forms. In order to describe an overview of the current
+trends in VS-based medical teaching and learning, we here
+review reports on the practice of using VS tools in medical
+education at the undergraduate level as documented in recently
+published literature.
+METHODS
+In this study, we performed a bibliographic search on the
+electronic database MEDLINE via PubMed using key words
+“virtual simulation (VS)OR e-simulation OR computer simulation
+OR virtual reality (VR) AND medical education OR medical
+students”. Only peer-reviewed articles written in English
+involving undergraduate medical students and fully published
+online in recent 2 years (between January 2020 and December
+2021) were included. The reviews, technical reports or study
+protocols without the practical outcomes were excluded. Full-
+texts of articles were obtained, screened, and underwent quality
+appraisal independently by two researchers then a consensus
+reached for included papers. Narrative data were extracted
+from each included article and downloaded into Excel using
+the categories listed in Supplementary Tables 1, 2 . Data were
+thematically analyzed. Based the fact that the included studies
+are pitching at varied levels of outcome measurement, in order
+to evaluate the outcomes of VS practices, the Kirkpatrick
+evaluation model (14) was adopted in the present review
+to aid to segregate, analyze and present the ﬁndings of the
+included articles. Two independent researchers reviewed and
+grouped data within four levels of the Kirkpatrick model, which
+are as follow (14): Assessment of learners’ views/satisfaction
+(Level 1); Change in learners’ views or attitudes (Level 2a);
+Change in learners’ knowledge or skills (Level 2b); Change in
+Frontiers in Medicine | www.frontiersin.org 2 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 3 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 3
+Wu et al. Virtual Simulation and Medical Education
+learners’ behavior/practice (Level 3); Change in organizational
+practice (Level 4a); Change in beneﬁt to patients/health
+outcome (Level 4b).
+RESUL TS
+We identiﬁed a total of 92 articles reporting the application
+practice of VS in the undergraduate medical teaching and
+learning published since 2020 through our search strategy.
+In Supplementary Tables 1, 2 , we summarized the study
+characteristics and main ﬁndings of these previous studies in
+detail. By and large, the annual numbers of related articles
+published during 2020 and 2021 were evenly split.
+Distribution of Included Studies
+From the 92 published studies, VS was reported to be applied
+in the educational practice involving undergraduate medical
+students across 25 countries including the United States [26
+studies (15ñ40)], the United Kingdom [9 studies (41ñ49)],
+Germany [7 studies (50ñ56)], China [6 studies (10, 57ñ61)],
+Denmark [6 studies (62ñ67)], France [4 studies (68ñ71)], Japan
+[4 studies (72ñ75)], Sweden [3 studies (76ñ78)], Canada [3 studies
+(79ñ81)], Netherlands [3 studies (82ñ84)], Spain [3 studies (85ñ
+87)], Australia [2 studies (88, 89)], Singapore [2 studies (90, 91)],
+Korea [2 studies (92, 93)], Finland [1 study (94)], Italy [1 study
+(95)], Ireland [1 study (96)], Colombia [1 study (97)], Pakistan [1
+study (98)], Thailand [1 study (99)], Iran [1 study (100)], Poland
+[1 study (101)], Mexico [1 study (102)], Norway [1 study (103)],
+Saudi Arabia [1 study (104)], and Switzerland [1 study (105)].
+The distribution of included studies among diﬀerent continents
+was shown in Figure 1. Results showed that nearly half of studies
+(45%) were from Europe; one third (33%) from North America;
+20% from Asia, while none was from Africa.
+Virtual Simulation T ools Used in
+Undergraduate Medical Education
+Despite the diversiﬁcation of virtual simulators/platforms/
+systems used in undergraduate medical education, we found that
+48 (52%) studies (18, 22, 23, 27ñ31, 33ñ35, 37ñ39, 42, 44ñ48, 50,
+52, 54, 57ñ67, 71, 72, 75, 78, 81ñ84, 93, 96, 99, 101, 103, 105)
+reported the immersive VR application, which is characterized
+by the use of VR equipment consisting of head-mounted displays
+(headsets or goggles) and/or hand controllers. This ﬁnding
+suggested that VR might be a typical and popular representative
+of modern VS technology used in medical education. Moreover,
+only one third of (31) articles (15, 16, 22, 26, 31ñ33, 38, 47, 48,
+52, 53, 56, 58, 60ñ62, 64, 65, 67, 71, 73, 75, 76, 78ñ80, 95, 96,
+101, 105) included in this review were based on the commercially
+available or free VS softwares/platforms, the rest used the self-
+developed ones.
+Kirkpatrick’s Four-Level Evaluation of
+Included Studies
+All the included studies involved the outcome evaluation that
+can be mapped to Kirkpatrick’s four-level model. Using the
+FIGURE 1 | Graph showing the distribution of included studies reporting the
+use of VS in undergraduate medical education among different continents.
+Kirkpatrick’s evaluation model to structure the analysis of
+evidence from these studies, a lens was aﬀorded for integrating
+the ﬁndings to identify that a vast majority of included studies
+(67 studies; 73%) evaluated at Level 2b of the Kirkpatrick’s model,
+included the changes in learners’ knowledge or skills. In addition,
+23 studies included the Kirkpatrick Level 1 evaluation of learner
+satisfaction, and two studies reported the changes in learners’
+views or attitudes (Level 2a). No study met the Level 3 (practice
+change) and Level 4 (health outcome) of Kirkpatrick’s model.
+These ﬁndings suggested that evidence for educational
+eﬀectiveness of VS in medical students’ knowledge or skills
+was suﬃcient. There was no study particularly presenting the
+students’ performance change in clinical practice or the possible
+beneﬁt to patient/health outcome. More pedagogical research
+might be merited to inform eﬀective evaluation of the eﬀect
+of VS used in undergraduate medical education on learners’
+behavior/practice as well as its clinical eﬀectiveness.
+Virtual Simulation-Based Learning
+Contexts and Practical Aspects
+In spite of the varied study purposes of included articles,
+these previous attempts at least open up possibility and suggest
+potential for VS application in undergraduate medical education.
+Based on the studies included for review, we summarized that,
+in the recent 2 years, VS has been integrated in the following
+learning contexts and practical aspects of undergraduate medical
+education (Figure 2).
+Simulation for Surgical Procedural Training
+Of the included 92 papers, 38% (35 paper) reported the
+integration of VS in surgical training for medical undergraduates,
+among which 12 studies focused on the instructional application
+of virtual endoscopic [including laparoscopic (31, 36, 37, 56,
+73, 76, 78, 98), arthroscopic (26, 47, 48), and otoscopic (53)]
+simulators; 7 studies were for learning procedures or concepts
+of orthopedic and bone surgery (32, 33, 35, 45, 57, 66, 70);
+5 studies were based on VS system or platform as a primary
+mode of teaching neurosurgical procedures, neuroanatomy and
+Frontiers in Medicine | www.frontiersin.org 3 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 4 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 4
+Wu et al. Virtual Simulation and Medical Education
+FIGURE 2 | Graph showing the distribution of 92 articles included in this review among learning contexts and practical aspects of undergraduate medical education.
+pathologies (22, 28, 71, 80, 81); 4 papers (38, 61, 75, 84) reported
+the exposure of medical undergraduates as novice surgeons to the
+robotic surgery simulators; 2 studies conducted by the same team
+(64, 65) explored the VR simulation-based training in Cochlear
+Implant surgery; the other 2 were for learning basic motor
+skills in liver surgery (50, 52); 1 in minimally invasive surgery
+(97), and 1 in vitreoretinal surgery (67). In addition, Fukuta
+et al. (46) generated a virtual operating theater orientation to
+improve knowledge and conﬁdence of medical undergraduates.
+Except ﬁve validation studies of virtual simulators (26, 47, 53,
+65, 81) in which the undergraduates acted as the novice group
+for comparison with the skilled group, the ﬁndings of all the
+other included studies positively supported the usability and its
+feasibility of integrating VS in surgical training.
+As one of crucial links in medical education, competence-
+based training of surgical skills is important from the
+undergraduate phase. Suﬃcient and high-quality training,
+deliberate practice, as well as mastery of surgical techniques
+and instruments are imperative for future surgeons. However,
+the high risks of injury, the slow learning curves, as well
+as the limited opportunities to practice, etc. are challenging
+the modern surgical training. Compared with the traditional
+master-apprentice surgical education, VS-integrated surgical
+training can provide desirable alternative allowing an active,
+independent, repeated and safe learning for students to become
+familiar with procedures, instruments, and equipment before
+performing surgeries on patients. In particular, VS-based
+learning has been found to be conducive to the development
+of complex psychomotor skills, such as hand-eye coordination
+that endoscopic and robotic surgery sets particular demands
+on (64, 65, 97). A recently published article conducted by
+Petersen et al. (67) found no positive skill transfer from
+basic skills pre-training in a VR vitreoretinal simulator to the
+procedure-speciﬁc modules, suggesting that, compared than
+spending valuable training time on basic skills VS pre-training,
+proceeding directly to VS-based training of procedures was more
+meaningful for learners.
+Simulation for Emergency and Pediatric Emergency
+Medicine Training
+The second focus of VS-integrated learning contexts in
+undergraduate medical education was emergency and pediatric
+emergency medicine training, with 14 articles (10, 16ñ18, 29, 30,
+34, 39, 51, 55, 68, 79, 93, 101) published recently. Among them,
+eight studies (10, 16ñ18, 30, 34, 39, 68) used VS-based teaching in
+pediatric emergencies. The VS simulators used in these studies
+were mainly based on virtual patient cases, and simulated the
+clinical critical events.
+Emergencies especially pediatric and neonatal emergencies
+are relatively rare, but potentially catastrophic. However, the
+life-saving emergency management skills are diﬃcult to master,
+and accordingly used uncommonly enough to make skill
+Frontiers in Medicine | www.frontiersin.org 4 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 5 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 5
+Wu et al. Virtual Simulation and Medical Education
+acquisition a challenge (18). In order to provide a safe
+environment for unlimited exposure to rare clinical events
+and training in high-risk procedures, SBL has long been
+considered as a cornerstone of emergency medicine training
+(16).Unfortunately, as a frequent approach to traditional SBL,
+standardized patients for emergencies especially for pediatric
+emergencies are not on option. Many available mannequin-type
+patient simulators cannot fully display the realistic conditions for
+training and assessment of competency, as well as critical physical
+examination ﬁndings, such as work of breathing and mental
+status, in clinical emergency events (30). The above studies
+showed the integration of VS in emergency medicine training
+provided promising zero-risk training for undergraduates. In
+particular, seven studies (18, 29, 30, 34, 39, 93, 101) used the
+VR simulation systems consisting of VR headsets or goggles
+to realistically and immersively replicate clinical settings and
+ﬁndings, allowing students to deliberately practice and receive
+vivid feedback on their assessment.
+Integration of Virtual Simulation in T eaching of Basic
+Medical Sciences
+As the foundation of medical practice, basic or pre-clinical
+sciences are considered as the “ core component ” for clinical
+education. The active and eﬃcient learning experiences in pre-
+clinical years for in-depth mastery of the basic medical knowledge
+shape up clinically competent and scientiﬁcally grounded
+physicians (106). Modern pre-clinical curricula lay emphasis on
+practical-oriented, laboratory-based hands-on training. However,
+most basic medical curricula are highly information-intensive.
+Especially facing the reduction of contact hours and limited
+resources, the use of VS in teaching of basic medical sciences has
+been paid more and more attentions (106).
+We found that, since 2020, there were 13 articles reporting
+the application of VS for teaching basic medical sciences,
+including anatomy (23, 42, 44, 49, 59, 60, 69, 72, 82,
+104), physiology (92, 94) and pharmacology (19). Obviously,
+VS-enhanced anatomy training is a focused program as a
+powerful supplement in conventional anatomy teaching settings.
+Traditional methods for understanding anatomy include lectures,
+textbooks, cadaveric dissection, the viewing of prosections,
+illustrations, photographs, physical models, etc. (42). However,
+the teaching eﬃciency may be lacking because of traditional
+2D images, as well as limited and expensive cadaver or
+mannequin resources. As the revolution of anatomy education
+through digital media, VS has been demonstrated to provide
+vivid and dynamic imagery that the students can interact
+with an active learning experience without having to study
+in an anatomy laboratory (23, 42, 44, 49, 59, 60, 69, 72,
+82, 104). Especially for some topics that are challenging to
+teach because of complex 3D nature, VS-integrated teaching
+facilitated the 3D spatial perception of anatomy, and helped
+the students learn more eﬃciently. Among the included 10
+articles reporting VS application in anatomy education, 6 (42,
+49, 59, 60, 72, 104) used virtual simulators to help students see
+the details of muscle and bones; 1 (44) for neuro-anatomy; 1
+(23) for cerebrovascular anatomy; and 1 (69) for prostate. The
+other study conducted by Bogomolova et al. (82) developed a
+virtual 3D assessment scenario for undergraduate anatomical
+education. Similarly, the other reports about teaching practices
+on the use of VS in the pre-clinical phase were in the
+ﬁelds of neurophysiology (94), cardiac physiology (92) and
+psychopharmacology (19), respectively.
+Virtual Simulation-Integrated Learning in Medical
+Radiation and Imaging
+Medical radiation and imaging data such as CT, MRI,
+and ultrasound are indispensable for the clinical diagnosis.
+Undergraduate medical education is responsible for pedagogical
+preparation of medical radiation practitioners. However, being
+limited by radiation safety reasons, the exposure of medical
+undergraduates to clinical imaging teaching materials is generally
+insuﬃcient (88, 96). With the technological development of
+digital radiographic reconstruction with geometric as well
+as density characteristic accuracy (107), more and more VS
+computer software programs have been designed and used in
+undergraduate medical education, allowing students gain more
+hands-on experience and develop their clinical skills without
+worrying about exposing to any unnecessary radiation. In the
+recent 2 years, we found ﬁve studies (20, 85, 86, 88, 96) used VS
+serious games or systems simulating a radiologist’s practice in the
+real world among medical undergraduates for radiology learning.
+The results collectively showed that, for medical undergraduates,
+the integration of VS as a valuable learning resource had the
+potential to improve preparation for the clinical environment and
+increase student conﬁdence (20, 85, 86, 88, 96).
+The other two studies (58, 62) demonstrated the eﬀectiveness
+of VR learning integrated in ultrasonography training for
+improving students’ ultrasound skills, and students reported they
+wanted more VS learning. As the VR educational tool is not as
+space demanding or as expensive as ultrasound simulators, it
+could be appealing for medical schools with limited resources for
+basic ultrasound training (62).
+Simulation for Puncture or Catheterization Training
+Mastering the skill and procedures of puncture or catheterization
+is essential across many medical specialties. However, as an
+invasive operation that may cause patients discomfort and have
+the risk of complications, puncture or catheterization has been
+considered as a challenge for medical training (63, 99). In the
+recent 2 years, three published articles reported the application
+of VR in VS training among medical undergraduates for lumbar
+puncture (25), ultrasound-guided peripheral venous catheter
+placement (63), and endotracheal intubation (99), respectively.
+The results collectively suggested that, as a teaching method well-
+received by students, VS training can engage learners, develop
+their practical competencies and proﬁciency in performing
+procedures under safe and controlled environments, facilitate
+spatial recognition and anatomic visualization, thus enhance
+medical education and skills training (25, 63, 99).
+Offering Opportunity for Quality Interprofessional
+Medical Education Delivery
+As a critical component of modern patient-centered healthcare
+practices, the interprofessional teamñbased model of care in
+Frontiers in Medicine | www.frontiersin.org 5 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 6 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 6
+Wu et al. Virtual Simulation and Medical Education
+which multiple healthcare professionals including physicians,
+nurses and pharmacists, etc. work together has been associated
+with enhanced patient satisfaction and better quality in patient
+care (108, 109). It has been well-accepted that interprofessional
+team training should commence at the undergraduate level
+and continue into clinical practice (91). Simulation-based
+experiential learning methods represented by role-play have
+been widely used in undergraduate medical education, and
+proven to be eﬀective for interprofessional team training
+(91, 108, 109). Nevertheless, traditional simulation-based
+interprofessional education in undergraduate stage is confronted
+with challenges, such as diﬃculties in getting together
+diﬀerent professions of healthcare students as well as the
+lack of simulation facilities and interprofessional facilitators
+(90, 91). Importantly, based on its multi-user feature, VS
+oﬀers an opportunity for healthcare undergraduates from
+diﬀerent professions and diﬀerent institutions to eﬃciently
+participate in interprofessional education. In 2020, Liaw
+et al. (91) reported an integration of computer-based VR
+into interprofessional team training curriculum among
+undergraduate medical and nursing students. No diﬀerence
+between virtual and live simulations was found in terms of
+students’ attitudes toward teamwork and communication
+skill performances, suggesting the potential use of VR to
+substitute conventional simulation training in interprofessional
+education. Subsequently, under the background of COVID-19
+pandemic, the same study team applied the Internet-based
+3D virtual world mimicking the real hospital environment for
+VS-integrated interprofessional training, and geographically
+dispersed undergraduate students from six diﬀerent healthcare
+professions (medicine, nursing, pharmacy, occupational
+therapy, physiotherapy, and medical social work) experienced
+this VS-based learning using their own avatar roles (90).
+Results also showed that this immersive and realistic VS tool
+oﬀered opportunity for high-quality interprofessional medical
+education delivery.
+Other Case-Based Virtual Simulation Learning
+Experiences in Virtual Patient-Care Settings
+In addition to the above learning contexts and practical aspects,
+the remaining 18 articles (15, 21, 24, 27, 40, 41, 43, 54, 73,
+77, 83, 87, 89, 95, 100, 102, 103, 105) reported the integration
+of VS into other case-based learning experiences in virtual
+patient-care settings. Despite the diversity of virtual patient
+systems and clinical scenarios, these studies generally showed
+that VS-integrated case-based learning as a feasible teaching
+approach (54) could result in students’ learning gains, retention
+of information, and transfer of knowledge to clinical application
+(89, 95, 100, 102), help future physicians improve diagnostic
+accuracy thus enhance the clinical reasoning teaching (15,
+27, 43), extend students’ preparedness level for their future
+clinical experiences (40, 83), facilitate empathy (24), cultural
+competence (77) and comprehensive clinical skills such as
+communication-based skills (21), clinical decision-making skills
+(78) within undergraduate medical education, and improve
+students’ conﬁdence in managing clinical scenarios (41), thus was
+highly received by students (89, 95, 105).
+Especially during the COVID-19 pandemic, this pedagogical
+modality avoided training interruption and was highly valued
+(41, 87, 95, 105). Due to risk of COVID-19 exposure and
+required social distancing, the students’ clinical placements,
+face-to-face teaching and practical/lab sessions have all been
+limited even canceled in the pandemic situations, and a sudden
+and complete disruption in medical education has occurred
+(15, 16, 106, 110). The restrictions due to COVID-19 raise
+the need for innovative medical VS teaching methods, which
+provide educational contents in a learning environment where
+lecturers and students separated by space or time or both
+(41). However, the sudden outbreak of COVID-19 poses the
+diﬃculties in altering medical training modality during an
+extremely short period of time. In this situation, VS-based
+learning that has been widely adopted in medical schools is
+considered as a prompt turning point in medical education
+to overcome the educational gap due to COVID-19 (16, 17,
+41, 79, 111). Through the application of VS, it is potential
+to digitally reconstruct the clinical environment, simulate the
+clinical learning and ensure the continuation of practical
+examinations, in spite of widely dispersed student or faculty
+placements (112). After outbreak of COVID-19, De Ponti et al.
+(95) conducted a questionnaire-based survey among 115 pre-
+graduated medical students, and showed that 97 students (84%)
+considered the future use of VS training useful in addition to
+the traditional apprenticeship at patient’s bedside, suggesting
+medical students’ appreciation for the application of VS in
+post-pandemic medical education. The integration of emergent
+technology represented by VS into medical curriculum has been
+considered as an indispensable component of the transformative
+change and post-COVID undergraduate medical education to
+keep the medical education on stream (106). Especially in the
+face of the current ongoing COVID-19 crisis, VS could act
+as a ﬂexible teaching and learning modality in response to
+further pandemic waves.
+In addition, the students’ performance on learning tasks can
+be well-assessed using VSPs (21), or a computer-based case
+simulation objective structured clinical examination (OSCE)
+(87). However, a study (103) compared a fully immersive,
+interactive, multiplayer VR application in the group self-practice
+of systematic clinical observation using the airway, breathing,
+circulation, disability and exposure (ABCDE) approach to the
+physical equipment, and the results showed that group self-
+practice of the ABCDE approach in VR application was non-
+inferior to practice with physical equipment. Therefore, further
+practice and research on the integration of diﬀerent virtual
+patient VS systems in case-based learning experiences under
+various clinical scenarios might be required to identify the role
+of VS in undergraduate medical education.
+DISCUSSION
+This study reviewed the recent practice of VS in the
+undergraduate medical teaching and learning reporting in
+92 articles since 2020. Evidence for educational eﬀectiveness
+of VS in medical students’ knowledge or skills was suﬃcient
+Frontiers in Medicine | www.frontiersin.org 6 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 7 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 7
+Wu et al. Virtual Simulation and Medical Education
+as per Kirkpatrick’s model of outcome evaluation. We found
+that VS was applied in the educational practice involving
+undergraduate medical students across 25 countries. However,
+an overwhelming majority of (97%) involved studies were form
+Europe, North America, and Asia. This regional bias might
+be due to the uneven distribution of digital medical education
+resources across the world, which would inﬂuence the local
+medical students’ access to education in underdeveloped areas.
+However, the highly shareable feature of digital resources
+has been considered to provide an opportunity to address
+the need for a fair learning system for medical students and
+promote equity in medical education globally (113, 114). Even
+in resource limited settings, the application of VS educational
+systems/platforms could help to promote medical learning
+by reducing instructor costs and laboratory materials. Along
+with the advancement and expansion of computer technology,
+VS has been believed as a less expensive and more accessible
+alternative for undergraduate medical education, allowing
+for its wide application in low-and-middle-income countries
+(85, 115). So far, increased availability and aﬀordability of
+technology-based commercial platforms, such as Google, Apple,
+and Microsoft, allow any medical educational institution to
+share VS resources, or engage in research and development of
+VS projects to improve their eﬃciencies within curricula. For
+example, as an international virtual community with more than
+1,500 million square meters allowing tens of thousands of users
+connected at the same time around the world, Second Life 1
+created by Linden Laboratories in 2003 has become the most
+active virtual world in higher education. Currently, hundreds of
+universities around the world have used it to support teaching
+and learning activities. As an educational tool, Second Life
+has been dedicated to the training of medical undergraduate
+students in areas such as radiology (85, 116) and anatomy (86,
+115, 117). Therefore, once being promoted to more medical
+schools around the world, VS learning produces based on
+platforms such as Second Life will help promote greater equity in
+global medical education. Similarly, the University of Southern
+California, United States, developed a freeware virtual patient
+community, the University of Southern California Standard
+Patient Studio platform, with funding from the Department of
+Defense. This platform allows for the creation of personalized
+VSP software for diﬀerent teaching and learning purposes, and
+has been shared by other US medical schools (19). In addition, a
+company (Oxford Medical Simulation) is oﬀering a VR medical
+education platform where undergraduate students can take
+medical histories, examine, diagnose and treat digitally simulated
+patients within a virtual clinical environment (118). Nowadays,
+Human Patient Simulators and Virtual Reality Laparoscopic
+Trainers have been well-developed by manufacturers and are
+available on the market (119, 120). Therefore, professional
+teaching materials that were previously limited to certain
+settings or world-renowned medical schools are now being
+released on VS-based platforms that can be employed by any
+user across institutions, areas and countries (121). In China,
+a proﬁle ﬁle-sharing website named the National Virtual
+1http://secondlife.com/
+Simulation Experiment Teaching Project Sharing Platform 2 is
+readily available with minimal setup and free access, in which the
+abundant medical VS teaching resources contribute greatly to
+the nationwide equity in undergraduate medical education. To
+date (1 October 2021), the VS teaching resources in the areas of
+pre-clinical and clinical medicine have been visited near 350,000
+times. If the language barrier can be overcome, these VS medical
+teaching materials may be shared by more medical schools
+around the world.
+Lack of infrastructure such as computer hardware and
+network has been considered as one of major challenges to
+establishing VS-integrated curricula (90). It has been found
+that computer self-eﬃcacy might aﬀect the learners’ willingness
+to adopt the VS as part of learning (90). For remote VS
+experiences, the Internet connection bandwidth could impact
+the learning experience, and contribute to the technical issues
+(90). Here, we found the immersive VR approach is the
+currently popular VS tool used in undergraduate medical
+education, the application of which was reported in half
+(52%) involved studies. However, the cost and the provision
+of satisfactory VR equipment such as head-mounted displays
+and hand controllers might limit ﬁnal implementation of VR-
+integrated educational practice in low- and middle income
+countries. Some studies (75, 105) showed that, during the
+VR-simulation, “ visually-induced motion sickness ” shown as
+nausea, headache, blurred vision, and dizziness might cause
+a disturbing impact on some learners at the physical level.
+Moreover, because the headsets and other VR equipment are
+used communally among undergraduate medical students, it
+should be necessary to disinfect the VR simulation tools
+for public use between uses, especially during the COVID-
+19 pandemic (105). In addition, we found only one third
+of involved studies used the commercially available or free-
+accessible VS softwares/platforms for the undergraduate medical
+teaching and learning. Actually, designing and developing new
+VS instructional simulators or creating VS educational scenarios
+require signiﬁcant inputs of time, funds and eﬀort for educators.
+Currently, due to the excessive rapid change of VS technology,
+there are no standardized or well described VS design approaches
+(13). Continued back-and-forth collaboration among educators,
+clinicians and engineers in design and development teams is
+critical to advancing the establishment and implementation of
+VS-integrated undergraduate medical training (57). It had been
+estimated that at least 1 year need to be spent to achieve an
+acceptable VR simulator for medical undergraduates (57). These
+barriers might provide incentive for educators to centralize VS
+medical educational resources. However, only through increasing
+availability and awareness of developed VS instructional tools
+among larger audiences, individual costs can be shared and
+the above barriers will be minimized. If possible, freely sharing
+online VS educational resources may help equalize global medical
+education.
+Recently, VS has been widely integrated in various learning
+contexts and practical aspects of undergraduate medical
+2http://www.ilab-x.com/ (in Chinese).
+Frontiers in Medicine | www.frontiersin.org 7 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 8 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 8
+Wu et al. Virtual Simulation and Medical Education
+education, including surgical procedural training, emergency
+and pediatric emergency medicine training, teaching of basic
+medical sciences, medical radiation and imaging, puncture or
+catheterization training, interprofessional medical education,
+and other case-based learning experiences. Among them, the
+most focused ﬁeld of study is the application of VS tools in
+training of surgical skills; however, more attempts are needed
+to apply VS in interprofessional medical education and training
+of puncture/catheter skills. Generally, VS has been well-accepted
+as a valuable pedagogical approach for undergraduate medical
+education. Through providing computer-generated immersive
+learning scenes being highly realistic, diversiﬁed, dynamic and
+customized, VS used in undergraduate medical education oﬀers
+an opportunity for students to achieve ﬁrst-person experiences
+in life-like and complex clinical scenarios that they may not
+normally be exposed to, or when it is hard to access patients,
+and makes learning eﬀective and appealing to students. However,
+content provided on a screen using a digital device might
+“decouple” users from reality. Hands-on experience is essential
+for medical students to master clinical skills, for example,
+surgical techniques. Several previous studies (18, 122) have
+suggested that improved performance in the VS environment
+might not always transfer to the clinical setting. Therefore,
+VS is insuﬃcient to replace hands-on experiential practice
+for medical students to master clinical skills, which might be
+another important challenge. The current VS simulators act as
+only part of the medical comprehensive training to supplement
+the hands-on experience but not the only training technique.
+In addition, an interesting study (86) explored the impact of
+compulsory participation on the VS learning experiences of
+medical undergraduates. The results showed that the learning
+performance and acceptance of VS technology were lower with
+a compulsory participation, and the opinion toward VS-based
+study was even worse if dropouts were not allowed. Therefore,
+learning in VS environments should be voluntary (86). And how
+to increase students’ motivation and engagement is an important
+issue for medical educators to achieve the eﬀective integration of
+VS into undergraduate education.
+AUTHOR CONTRIBUTIONS
+QW and JW substantially contributed to the conception and
+the design of the work. All authors have contributed to
+the interpretation of the data and the drafting of the work,
+they revised several versions of it and have approved the
+submitted version.
+FUNDING
+This work was supported by the Educational Science Planning
+Project in Hubei province (2019GB019) and the Teaching
+Research Project in Wuhan University of Science and
+Technology (2019Z004).
+SUPPLEMENTARY MATERIAL
+The Supplementary Material for this article can be found
+online at: https://www.frontiersin.org/articles/10.3389/fmed.
+2022.855403/full#supplementary-material
+REFERENCES
+1. Jabaay MJ, Marotta DA, Aita SL, Walker DB, Grcevich LO, Camba V ,
+et al. Medical simulation-based learning outcomes in pre-clinical medical
+education. Cureus. (2020) 12:e11875. doi: 10.7759/cureus.11875
+2. Nara N, Beppu M, Tohda S, Suzuki T. The introduction and eﬀectiveness of
+simulation-based learning in medical education.Intern Med. (2009) 48:1515ñ
+9. doi: 10.2169/internalmedicine.48.2373
+3. Najjuma JN, Bajunirwe F , Twine M, Namata T, Kyakwera CK, Cherop M,
+et al. Stakeholder perceptions about the establishment of medical simulation-
+based learning at a university in a low resource setting: a qualitative study in
+Uganda. BMC Med Educ. (2020) 20:379. doi: 10.1186/s12909-020-02301-3
+4. Theodoulou I, Nicolaides M, Athanasiou T, Papalois A, Sideris M.
+Simulation-based learning strategies to teach undergraduate students basic
+surgical skills: a systematic review. J Surg Educ. (2018) 75:1374ñ88. doi:
+10.1016/j.jsurg.2018.01.013
+5. Koh J, Dubrowski A. Merging problem-based learning with simulation-based
+learning in the medical undergraduate curriculum: the PAIRED framework
+for enhancing lifelong learning. Cureus. (2016) 8:e647. doi: 10.7759/
+cureus.647
+6. Kaldheim HKA, Bergland Å, Ølnes MA, Hofsø K, Dihle A, Creutzfeldt J, et al.
+Use of simulation-based learning among perioperative nurses and students: a
+scoping review. Nurse Educ Today. (2019) 73:31ñ7. doi: 10.1016/j.nedt.2018.
+09.013
+7. Murphy JG, Cremonini F , Kane GC, Dunn W. Is simulation based medicine
+training the future of clinical medicine?. Eur Rev Med Pharmacol Sci. (2007)
+11:1ñ8.
+8. McGaghie WC, Issenberg SB, Cohen ER, Barsuk JH, Wayne DB. Does
+simulation-based medical education with deliberate practice yield better
+results than traditional clinical education? A meta-analytic comparative
+review of the evidence. Acad Med. (2011) 86:706ñ11. doi: 10.1097/ACM.
+0b013e318217e119
+9. Coyne E, Calleja P , Forster E, Lin F. A review of virtual-simulation for
+assessing healthcare students’ clinical competency.Nurse Educ Today. (2021)
+96:104623. doi: 10.1016/j.nedt.2020.104623
+10. Hu L, Zhang L, Yin R, Li Z, Shen J, Tan H, et al. NEOGAMES: a
+serious computer game that improves long-term knowledge retention of
+neonatal resuscitation in undergraduate medical students. Front Pediatr.
+(2021) 9:645776. doi: 10.3389/fped.2021.645776
+11. Borg Sapiano A, Sammut R, Trapani J. The eﬀectiveness of virtual simulation
+in improving student nurses’ knowledge and performance during patient
+deterioration: a pre and post test design.Nurse Educ Today.(2018) 62:128ñ33.
+doi: 10.1016/j.nedt.2017.12.025
+12. Tinôco JDS, Enders BC, Sonenberg A, Lira ALBC. Virtual clinical simulation
+in nursing education: a concept analysis. Int J Nurs Educ Scholarsh. (2021)
+18:20200001. doi: 10.1515/ijnes-2020-0001
+13. McGrath JL, Taekman JM, Dev P , Danforth DR, Mohan D, Kman N, et al.
+Using virtual reality simulation environments to assess competence for
+emergency medicine learners. Acad Emerg Med. (2018) 25:186ñ95. doi: 10.
+1111/acem.13308
+14. Campbell K, Taylor V , Douglas S. Eﬀectiveness of online cancer education for
+nurses and allied health professionals; a systematic review using kirkpatrick
+evaluation framework. J Cancer Educ. (2019) 34:339ñ56. doi: 10.1007/
+s13187-017-1308-2
+Frontiers in Medicine | www.frontiersin.org 8 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 9 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 9
+Wu et al. Virtual Simulation and Medical Education
+15. Dekhtyar M, Park YS, Kalinyak J, Chudgar SM, Fedoriw KB, Johnson KJ,
+et al. Use of a structured approach and virtual simulation practice to improve
+diagnostic reasoning. Diagnosis. (2021) 9:69ñ76. doi: 10.1515/dx-2020-0160
+16. Austin A, Rudolf F , Fernandez J, Ishimine P , Murray M, Suresh P , et al.
+COVID-19 educational innovation: hybrid in-person and virtual simulation
+for emergency medicine trainees. AEM Educ Train. (2021) 5:e10593. doi:
+10.1002/aet2.10593
+17. Y ang T, Buck S, Evans L, Auerbach M. A telesimulation elective to
+provide medical students with pediatric patient care experiences during the
+COVID pandemic. Pediatr Emerg Care. (2021) 37:119ñ22. doi: 10.1097/PEC.
+0000000000002311
+18. Putnam EM, Rochlen LR, Alderink E, Augé J, Popov V , Levine R, et al. Virtual
+reality simulation for critical pediatric airway management training. J Clin
+Transl Res. (2021) 7:93ñ9.
+19. Rakofsky JJ, Talbot TB, Dunlop BWA. Virtual standardized patient-based
+assessment tool to evaluate psychiatric residents’ psychopharmacology
+proﬁciency. Acad Psychiatry. (2020) 44:693ñ700. doi: 10.1007/s40596-020-
+01286-x
+20. Shu L, Bahri F , Mostaghni N, Yu G, Javan R. The time has come: a
+paradigm shift in diagnostic radiology education via simulation training. J
+Digit Imaging. (2021) 34:212ñ27. doi: 10.1007/s10278-020-00405-2
+21. O’Rourke SR, Branford KR, Brooks TL, Ives LT, Nagendran A, Compton SN.
+The emotional and behavioral impact of delivering bad news to virtual versus
+real standardized patients: a pilot study. Teach Learn Med. (2020) 32:139ñ49.
+doi: 10.1080/10401334.2019.1652180
+22. Greuter L, De Rosa A, Cattin P , Croci DM, Soleman J, Guzman R.
+Randomized study comparing 3D virtual reality and conventional 2D on-
+screen teaching of cerebrovascular anatomy. Neurosurg Focus. (2021) 51:E18.
+doi: 10.3171/2021.5.FOCUS21212
+23. Galvez R, Wallon RC, Shackelford L, Amos JR, Rowen JL. Use of virtual
+reality to educate undergraduate medical students on cardiac peripheral and
+collateral circulation. Med Sci Educ. (2020) 31:19ñ22. doi: 10.1007/s40670-
+020-01104-x
+24. Elzie CA, Shaia JA. Pilot study of the impact of virtually embodying a patient
+with a terminal illness. Med Sci Educ. (2021) 31:665ñ75. doi: 10.1007/s40670-
+021-01243-9
+25. Roehr M, Wu T, Maykowski P , Munter B, Hoebee S, Daas E, et al. The
+feasibility of virtual reality and student-led simulation training as methods of
+lumbar puncture instruction. Med Sci Educ. (2020) 31:117ñ24. doi: 10.1007/
+s40670-020-01141-6
+26. Bishop ME, Ode GE, Hurwit DJ, Zmugg S, Rauck RC, Nguyen JT, et al. The
+arthroscopic surgery skill evaluation tool global rating scale is a valid and
+reliable adjunct measure of performance on a virtual reality simulator for
+hip arthroscopy. Arthroscopy. (2021) 37:1856ñ66. doi: 10.1016/j.arthro.2021.
+01.046
+27. Kim B, Loke YH, Mass P , Irwin MR, Capeland C, Olivieri L, et al. Novel virtual
+reality medical image display system for group discussions of congenital heart
+disease: development and usability testing. JMIR Cardio. (2020) 4:e20633.
+doi: 10.2196/20633
+28. Atli K, Selman W, Ray AA. Comprehensive multicomponent neurosurgical
+course with use of virtual reality: modernizing the medical classroom. J Surg
+Educ. (2021) 78:1350ñ6. doi: 10.1016/j.jsurg.2020.11.003
+29. Lowe J, Peng C, Winstead-Derlega C, Curtis H. 360 virtual reality pediatric
+mass casualty incident: a cross sectional observational study of triage and out-
+of-hospital intervention accuracy at a national conference. J Am Coll Emerg
+Physicians Open. (2020) 1:974ñ80. doi: 10.1002/emp2.12214
+30. Zackoﬀ MW, Young D, Sahay RD, Fei L, Real FJ, Guiot A, et al.
+Establishing objective measures of clinical competence in undergraduate
+medical education through immersive virtual reality. Acad Pediatr. (2021)
+21:575ñ9. doi: 10.1016/j.acap.2020.10.010
+31. Melnyk R, Campbell T, Holler T, Cameron K, Saba P , Witthaus MW, et al.
+See like an expert: gaze-augmented training enhances skill acquisition in
+a virtual reality robotic suturing task. J Endourol. (2021) 35:376ñ82. doi:
+10.1089/end.2020.0445
+32. Orland MD, Patetta MJ, Wieser M, Kayupov E, Gonzalez MH. Does virtual
+reality improve procedural completion and accuracy in an intramedullary
+tibial nail procedure? a randomized control trial. Clin Orthop Relat Res.
+(2020) 478:2170ñ7. doi: 10.1097/CORR.0000000000001362
+33. Wang KC, Bernardoni ED, Cotter EJ, Levine BR, Frank RM. The impact of
+unguided trauma simulation practice on novice performance: a randomized
+controlled trial. J Am Acad Orthop Surg. (2021) 29:255ñ62. doi: 10.5435/
+JAAOS-D-19-00225
+34. Zackoﬀ MW, Real FJ, Sahay RD, Fei L, Guiot A, Lehmann C, et al. Impact
+of an immersive virtual reality curriculum on medical students’ clinical
+assessment of infants with respiratory distress. Pediatr Crit Care Med. (2020)
+21:477ñ85. doi: 10.1097/PCC.0000000000002249
+35. Blumstein G, Zukotynski B, Cevallos N, Ishmael C, Zoller S, Burke Z, et al.
+Randomized trial of a virtual reality tool to teach surgical technique for
+tibial shaft fracture intramedullary nailing. J Surg Educ. (2020) 77:969ñ77.
+doi: 10.1016/j.jsurg.2020.01.002
+36. Fu Y , Cavuoto L, Qi D, Panneerselvam K, Arikatla VS, Enquobahrie A,
+et al. Characterizing the learning curve of a virtual intracorporeal suturing
+simulator VBLaST-SS©. Surg Endosc. (2020) 34:3135ñ44. doi: 10.1007/
+s00464-019-07081-6
+37. Lesch H, Johnson E, Peters J, Cendán JCVR. Simulation leads to enhanced
+procedural conﬁdence for surgical trainees. J Surg Educ. (2020) 77:213ñ8.
+doi: 10.1016/j.jsurg.2019.08.008
+38. Gurung PMS, Campbell T, Wang B, Joseph JV , Ghazi AE. Accelerated
+skills acquisition protocol (ASAP) in optimizing robotic surgical simulation
+training: a prospective randomized study. World J Urol. (2020) 38:1623ñ30.
+doi: 10.1007/s00345-019-02858-9
+39. Young D, Real FJ, Sahay RD, Zackoﬀ M. Remote virtual reality teaching:
+closing an educational gap during a global pandemic. Hosp Pediatr. (2021)
+11:e258ñ62. doi: 10.1542/hpeds.2021-005927
+40. Chaﬀkin J, Ray JM, Goldenberg M, Wong AH. Impact of a virtual simulation-
+based educational module on managing agitation for medical students. Acad
+Psychiatry. (2021). [Online ahead of print]. doi: 10.1007/s40596-021-01521-z
+41. Morgan G, Melson E, Davitadze M, Ooi E, Zhou D, Hanania T, et al. Utility
+of Simulation via Instant Messaging - Birmingham Advance (SIMBA) in
+medical education during COVID-19 pandemic. J R Coll Physicians Edinb.
+(2021) 51:168ñ72. doi: 10.4997/JRCPE.2021.218
+42. Kolla S, Elgawly M, Gaughan JP , Goldman E. Medical student perception of a
+virtual reality training module for anatomy education. Med Sci Educ. (2020)
+30:1201ñ10. doi: 10.1007/s40670-020-00993-2
+43. Plackett R, Kassianos AP , Timmis J, Sheringham J, Schartau P , Kambouri
+M. Using virtual patients to explore the clinical reasoning skills of medical
+students: mixed methods study. J Med Internet Res. (2021) 23:e24723. doi:
+10.2196/24723
+44. Pickering JD, Panagiotis A, Ntakakis G, Athanassiou A, Babatsikos E,
+Bamidis PD. Assessing the diﬀerence in learning gain between a mixed reality
+application and drawing screencasts in neuroanatomy.Anat Sci Educ.(2021).
+[Online ahead of print]. doi: 10.1002/ase.2113
+45. Wilson G, Zargaran A, Kokotkin I, Bhaskar J, Zargaran D, Trompeter A.
+Virtual reality and physical models in undergraduate orthopaedic education:
+a modiﬁed randomised crossover trial. Orthop Res Rev. (2020) 12:97ñ104.
+doi: 10.2147/ORR.S252274
+46. Fukuta J, Gill N, Rooney R, Coombs A, Murphy D. Use of 360 ◦ video for a
+virtual operating theatre orientation for medical students.J Surg Educ. (2021)
+78:391ñ3. doi: 10.1016/j.jsurg.2020.08.014
+47. Mulligan A, Vaghela KR, Jeyaseelan L, Lee J, Akhtar K. Transferable global
+rating scales in the validation of the ArthroSimTM virtual reality arthroscopy
+simulator. Surg Technol Int. (2020) 37:306ñ11.
+48. Bartlett JD, Lawrence JE, Y an M, Guevel B, Stewart ME, Audenaert E, et al.
+The learning curves of a validated virtual reality hip arthroscopy simulator.
+Arch Orthop Trauma Surg. (2020) 140:761ñ7. doi: 10.1007/s00402-020-
+03352-3
+49. Lo S, Abaker ASS, Quondamatteo F , Clancy J, Rea P , Marriott M, et al. Use
+of a virtual 3D anterolateral thigh model in medical education: augmentation
+and not replacement of traditional teaching?. J Plast Reconstr Aesthet Surg.
+(2020) 73:269ñ75. doi: 10.1016/j.bjps.2019.09.034
+50. Kenngott HG, Pfeiﬀer M, Preukschas AA, Bettscheider L, Wise PA, Wagner
+M, et al. IMHOTEP: cross-professional evaluation of a three-dimensional
+virtual reality system for interactive surgical operation planning, tumor board
+discussion and immersive training for complex liver surgery in a head-
+mounted display. Surg Endosc. (2021) 36:126ñ34. doi: 10.1007/s00464-020-
+08246-4
+Frontiers in Medicine | www.frontiersin.org 9 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 10 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 10
+Wu et al. Virtual Simulation and Medical Education
+51. Middeke A, Anders S, Raupach T, Schuelper N. Transfer of clinical
+reasoning trained with a serious game to comparable clinical problems: a
+prospective randomized study. Simul Healthc. (2020) 15:75ñ81. doi: 10.1097/
+SIH.0000000000000407
+52. Huettl F , Saalfeld P , Hansen C, Preim B, Poplawski A, Kneist W, et al.
+Virtual reality and 3D printing improve preoperative visualization of 3D
+liver reconstructions-results from a preclinical comparison of presentation
+modalities and user’s preference. Ann Transl Med. (2021) 9:1074. doi: 10.
+21037/atm-21-512
+53. Albrecht T, Nikendei C, Praetorius M. Face, content, and construct validity
+of a virtual reality otoscopy simulator and applicability to medical training.
+Otolaryngol Head Neck Surg. (2021). [Online ahead of print]. doi: 10.1177/
+01945998211032897
+54. Klemm P , Kleyer A, Tascilar K, Schuster L, Meinderink T, Steiger F , et al.
+Virtual reality-based app to educate health care professionals and medical
+students about inﬂammatory arthritis: feasibility study. JMIR Serious Games.
+(2021) 9:e23835. doi: 10.2196/23835
+55. Issleib M, Kromer A, Pinnschmidt HO, Süss-Havemann C, Kubitz JC. Virtual
+reality as a teaching method for resuscitation training in undergraduate ﬁrst
+year medical students: a randomized controlled trial. Scand J Trauma Resusc
+Emerg Med. (2021) 29:27. doi: 10.1186/s13049-021-00836-y
+56. Huettl F , Huber T, Duwe M, Lang H, Paschold M, Kneist W. Higher quality
+camera navigation improves the surgeon’s performance: evidence from a
+pre-clinical study. J Minim Access Surg. (2020) 16:355ñ9. doi: 10.4103/jmas.
+JMAS_143_19
+57. Mok TN, Chen J, Pan J, Ming WK, He Q, Sin TH, et al. Use of a virtual
+reality simulator for tendon repair training: randomized controlled trial.
+JMIR Serious Games. (2021) 9:e27544. doi: 10.2196/27544
+58. Hu KC, Salcedo D, Kang YN, Lin CW, Hsu CW, Cheng CY , et al. Impact
+of virtual reality anatomy training on ultrasound competency development:
+a randomized controlled trial. PLoS One. (2020) 15:e0242731. doi: 10.1371/
+journal.pone.0242731
+59. Chen S, Zhu J, Cheng C, Pan Z, Liu L, Du J, et al. Can virtual reality improve
+traditional anatomy education programmes? A mixed-methods study on the
+use of a 3D skull model.BMC Med Educ. (2020) 20:395. doi: 10.1186/s12909-
+020-02255-6
+60. Du YC, Fan SC, Y ang LC. The impact of multi-person virtual reality
+competitive learning on anatomy education: a randomized controlled
+study. BMC Med Educ. (2020) 20:343. doi: 10.1186/s12909-020-
+02155-9
+61. Chiu HY , Kang YN, Wang WL, Tong YS, Chang SW, Fong TH, et al. Gender
+diﬀerences in the acquisition of suturing skills with the da Vinci surgical
+system. J Formos Med Assoc. (2020) 119:462ñ70. doi: 10.1016/j.jfma.2019.
+06.013
+62. Rosenfeldt Nielsen M, Kristensen EQ, Jensen RO, Mollerup AM, Pfeiﬀer T,
+Graumann O. Clinical ultrasound education for medical students: virtual
+Reality versus e-Learning, a randomized controlled pilot trial. Ultrasound Q.
+(2021) 37:292ñ6. doi: 10.1097/RUQ.0000000000000558
+63. Andersen NL, Jensen RO, Posth S, Laursen CB, Jørgensen R, Graumann O.
+Teaching ultrasound-guided peripheral venous catheter placement through
+immersive virtual reality: an explorative pilot study. Medicine. (2021)
+100:e26394. doi: 10.1097/MD.0000000000026394
+64. Frendø M, Frithioﬀ A, Konge L, Sørensen MS, Andersen SAW. Cochlear
+implant surgery: learning curve in virtual reality simulation training and
+transfer of skills to a 3D-printed temporal bone - A prospective trial.Cochlear
+Implants Int. (2021) 22:330ñ7. doi: 10.1080/14670100.2021
+65. Frendø M, Frithioﬀ A, Konge L, Foghsgaard S, Mikkelsen PT, Sørensen
+MS, et al. Assessing competence in cochlear implant surgery using
+the newly developed cochlear implant surgery assessment tool. Eur
+Arch Otorhinolaryngol. (2021) 279:127ñ36. doi: 10.1007/s00405-021-
+06632-9
+66. Andersen SAW, Mikkelsen PT, Sørensen MS. The eﬀect of simulator-
+integrated tutoring for guidance in virtual reality simulation training. Simul
+Healthc. (2020) 15:147ñ53. doi: 10.1097/SIH.0000000000000414
+67. Petersen SB, Vestergaard AH, Thomsen ASS, Konge L, Cour M, Grauslund
+J, et al. Pretraining of basic skills on a virtual reality vitreoretinal simulator:
+a waste of time. Acta Ophthalmol. (2021). [Online ahead of print]. doi: 10.
+1111/aos.15039
+68. Michelet D, Barre J, Truchot J, Piot MA, Cabon P , Tesniere A. Eﬀect of
+computer debrieﬁng on acquisition and retention of learning after screen-
+based simulation of neonatal resuscitation: randomized controlled trial.JMIR
+Serious Games. (2020) 8:e18633. doi: 10.2196/18633
+69. Fiard G, Selmi SY , Maigron M, Bellier A, Promayon E, Descotes JL, et al.
+validating the transfer of skills acquired on a prostate biopsy simulator: a
+prospective, randomized, controlled study. J Surg Educ. (2020) 77:953ñ60.
+doi: 10.1016/j.jsurg.2020.01.008
+70. Bouaoud J, El Beheiry M, Jablon E, Schouman T, Bertolus C, Picard A, et al.
+a 3D virtual reality platform, improves undergraduate craniofacial trauma
+education. J Stomatol Oral Maxillofac Surg. (2021) 122:367ñ71. doi: 10.1016/
+j.jormas.2020.09.009
+71. Ros M, Debien B, Cyteval C, Molinari N, Gatto F , Lonjon N. Applying
+an immersive tutorial in virtual reality to learning a new technique.
+Neurochirurgie. (2020) 66:212ñ8. doi: 10.1016/j.neuchi.2020.05.006
+72. Nakai K, Terada S, Takahara A, Hage D, Tubbs RS, Iwanaga J. Anatomy
+education for medical students in a virtual reality workspace: a pilot study.
+Clin Anat. (2021) 35:40ñ4. doi: 10.1002/ca.23783
+73. Watari T, Tokuda Y , Owada M, Onigata K. the utility of virtual patient
+simulations for clinical reasoning education. Int J Environ Res Public Health.
+(2020) 17:5325. doi: 10.3390/ijerph17155325
+74. Wada Y , Nishi M, Yoshikawa K, Higashijima J, Miyatani T, Tokunaga T, et al.
+Usefulness of virtual three-dimensional image analysis in inguinal hernia as
+an educational tool.Surg Endosc. (2020) 34:1923ñ8. doi: 10.1007/s00464-019-
+06964-y
+75. Takata R, Kanehira M, Kato Y , Matsuura T, Kato R, Maekawa S, et al.
+Improvement of three-dimensional motion sickness using a virtual reality
+simulator for robot-assisted surgery in undergraduate medical students: a
+prospective observational study. BMC Med Educ.(2021) 21:498. doi: 10.1186/
+s12909-021-02872-9
+76. Oussi N, Renman P , Georgiou K, Enochsson L. Baseline characteristics in
+laparoscopic simulator performance: the impact of personal computer (PC)-
+gaming experience and visuospatial ability. Surg Open Sci. (2020) 4:19ñ25.
+doi: 10.1016/j.sopen.2020.06.002
+77. Rothlind E, Fors U, Salminen H, Wändell P , Ekblad S. Virtual patients
+reﬂecting the clinical reality of primary care - a useful tool to improve cultural
+competence. BMC Med Educ. (2021) 21:270. doi: 10.1186/s12909-021-
+02701-z
+78. Oussi N, Enochsson L, Henningsohn L, Castegren M, Georgiou E, Kjellin A.
+Trainee performance after laparoscopic simulator training using a Blackbox
+versus LapMentor. J Surg Res. (2020) 250:1ñ11. doi: 10.1016/j.jss.2019.
+12.039
+79. Foohey S, Nagji A, Yilmaz Y , Sibbald M, Monteiro S, Chan TM. Developing
+the virtual resus room: ﬁdelity, usability, acceptability, and applicability of
+a virtual simulation for teaching and learning. Acad Med. (2021). [Online
+ahead of print]. doi: 10.1097/ACM.0000000000004364
+80. Mirchi N, Bissonnette V , Yilmaz R, Ledwos N, Winkler-Schwartz A,
+Del Maestro RF. The virtual operative assistant: an explainable artiﬁcial
+intelligence tool for simulation-based training in surgery and medicine.PLoS
+One. (2020) 15:e0229596. doi: 10.1371/journal.pone.0229596
+81. Siyar S, Azarnoush H, Rashidi S, Del Maestro RF. Tremor assessment during
+virtual reality brain tumor resection. J Surg Educ. (2020) 77:643ñ51. doi:
+10.1016/j.jsurg.2019.11.011
+82. Bogomolova K, Sam AH, Misky AT, Gupte CM, Strutton PH, Hurkxkens
+TJ, et al. Development of a virtual three-dimensional assessment scenario
+for anatomical education. Anat Sci Educ. (2021) 14:385ñ93. doi: 10.1002/ase.
+2055
+83. Arents V , de Groot PCM, Struben VMD, van Stralen KJ. Use of 360 ◦ virtual
+reality video in medical obstetrical education: a quasi-experimental
+design. BMC Med Educ. (2021) 21:202. doi: 10.1186/s12909-021-
+02628-5
+84. Beulens AJW, Hashish YAF , Brinkman WM, Umari P , Puliatti S, Koldewijn
+EL, et al. Training novice robot surgeons: proctoring provides same results as
+simulator-generated guidance. J Robot Surg. (2021) 15:397ñ428. doi: 10.1007/
+s11701-020-01118-y
+85. Rudolphi-Solero T, Jimenez-Zayas A, Lorenzo-Alvarez R, Domínguez-
+Pinos D, Ruiz-Gomez MJ, Sendra-Portero FA. team-based competition
+for undergraduate medical students to learn radiology within the virtual
+Frontiers in Medicine | www.frontiersin.org 10 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 11 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 11
+Wu et al. Virtual Simulation and Medical Education
+world Second Life. Insights Imaging. (2021) 12:89. doi: 10.1186/s13244-021-
+01032-3
+86. Rudolphi-Solero T, Lorenzo-Alvarez R, Ruiz-Gomez MJ, Sendra-Portero
+F. Impact of compulsory participation of medical students in a multiuser
+online game to learn radiological anatomy and signs within the virtual world
+Second Life. Anat Sci Educ. (2021). [Online ahead of print]. doi: 10.1002/ase.
+2134
+87. García-Seoane JJ, Ramos-Rincón JM, Lara-Muñoz JP. CCS-OSCE working
+group of the CNDFME. Changes in the Objective Structured Clinical
+Examination (OSCE) of University Schools of Medicine during COVID-19.
+Experience with a computer-based case simulation OSCE (CCS-OSCE). Rev
+Clin Esp. (2021) 221:456ñ63. doi: 10.1016/j.rceng.2021.01.006
+88. Gunn T, Rowntree P , Starkey D, Nissen L. The use of virtual reality computed
+tomography simulation within a medical imaging and a radiation therapy
+undergraduate programme. J Med Radiat Sci. (2021) 68:28ñ36. doi: 10.1002/
+jmrs.436
+89. Torda ACLASSIE. teaching - using virtual reality to incorporate medical
+ethics into clinical decision making. BMC Med Educ. (2020) 20:326. doi:
+10.1186/s12909-020-02217-y
+90. Liaw SY , Choo T, Wu LT, Lim WS, Choo H, Lim SM, et al. “Wow, woo,
+win”: healthcare students’ and facilitators’ experiences of interprofessional
+simulation in three-dimensional virtual world: a qualitative evaluation
+study. Nurse Educ Today. (2021) 105:105018. doi: 10.1016/j.nedt.2021.
+105018
+91. Liaw SY , Ooi SW, Rusli KDB, Lau TC, Tam WWS, Chua WL. Nurse-
+physician communication team training in virtual reality versus live
+simulations: randomized controlled trial on team communication and
+teamwork attitudes. J Med Internet Res. (2020) 22:e17279. doi: 10.2196/
+17279
+92. Jeon YK, Youm JB, Ha K, Woo J, Yoo HY , Leem CH, et al. Teaching cardiac
+excitation-contraction coupling using a mathematical computer simulation
+model of human ventricular myocytes. Adv Physiol Educ. (2020) 44:323ñ33.
+doi: 10.1152/advan.00093.2019
+93. Han SG, Kim YD, Kong TY , Cho J. Virtual reality-based neurological
+examination teaching tool (VRNET) versus standardized patient in teaching
+neurological examinations for the medical students: a randomized, single-
+blind study. BMC Med Educ. (2021) 21:493. doi: 10.1186/s12909-021-
+02920-4
+94. Björn MH, Laurila JM, Ravyse W, Kukkonen J, Leivo S, Mäkitalo K,
+et al. Learning impact of a virtual brain electrical activity simulator among
+neurophysiology students: mixed-methods intervention study. JMIR Serious
+Games. (2020) 8:e18768. doi: 10.2196/18768
+95. De Ponti R, Marazzato J, Maresca AM, Rovera F , Carcano G, Ferrario MM.
+Pre-graduation medical training including virtual reality during COVID-19
+pandemic: a report on students’ perception. BMC Med Educ. (2020) 20:332.
+doi: 10.1186/s12909-020-02245-8
+96. O’Connor M, Stowe J, Potocnik J, Giannotti N, Murphy S, Rainford L. 3D
+virtual reality simulation in radiography education: the students’ experience.
+Radiography. (2021) 27:208ñ14. doi: 10.1016/j.radi.2020.07.017
+97. Alvarez-Lopez F , Maina MF , Arango F , Saigí-Rubió F. Use of a low-cost
+portable 3D virtual reality simulator for psychomotor skill training in
+minimally invasive surgery: task metrics and score validity. JMIR Serious
+Games. (2020) 8:e19723. doi: 10.2196/19723
+98. Sattar MU, Palaniappan S, Lokman A, Shah N, Riaz Z, Khalid U. User
+experience design in virtual reality medical training application. J Pak Med
+Assoc. (2021) 71:1730ñ5. doi: 10.5455/JPMA.22992
+99. Khundam C, Sukkriang N, Noël F. No diﬀerence in learning outcomes and
+usability between using controllers and hand tracking during a virtual reality
+endotracheal intubation training for medical students in Thailand. J Educ
+Eval Health Prof. (2021) 18:22. doi: 10.3352/jeehp.2021.18.22
+100. Mansoory MS, Khazaei MR, Azizi SM, Niromand E. Comparison of
+the eﬀectiveness of lecture instruction and virtual reality-based serious
+gaming instruction on the medical students’ learning outcome about
+approach to coma. BMC Med Educ. (2021) 21:347. doi: 10.1186/s12909-021-
+02771-z
+101. Jaskiewicz F , Kowalewski D, Starosta K, Cierniak M, Timler D. Chest
+compressions quality during sudden cardiac arrest scenario performed in
+virtual reality: a crossover study in a training environment. Medicine. (2020)
+99:e23374. doi: 10.1097/MD.0000000000023374
+102. López Chávez O, Rodríguez LF , Gutierrez-Garcia JOA. comparative case
+study of 2D, 3D and immersive-virtual-reality applications for healthcare
+education. Int J Med Inform.(2020) 141:104226. doi: 10.1016/j.ijmedinf.2020.
+104226
+103. Berg H, Steinsbekk A. The eﬀect of self-practicing systematic clinical
+observations in a multiplayer, immersive, interactive virtual reality
+application versus physical equipment: a randomized controlled trial. Adv
+Health Sci Educ Theory Pract. (2021) 26:667ñ82. doi: 10.1007/s10459-020-
+10019-6
+104. Alharbi Y , Al-Mansour M, Al-Saﬀar R, Garman A, Alraddadi A.
+Three-dimensional virtual reality as an innovative teaching and
+learning tool for human anatomy courses in medical education: a
+mixed methods study. Cureus. (2020) 12:e7085. doi: 10.7759/cureus.
+7085
+105. Birrenbach T, Zbinden J, Papagiannakis G, Exadaktylos AK, Müller M,
+Hautz WE, et al. Eﬀectiveness and utility of virtual reality simulation as an
+educational tool for safe performance of COVID-19 diagnostics: prospective,
+randomized pilot trial. JMIR Serious Games. (2021) 9:e29586. doi: 10.2196/
+29586
+106. Gaur U, Majumder MAA, Sa B, Sarkar S, Williams A, Singh K. Challenges
+and opportunities of preclinical medical education: COVID-19 crisis and
+beyond. SN Compr Clin Med. (2020) 2:1992ñ7. doi: 10.1007/s42399-020-00
+528-1
+107. Wu Z, Yu J, Wu Q, Hou P , Sun J. Validation of radiographic quality of
+simulation software - ImaSim. J Xray Sci Technol. (2021) 29:453ñ62. doi:
+10.3233/XST-210860
+108. Wang J, Hu X, Liu J, Li L. Pharmacy students’ attitudes towards
+physician-pharmacist collaboration: intervention eﬀect of integrating
+cooperative learning into an interprofessional team-based community
+service. J Interprof Care. (2016) 30:591ñ8. doi: 10.1080/13561820.2016.118
+5095
+109. Wang J, Guo J, Wang Y , Y an D, Liu J, Zhang Y , et al. Use of profession-
+role exchange in an interprofessional student team-based community health
+service-learning experience. BMC Med Educ. (2020) 20:212. doi: 10.1186/
+s12909-020-02127-z
+110. Nieto-Escamez FA, Roldán-Tapia MD. Gamiﬁcation as online teaching
+strategy during COVID-19: a mini-review. Front Psychol. (2021) 12:648552.
+doi: 10.3389/fpsyg.2021.648552
+111. Hoopes S, Pham T, Lindo FM, Antosh DD. Home surgical skill training
+resources for obstetrics and gynecology trainees during a pandemic.
+Obstet Gynecol. (2020) 136:56ñ64. doi: 10.1097/AOG.00000000000
+03931
+112. Park JC, Kwon HE, Chung CW. Innovative digital tools for new trends in
+teaching and assessment methods in medical and dental education. J Educ
+Eval Health Prof. (2021) 18:13. doi: 10.1097/AOG.0000000000003931
+113. Posever N, Sehdev M, Sylla M, Mashar R, Mashar M, Abioye A. addressing
+equity in global medical education during the COVID-19 pandemic: the
+global medical education collaborative. Acad Med. (2021) 96:1574ñ9. doi:
+10.1097/ACM.0000000000004230
+114. Olszewski AE, Daniel DA, Stein DR, McCulloch MI, Su SW, Hames
+DL, et al. Teaching pediatric peritoneal dialysis globally through virtual
+simulation. Clin J Am Soc Nephrol. (2018) 13:900ñ6. doi: 10.2215/CJN.104
+60917
+115. Maresky HS, Oikonomou A, Ali I, Ditkofsky N, Pakkal M, Ballyk B. Virtual
+reality and cardiac anatomy: exploring immersive three-dimensional cardiac
+imaging, a pilot study in undergraduate medical anatomy education. Clin
+Anat. (2019) 32:238ñ43. doi: 10.1002/ca.23292
+116. Lorenzo-Alvarez R, Rudolphi-Solero T, Ruiz-Gomez MJ, Sendra-Portero F.
+Game-based learning in virtual worlds: a multiuser online game for medical
+undergraduate radiology education within second life. Anat Sci Educ. (2020)
+13:602ñ17. doi: 10.1002/ase.1927
+117. Richardson A, Hazzard M, Challman SD, Morgenstein AM, Brueckner
+JKA. “Second Life” for gross anatomy: applications for multiuser virtual
+environments in teaching the anatomical sciences. Anat Sci Educ. (2011)
+4:39ñ43. doi: 10.1002/ase.195
+Frontiers in Medicine | www.frontiersin.org 11 March 2022 | Volume 9 | Article 855403
+
+=== PAGE 12 ===
+fmed-09-855403 March 24, 2022 Time: 15:17 # 12
+Wu et al. Virtual Simulation and Medical Education
+118. Virtual Reality Medical Simulation. Oxford Medical Simulation . (2020).
+Available online at: http://oxfordmedicalsimulation.com/product/vr-
+medical-simulation/ (Accessed June 18, 2020)
+119. Klosiewicz T, Zalewski R, Faferek J, Zawiejska A. Application of medical
+simulation in the education of medical students in the area of gynecology
+and obstetrics. Ginekol Pol. (2020) 91:281ñ6. doi: 10.5603/GP.2020.0046
+120. Brinkmann C, Fritz M, Pankratius U, Bahde R, Neumann P , Schlueter S,
+et al. Box- or virtual-reality trainer: which tool results in better transfer of
+laparoscopic basic skills?-A prospective randomized trial. J Surg Educ. (2017)
+74:724ñ35. doi: 10.1016/j.jsurg.2016.12.009
+121. Tabatabai S. Simulations and virtual learning supporting clinical education
+during the COVID 19 pandemic. Adv Med Educ Pract. (2020) 11:513ñ6.
+doi: 10.2147/AMEP.S257750
+122. Remtulla R. The present and future applications of technology in adapting
+medical education amidst the COVID-19 pandemic. JMIR Med Educ. (2020)
+6:e20190. doi: 10.2196/20190
+Conﬂict of Interest: The authors declare that the research was conducted in the
+absence of any commercial or ﬁnancial relationships that could be construed as a
+potential conﬂict of interest.
+Publisher’s Note:All claims expressed in this article are solely those of the authors
+and do not necessarily represent those of their aﬃliated organizations, or those of
+the publisher, the editors and the reviewers. Any product that may be evaluated in
+this article, or claim that may be made by its manufacturer, is not guaranteed or
+endorsed by the publisher.
+Copyright © 2022 Wu, Wang, Lu, Chen, Long and Wang. This is an open-access
+article distributed under the terms of the Creative Commons Attribution License
+(CC BY). The use, distribution or reproduction in other forums is permitted, provided
+the original author(s) and the copyright owner(s) are credited and that the original
+publication in this journal is cited, in accordance with accepted academic practice. No
+use, distribution or reproduction is permitted which does not comply with these terms.
+Frontiers in Medicine | www.frontiersin.org 12 March 2022 | Volume 9 | Article 855403

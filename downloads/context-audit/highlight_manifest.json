@@ -1,0 +1,226 @@
+[
+  {
+    "id": "R36-E1",
+    "paper": "R36",
+    "page": 6,
+    "location": "§2.3",
+    "purpose": "位置效应的具体量级",
+    "row_only": false,
+    "matched_phrase": "more than 20%",
+    "bounds": [
+      72.0,
+      301.50439453125,
+      290.29937744140625,
+      475.10205078125
+    ],
+    "paragraph_text_sha256": "af677d225d7d36b545968bfb4203a86815aa31c621d1655f140cf1efc7f9e190"
+  },
+  {
+    "id": "R36-E2",
+    "paper": "R36",
+    "page": 6,
+    "location": "§2.3",
+    "purpose": "窗口扩展与利用能力的区别",
+    "row_only": false,
+    "matched_phrase": "Extended-context models",
+    "bounds": [
+      72.00001525878906,
+      490.668212890625,
+      290.3093566894531,
+      677.903564453125
+    ],
+    "paragraph_text_sha256": "a28446aaea44bceb313d4df63a37661c6c693c9457578233585e88d504008ede"
+  },
+  {
+    "id": "R36-E3",
+    "paper": "R36",
+    "page": 8,
+    "location": "§4.2",
+    "purpose": "提示变化与检索基线",
+    "row_only": false,
+    "matched_phrase": "45.6%",
+    "bounds": [
+      307.27789306640625,
+      571.2472534179688,
+      525.586181640625,
+      704.1910400390625
+    ],
+    "paragraph_text_sha256": "120b38d6816dcd5dbdbd9cd11572bb5ad60f7a42b3a3c516b25177c93e764714"
+  },
+  {
+    "id": "R37-E1",
+    "paper": "R37",
+    "page": 6,
+    "location": "§4",
+    "purpose": "有效长度定义是评估阈值",
+    "row_only": false,
+    "matched_phrase": "Effective Context Size",
+    "bounds": [
+      108.0,
+      398.25714111328125,
+      504.0034484863281,
+      463.18389892578125
+    ],
+    "paragraph_text_sha256": "4a378bdfaab5627a4c1845c68b542ede09d1e8a38abb84642e9433487fc10edc"
+  },
+  {
+    "id": "R37-E2",
+    "paper": "R37",
+    "page": 7,
+    "location": "Table3",
+    "purpose": "Gemini稳定结果；应标整行模型结果",
+    "row_only": true,
+    "matched_phrase": "96.7",
+    "bounds": [
+      108.8885726928711,
+      116.68967742919922,
+      504.49371337890625,
+      125.84291534423828
+    ],
+    "paragraph_text_sha256": "1552d63076f3884895bd7336d2786079f20082dc40ee9f96dc042dd217f1556c"
+  },
+  {
+    "id": "R37-E3",
+    "paper": "R37",
+    "page": 10,
+    "location": "§8",
+    "purpose": "不能直接外推真实OSCE",
+    "row_only": false,
+    "matched_phrase": "Lack of correlation",
+    "bounds": [
+      107.58200073242188,
+      479.96295166015625,
+      505.2414855957031,
+      555.8119506835938
+    ],
+    "paragraph_text_sha256": "7fe2514c9b81e50f102d8644ce6677239a70685596b6e5b79e8a89d408fb50f9"
+  },
+  {
+    "id": "R37-E4",
+    "paper": "R37",
+    "page": 3,
+    "location": "§3 The RULER Benchmark",
+    "purpose": "检索、多跳追踪、聚合与问答的任务设计",
+    "row_only": false,
+    "matched_phrase": "RULER comprises tasks",
+    "bounds": [
+      108.0,
+      556.3580322265625,
+      504.2817687988281,
+      632.3119506835938
+    ],
+    "paragraph_text_sha256": "642fd0612ed4928d887b4892e19f641c2cfd8d1d273bc7d2e44d979a5a3afe08"
+  },
+  {
+    "id": "R38-E1",
+    "paper": "R38",
+    "page": 5,
+    "location": "§4.1",
+    "purpose": "每长度主体采样数",
+    "row_only": false,
+    "matched_phrase": "7,540",
+    "bounds": [
+      55.11199951171875,
+      304.03729248046875,
+      291.0921630859375,
+      385.8060607910156
+    ],
+    "paragraph_text_sha256": "c29bc6800958bbd26237470db946c5b456cdc65d7aae73b66d997242f6ae999a"
+  },
+  {
+    "id": "R38-E2",
+    "paper": "R38",
+    "page": 5,
+    "location": "Table3",
+    "purpose": "GPT-4o在32K结果；应标整行",
+    "row_only": true,
+    "matched_phrase": "69.7",
+    "bounds": [
+      112.53997802734375,
+      94.94697875976563,
+      481.97320556640625,
+      105.51337890625
+    ],
+    "paragraph_text_sha256": "ea341ab7bc386d00917662cf1d3947dbabe6bc0cf4b421c5c443fe28556c043c"
+  },
+  {
+    "id": "R38-E3",
+    "paper": "R38",
+    "page": 15,
+    "location": "Table10",
+    "purpose": "新模型结果；只选表格模型行，避免同页说明文字",
+    "row_only": true,
+    "matched_phrase": "GPT-4.1",
+    "bounds": [
+      82.69097900390625,
+      366.18898315429686,
+      507.84112548828125,
+      376.75538330078126
+    ],
+    "paragraph_text_sha256": "325f553d7447f71a542c49ce5b4741495efcd14411b858405044f02e631464c6"
+  },
+  {
+    "id": "R38-E4",
+    "paper": "R38",
+    "page": 3,
+    "location": "§3 NOLIMA",
+    "purpose": "问题与证据保持最少字面匹配的构造条件",
+    "row_only": false,
+    "matched_phrase": "The main elements",
+    "bounds": [
+      55.082000732421875,
+      517.0733642578125,
+      291.17926025390625,
+      670.4220581054688
+    ],
+    "paragraph_text_sha256": "8ffa6295e56f1f4e5b87c5f5a20ad1a29896331549da75b05ac6162f65275876"
+  },
+  {
+    "id": "R39-E1",
+    "paper": "R39",
+    "page": 6,
+    "location": "Figure3(b)",
+    "purpose": "GPT-4o oracle/全历史结果；应标整行",
+    "row_only": true,
+    "matched_phrase": "0.870",
+    "bounds": [
+      323.15234375,
+      100.2739974975586,
+      489.3686218261719,
+      109.62540130615234
+    ],
+    "paragraph_text_sha256": "470eca40f7c688a7d57e068599aed9e10d9aa1433195495a3f388f28f9446b66"
+  },
+  {
+    "id": "R39-E2",
+    "paper": "R39",
+    "page": 8,
+    "location": "§5.2",
+    "purpose": "进一步压缩可能降低性能",
+    "row_only": false,
+    "matched_phrase": "replacing sessions",
+    "bounds": [
+      108.0,
+      637.8663940429688,
+      504.00335693359375,
+      713.5819702148438
+    ],
+    "paragraph_text_sha256": "11114edcb007d26d36b4c6a03a7e6ae36421f1b67431dfd7d6a4e16c3ba56667"
+  },
+  {
+    "id": "R39-E3",
+    "paper": "R39",
+    "page": 9,
+    "location": "§5.2",
+    "purpose": "GPT-4o更多检索tokens仍改善",
+    "row_only": false,
+    "matched_phrase": "over 20k",
+    "bounds": [
+      108.0,
+      326.366455078125,
+      504.00335693359375,
+      369.2050476074219
+    ],
+    "paragraph_text_sha256": "de75252b9c385e025a0cc3930ccfdb43939f1d862074720ea476bbba05957df8"
+  }
+]

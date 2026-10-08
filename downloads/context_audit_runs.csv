@@ -1,0 +1,1 @@
+﻿scenario_id,station,configuration,call_id,call_purpose,first_run,messages_sha256,model_id,provider,tokenizer_revision,reference_input_tokens,provider_input_tokens,provider_output_tokens,retrieval_evidence_ids,knowledge_ids,cache_hit,retry_index,truncated,request_failure,total_calls,total_usage,role_endpoint,assessment_endpoint
